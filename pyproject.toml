@@ -1,0 +1,13 @@
+[project]
+name = "aurafarmers"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["numpy>=2.0", "anthropic>=0.116"]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not live'"
+markers = ["live: hits the real Anthropic API"]

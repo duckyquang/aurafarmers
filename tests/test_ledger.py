@@ -18,7 +18,7 @@ def field_edges(f, layer):
 
 
 def submit_edge(led, tick, agent, cause, effect):
-    w = T.edges[(cause, effect)]
+    w = T.effect[(cause, effect)]
     eid = led.record_experiment(tick, agent, "intervene", [cause], [effect], 25)
     claim = {"type": "edge", "cause": cause, "effect": effect,
              "sign": "+" if w > 0 else "-", "strength": Truth.strength_bin(w)}

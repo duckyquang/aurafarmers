@@ -21,7 +21,7 @@ def canonical_key(c):
 def verify(c, truth):
     t = c["type"]
     if t == "edge":
-        w = truth.edges.get((c["cause"], c["effect"]))
+        w = truth.effect.get((c["cause"], c["effect"]))
         if w is None:
             return "false"
         ok = (("+" if w > 0 else "-") == c["sign"]
@@ -48,7 +48,7 @@ def tier_value(c, truth):
     if t == "interaction":
         return (3, 15)
     (cf, cl), (ef, el) = _fl(c["cause"]), _fl(c["effect"])
-    w = truth.edges.get((c["cause"], c["effect"]))
+    w = truth.effect.get((c["cause"], c["effect"]))
     band = Truth.strength_bin(w) if w is not None else c["strength"]
     if cf != ef or el - cl >= 2 or band == "weak":
         return (3, 15)

@@ -23,6 +23,7 @@ class Truth:
     scale: dict
     names: dict
     field_names: dict
+    effect: dict = None      # edges[(p,c)] / scale[c] — see below
 
     @staticmethod
     def strength_bin(w: float) -> str:
@@ -101,5 +102,9 @@ def generate(seed: int) -> Truth:
             x = x + w * vals[a] * vals[b]
         scale[node] = float(x.std()) or 1.0
         vals[node] = x / scale[node]
+    # An experiment can only ever recover d E[child] / d parent, which is
+    # w / scale[child] — not the raw w. Binning strength on w taxed even a
+    # perfect n=1000 intervention ~23% of the time; bin on `effect` instead.
+    effect = {k: w / scale[k[1]] for k, w in edges.items()}
     return Truth(edges, interactions, parents, noise, order, scale, names,
-                 field_names)
+                 field_names, effect)

@@ -9,7 +9,7 @@ def seeded_ledger(tmp_path):
     led = Ledger(T, tmp_path / "l.jsonl", 1000)
     for i, (c, e) in enumerate(list(T.edges)[:5]):
         eid = led.record_experiment(1, f"a{i}", "intervene", [c], [e], 25)
-        w = T.edges[(c, e)]
+        w = T.effect[(c, e)]
         p = led.submit_paper(1, f"a{i}", f"On {T.names[e]}", [{
             "type": "edge", "cause": c, "effect": e,
             "sign": "+" if w > 0 else "-", "strength": Truth.strength_bin(w)}],

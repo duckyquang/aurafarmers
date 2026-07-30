@@ -2,8 +2,8 @@ from sim.verify import admissible, canonical_key, tier_value, verify
 from sim.worldgen import Truth, generate
 
 T = generate(21)
-CAUSE, EFFECT = max(T.edges, key=lambda k: abs(T.edges[k]))
-W = T.edges[(CAUSE, EFFECT)]
+CAUSE, EFFECT = max(T.effect, key=lambda k: abs(T.effect[k]))
+W = T.effect[(CAUSE, EFFECT)]
 
 
 def edge_claim(sign=None, strength=None):

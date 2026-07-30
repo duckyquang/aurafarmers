@@ -1,7 +1,7 @@
 import json
 
 from sim.ledger import Ledger
-from sim.worldgen import Truth, generate
+from sim.worldgen import Truth, generate, is_latent
 
 T = generate(31)
 
@@ -13,6 +13,7 @@ def make(tmp_path):
 def field_edges(f, layer):
     """Same-field edges from layer-1 into `layer` of field f."""
     return [(c, e) for (c, e) in T.edges
+            if not is_latent(c) and not is_latent(e)
             if int(e[1:3]) == f and int(e[5:7]) == layer
             and int(c[1:3]) == f and int(c[5:7]) == layer - 1]
 

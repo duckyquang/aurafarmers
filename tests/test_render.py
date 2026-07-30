@@ -1,13 +1,15 @@
 from sim import render
 from sim.ledger import Ledger
-from sim.worldgen import Truth, generate
+from sim.worldgen import Truth, generate, is_latent
 
 T = generate(41)
 
 
 def seeded_ledger(tmp_path):
     led = Ledger(T, tmp_path / "l.jsonl", 1000)
-    for i, (c, e) in enumerate(list(T.edges)[:5]):
+    vis = [(c, e) for (c, e) in T.edges
+            if not is_latent(c) and not is_latent(e)]
+    for i, (c, e) in enumerate(vis[:5]):
         eid = led.record_experiment(1, f"a{i}", "intervene", [c], [e], 25)
         w = T.effect[(c, e)]
         p = led.submit_paper(1, f"a{i}", f"On {T.names[e]}", [{

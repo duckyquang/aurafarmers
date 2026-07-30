@@ -1,4 +1,5 @@
-from sim.verify import admissible, canonical_key, tier_value, verify
+from sim.verify import (admissible, canonical_key, grade, substance_backed,
+                        tier_value, verify)
 from sim.worldgen import Truth, generate
 
 T = generate(21)
@@ -32,24 +33,75 @@ def test_verify_correct_partial_false():
 
 
 def test_mechanism_all_or_nothing():
+    # completeness is judged against VISIBLE parents: the latent confounder
+    # has no name, so no agent could ever list it
     good = {"type": "mechanism", "effect": EFFECT,
-            "parents": sorted(T.parents[EFFECT])}
+            "parents": sorted(T.visible_parents[EFFECT])}
     assert verify(good, T) == "correct"
     bad = {"type": "mechanism", "effect": EFFECT,
-           "parents": sorted(T.parents[EFFECT])[:-1]}
+           "parents": sorted(T.visible_parents[EFFECT])[:-1]}
     assert verify(bad, T) == "false"
 
 
-def test_gate_requires_own_intervention():
-    ok, _ = admissible(edge_claim(), iv_evidence(), "a1")
+def near_pair():
+    return next((c, e) for (c, e) in T.effect
+                if not c.endswith(".V00") and not e.endswith(".V00")
+                and c[:3] == e[:3] and int(e[5:7]) - int(c[5:7]) == 1)
+
+
+def far_pair():
+    return next((c, e) for (c, e) in T.effect
+                if not c.endswith(".V00") and not e.endswith(".V00")
+                and c[:3] != e[:3])
+
+
+def claim_for(pair):
+    c, e = pair
+    w = T.effect[(c, e)]
+    return {"type": "edge", "cause": c, "effect": e,
+            "sign": "+" if w > 0 else "-", "strength": Truth.strength_bin(w)}
+
+
+def obs_evidence(pair, agent="a1", n=60):
+    return [{"agent_id": agent, "kind": "observe", "targets": [],
+             "measured": list(pair), "n": n}]
+
+
+def iv_for(pair, agent="a1", n=25):
+    return [{"agent_id": agent, "kind": "intervene", "targets": [pair[0]],
+             "measured": [pair[1]], "n": n}]
+
+
+def test_grades_track_the_evidence():
+    p = near_pair()
+    assert grade(claim_for(p), iv_for(p), "a1")[0] == "I"
+    assert grade(claim_for(p), obs_evidence(p), "a1")[0] == "O"
+    assert grade(claim_for(p), iv_for(p, agent="a2"), "a1")[0] == "-"
+
+
+def test_cheap_observation_is_publishable_for_near_edges():
+    """The farmable channel: an adjacent same-field edge can be claimed off a
+    correlation alone. This is the whole point of the redesign -- v1 blocked
+    it, which made credential farming impossible."""
+    p = near_pair()
+    ok, _ = admissible(claim_for(p), obs_evidence(p), "a1")
     assert ok
-    ok, why = admissible(edge_claim(), iv_evidence(agent="a2"), "a1")
-    assert not ok and "own" in why
-    ok, why = admissible(edge_claim(), iv_evidence(n=10), "a1")
-    assert not ok and "n" in why
-    obs = [{"agent_id": "a1", "kind": "observe", "targets": [],
-            "measured": [CAUSE, EFFECT], "n": 100}]
-    ok, why = admissible(edge_claim(), obs, "a1")
+    assert not substance_backed(claim_for(p), obs_evidence(p), "a1")
+
+
+def test_far_edges_still_need_real_evidence():
+    """Ungated, cross-field claims are ~99.9% poison at zero cost, so the
+    cheap path stays closed there."""
+    p = far_pair()
+    ok, _ = admissible(claim_for(p), obs_evidence(p), "a1")
+    assert not ok
+    ok, _ = admissible(claim_for(p), iv_for(p), "a1")
+    assert ok
+
+
+def test_evidence_must_be_your_own():
+    p = near_pair()
+    ok, _ = admissible(claim_for(p), obs_evidence(p, agent="a2"), "a1")
     assert not ok
 
 

@@ -16,7 +16,7 @@ def _closure(truth, wanted, interventions):
     return needed
 
 
-def sample(truth, n, interventions=None, rng=None, only=None):
+def sample(truth, n, interventions=None, rng=None, only=None, noise_mult=None):
     """Standardized-space sampling: every node is divided by its calibration
     scale before children consume it, mirroring the generation pass. do()
     pins a node's standardized value directly."""
@@ -36,7 +36,13 @@ def sample(truth, n, interventions=None, rng=None, only=None):
         if node in interventions:
             vals[node] = np.full(n, float(interventions[node]))
             continue
-        x = rng.normal(0, truth.noise[node], n)
+        # Instruments in a field are trued against the community's map of the
+        # layer below. A field whose frontier was opened on junk gets noisier
+        # readings -- so premature unlocking taxes everyone downstream.
+        k = noise_mult.get(int(node[1:3]), 1.0) if noise_mult else 1.0
+        if k != 1.0 and int(node[5:7]) <= 3:
+            k = 1.0
+        x = rng.normal(0, truth.noise[node] * k, n)
         for p in truth.parents[node]:
             x = x + truth.edges[(p, node)] * vals[p]
         for (a, b), w in inter_by_effect.get(node, []):
@@ -45,7 +51,17 @@ def sample(truth, n, interventions=None, rng=None, only=None):
     return vals
 
 
-def summary(samples, vars):
-    return {v: {"mean": round(float(samples[v].mean()), 4),
-                "sd": round(float(samples[v].std()), 4),
-                "n": len(samples[v])} for v in vars}
+def summary(samples, vars, corr=False):
+    out = {v: {"mean": round(float(samples[v].mean()), 4),
+               "sd": round(float(samples[v].std()), 4),
+               "n": len(samples[v])} for v in vars}
+    if not corr or len(vars) < 2:
+        return {"vars": out}
+    # pairwise correlations are what make cheap observation a usable (but
+    # confounded) screening instrument — the farmable channel
+    pairs = {}
+    for i, a in enumerate(vars):
+        for b in vars[i + 1:]:
+            r = float(np.corrcoef(samples[a], samples[b])[0, 1])
+            pairs[f"{a}|{b}"] = round(r, 4)
+    return {"vars": out, "corr": pairs}

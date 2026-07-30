@@ -98,7 +98,11 @@ class Memory:
 def _fmt_exp(e):
     tgt = ", ".join(f"{k}={v}" for k, v in e["targets"].items()) or "none"
     res = "; ".join(f"{m}: mean {r['mean']}, sd {r['sd']}"
-                    for m, r in e["result"].items())
+                    for m, r in e["result"]["vars"].items())
+    corr = e["result"].get("corr")
+    if corr:
+        res += " | correlations: " + "; ".join(
+            f"{k} r={v}" for k, v in list(corr.items())[:8])
     return (f"{e['exp_id']} {e['kind']} (targets: {tgt}, n={e['n']}) -> {res}")
 
 

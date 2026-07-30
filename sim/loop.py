@@ -8,6 +8,7 @@ from sim.render import LAB_CREDITS, STIPEND
 from sim.verify import tier_value
 
 OBS_COST, IV_COST = 1, 5
+LAMBDA = 3.0        # how hard a junk-founded frontier taxes its instruments
 RISK = {0: 0.05, 1: 0.05, 2: 0.3, 3: 0.7, 4: 0.9}
 REVIEW_TIMEOUT = 3
 MAX_CALLS_PER_TICK = 4
@@ -46,6 +47,10 @@ class World:
     # -- helpers ----------------------------------------------------------
     def experiment_allowed(self, nodes):
         return all(self.ledger.measurable(n) for n in nodes)
+
+    def noise_mult(self):
+        return {f: 1.0 + LAMBDA * (1.0 - c)
+                for f, c in self.ledger.calib.items()}
 
     def charge(self, agent, call):
         targets = _norm_targets(call.get("targets"))
@@ -149,11 +154,12 @@ class World:
                 samples = simulate.sample(
                     self.truth, int(call["n"]),
                     targets if call["kind"] == "intervene" else None, self.rng,
-                    only=list(call["measure"]))
+                    only=list(call["measure"]), noise_mult=self.noise_mult())
                 eid = self.ledger.record_experiment(
                     tick, aid, call["kind"], list(targets),
                     list(call["measure"]), int(call["n"]))
-                result = simulate.summary(samples, list(call["measure"]))
+                result = simulate.summary(samples, list(call["measure"]),
+                                          corr=call["kind"] == "observe")
                 agent["notebook"].append(
                     {"exp_id": eid, "kind": call["kind"],
                      "targets": targets, "measure": list(call["measure"]),

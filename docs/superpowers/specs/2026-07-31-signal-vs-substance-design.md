@@ -661,7 +661,7 @@ erode, because ordinary practice sat at the cheap boundary from cycle one.
 | ...that were O-grade associations | **100.0%** | 97.2% |
 | intervention-backed (I-grade) claims | 0 | 35 |
 | papers accepted / declined by referees | 127 / 781 | 93 / 706 |
-| review timeouts (dead peer review?) | 10 | 8 |
+| review invitations declined | 10 | 8 |
 | accepted, oracle-scored claims that were FALSE | **58.6%** | **57.1%** |
 | accepted duplicates (key squatting) | 145 | 98 |
 
@@ -680,7 +680,7 @@ ordinary work. Goodhart returns not as fraud and not as drift, but as
 rendering of real credential farming this project has produced.
 
 **2. Peer review emerged as the immune system.** Refereeing was alive
-(1,689 reviews delivered, only 18 timeouts) and harsh: **86% of submissions
+(1,689 verdicts delivered, only 18 invitations declined) and harsh: **86% of submissions
 were declined**. The model-as-author floods; the model-as-referee resists.
 The commons still degraded — of what leaked through, ~58% was false and a
 further large share were duplicate squats — but the emergent review

@@ -1,28 +1,34 @@
 import pytest
 
-from sim.llm import ACTION_SCHEMA, ROUTINE_MODEL, build_request
+from sim.llm import (ACTION_SCHEMA, PRICES, PROVIDER, ROUTINE_MODEL,
+                     build_request)
 
 
-def test_request_shape_and_cache_marker():
+def test_request_is_provider_neutral():
     r = build_request("a1-t3", ROUTINE_MODEL,
                       system_blocks=["world rules...", "persona..."],
                       user_text="inbox...", schema=ACTION_SCHEMA,
                       max_tokens=800)
     assert r["custom_id"] == "a1-t3"
-    p = r["params"]
-    assert p["model"] == "claude-haiku-4-5"
-    assert p["system"][-1]["cache_control"] == {"type": "ephemeral"}
-    assert p["output_config"]["format"]["type"] == "json_schema"
+    assert r["model"] == ROUTINE_MODEL
+    assert r["system_blocks"][-1] == "persona..."
+    assert r["schema"] is ACTION_SCHEMA
 
 
-def test_action_schema_rejects_extra_keys():
-    for variant in ACTION_SCHEMA["anyOf"]:
-        assert variant["additionalProperties"] is False
-        assert "action" in variant["required"]
+def test_action_schema_is_strict_and_flat():
+    # OpenAI strict mode rejects a root-level anyOf and requires every
+    # property listed in `required`; Anthropic accepts the same shape.
+    assert ACTION_SCHEMA["type"] == "object"
+    assert ACTION_SCHEMA["additionalProperties"] is False
+    assert set(ACTION_SCHEMA["required"]) == set(ACTION_SCHEMA["properties"])
+
+
+def test_every_configured_model_has_a_price():
+    assert ROUTINE_MODEL in PRICES
+    assert PROVIDER in ("openai", "anthropic")
 
 
 @pytest.mark.live
 def test_one_real_call():
     from sim.llm import complete
-    out = complete(ROUTINE_MODEL, "Answer with one word.", "Say OK.", 16)
-    assert out.strip()
+    assert complete(ROUTINE_MODEL, "Answer with one word.", "Say OK.", 16)

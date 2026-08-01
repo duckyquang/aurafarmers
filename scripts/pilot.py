@@ -70,11 +70,8 @@ def main():
         from sim import llm
         print(f"\ntokens: in={llm.IN_TOKENS} out={llm.OUT_TOKENS} "
               f"cache_read={llm.CACHE_READ_TOKENS}")
-        haiku = not args.heavy
-        rate_in, rate_out = (1, 5) if haiku else (3, 15)
-        est = (llm.IN_TOKENS * rate_in + llm.OUT_TOKENS * rate_out) / 1e6
-        print(f"approx cost if billed via API: ${est:.2f} "
-              f"(subscription auth: draws quota instead)")
+        print(f"cost: ${llm.spend():.4f}  "
+              f"({llm.PROVIDER}/{llm.ROUTINE_MODEL})")
 
     logs = {c: str(Path(args.out) / c / "log.jsonl") for c in "AB"}
     print(f"\nlogs: {json.dumps(logs)}")

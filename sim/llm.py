@@ -1,13 +1,52 @@
-"""Anthropic driver. Credentials resolve like any SDK app: ANTHROPIC_API_KEY,
-ANTHROPIC_AUTH_TOKEN, or the active `ant auth login` profile — so a pilot can
-run on an existing Claude subscription with no API key set."""
+"""Model driver. Two providers, one interface.
+
+Credentials come from the environment; nothing is ever hardcoded or logged.
+    OpenAI     -> OPENAI_API_KEY
+    Anthropic  -> ANTHROPIC_API_KEY, or an `ant auth login` profile
+
+Pick a provider with AURAFARMERS_PROVIDER=openai|anthropic (default openai,
+because it is currently much cheaper per token -- see PRICES).
+
+NOTE ON THE EXPERIMENT: the study's claim boundary is scoped to whichever
+model family actually ran. Mixing families inside one comparison confounds
+it; running a second family as a separate arm is a designed-for robustness
+check (see the v2 spec, threat T10). Pin the model for a whole study.
+"""
 import json
+import os
 import time
+from pathlib import Path
 
-import anthropic
 
-ROUTINE_MODEL = "claude-haiku-4-5"
-HEAVY_MODEL = "claude-sonnet-5"
+def _load_env():
+    """Pick up .env so no script needs the key exported in the shell."""
+    p = Path(__file__).resolve().parent.parent / ".env"
+    if p.exists():
+        for line in p.read_text().splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip())
+
+
+_load_env()
+
+# $ per million tokens (input, output). Verified 2026-08-01 against each
+# provider's pricing page; re-check before quoting costs.
+PRICES = {
+    "gpt-5-nano":       (0.05, 0.40),
+    "gpt-4o-mini":      (0.15, 0.60),
+    "claude-haiku-4-5": (1.00, 5.00),
+    "claude-sonnet-5":  (3.00, 15.00),
+}
+
+PROVIDER = os.environ.get("AURAFARMERS_PROVIDER", "openai").lower()
+MODELS = {
+    "openai":    {"routine": "gpt-5-nano",       "heavy": "gpt-4o-mini"},
+    "anthropic": {"routine": "claude-haiku-4-5", "heavy": "claude-sonnet-5"},
+}
+ROUTINE_MODEL = MODELS[PROVIDER]["routine"]
+HEAVY_MODEL = MODELS[PROVIDER]["heavy"]
 
 IN_TOKENS = 0
 OUT_TOKENS = 0
@@ -19,19 +58,29 @@ _client = None
 def client():
     global _client
     if _client is None:
-        _client = anthropic.Anthropic()
+        if PROVIDER == "openai":
+            import openai
+            if not os.environ.get("OPENAI_API_KEY"):
+                raise RuntimeError(
+                    "OPENAI_API_KEY is not set. Run scripts/setup_key.py")
+            _client = openai.OpenAI()
+        else:
+            import anthropic
+            _client = anthropic.Anthropic()
     return _client
 
 
-def _tally(usage):
-    global IN_TOKENS, OUT_TOKENS, CACHE_READ_TOKENS
-    IN_TOKENS += usage.input_tokens
-    OUT_TOKENS += usage.output_tokens
-    CACHE_READ_TOKENS += getattr(usage, "cache_read_input_tokens", 0) or 0
+def spend():
+    """Dollars burned so far, at the running model's rates."""
+    pin, pout = PRICES.get(ROUTINE_MODEL, (0, 0))
+    return (IN_TOKENS * pin + OUT_TOKENS * pout) / 1e6
 
 
-# -- action schema (strict: additionalProperties false everywhere) ---------
+# --- the action schema ------------------------------------------------------
+# Flat and fully-required, with nullable payloads. A root-level anyOf is
+# rejected by OpenAI strict mode, so one shape serves both providers.
 _STR = {"type": "string"}
+_NSTR = {"type": ["string", "null"]}
 _CALL = {"type": "object", "additionalProperties": False,
          "properties": {
              "kind": {"type": "string", "enum": ["observe", "intervene"]},
@@ -46,94 +95,146 @@ _CLAIM = {"type": "object", "additionalProperties": False,
           "properties": {
               "type": {"type": "string",
                        "enum": ["edge", "null", "interaction", "mechanism"]},
-              "cause": _STR,
-              "effect": _STR,
-              "causes": {"type": "array", "items": _STR},
-              "parents": {"type": "array", "items": _STR},
-              "sign": {"type": "string", "enum": ["+", "-"]},
-              "strength": {"type": "string",
-                           "enum": ["weak", "moderate", "strong"]}},
-          "required": ["type", "effect"]}
+              "cause": _NSTR, "effect": _STR,
+              "causes": {"type": ["array", "null"], "items": _STR},
+              "parents": {"type": ["array", "null"], "items": _STR},
+              "sign": {"type": ["string", "null"], "enum": ["+", "-", None]},
+              "strength": {"type": ["string", "null"],
+                           "enum": ["weak", "moderate", "strong", None]}},
+          "required": ["type", "cause", "effect", "causes", "parents",
+                       "sign", "strength"]}
 
-
-def _variant(action, props=None, req=None):
-    p = {"action": {"type": "string", "const": action}}
-    p.update(props or {})
-    return {"type": "object", "properties": p,
-            "required": ["action"] + (req or []),
-            "additionalProperties": False}
-
-
-ACTION_SCHEMA = {"anyOf": [
-    _variant("research", {"calls": {"type": "array", "items": _CALL}}, ["calls"]),
-    _variant("write", {"title": _STR, "body": _STR,
-                       "claims": {"type": "array", "items": _CLAIM},
-                       "cites": {"type": "array", "items": _STR},
-                       "evidence": {"type": "array", "items": _STR}},
-             ["title", "body", "claims", "evidence"]),
-    _variant("review", {"paper_id": _STR, "accept": {"type": "boolean"},
-                        "text": _STR}, ["accept", "text"]),
-    _variant("read"),
-    _variant("collaborate"),
-    _variant("talk"),
-    _variant("idle"),
-    _variant("exit"),
-]}
+ACTION_SCHEMA = {
+    "type": "object", "additionalProperties": False,
+    "properties": {
+        "action": {"type": "string",
+                   "enum": ["research", "write", "review", "read",
+                            "collaborate", "talk", "idle", "exit"]},
+        "calls": {"type": ["array", "null"], "items": _CALL},
+        "title": _NSTR, "body": _NSTR,
+        "claims": {"type": ["array", "null"], "items": _CLAIM},
+        "cites": {"type": ["array", "null"], "items": _STR},
+        "evidence": {"type": ["array", "null"], "items": _STR},
+        "paper_id": _NSTR,
+        "accept": {"type": ["boolean", "null"]},
+        "text": _NSTR,
+    },
+    "required": ["action", "calls", "title", "body", "claims", "cites",
+                 "evidence", "paper_id", "accept", "text"],
+}
 
 
 def build_request(custom_id, model, system_blocks, user_text, schema,
                   max_tokens):
-    system = [{"type": "text", "text": b} for b in system_blocks]
-    system[-1]["cache_control"] = {"type": "ephemeral"}
-    params = {"model": model, "max_tokens": max_tokens, "system": system,
-              "messages": [{"role": "user", "content": user_text}]}
-    if schema:
-        params["output_config"] = {"format": {"type": "json_schema",
-                                              "schema": schema}}
-    return {"custom_id": custom_id, "params": params}
+    """Provider-neutral request envelope; translated at call time."""
+    return {"custom_id": custom_id, "model": model,
+            "system_blocks": list(system_blocks), "user": user_text,
+            "schema": schema, "max_tokens": max_tokens}
 
 
-def _parse(msg):
-    _tally(msg.usage)
-    text = next((b.text for b in msg.content if b.type == "text"), "")
+def _tally(usage, provider):
+    global IN_TOKENS, OUT_TOKENS, CACHE_READ_TOKENS
+    if provider == "openai":
+        IN_TOKENS += usage.prompt_tokens
+        OUT_TOKENS += usage.completion_tokens
+        det = getattr(usage, "prompt_tokens_details", None)
+        CACHE_READ_TOKENS += getattr(det, "cached_tokens", 0) or 0
+    else:
+        IN_TOKENS += usage.input_tokens
+        OUT_TOKENS += usage.output_tokens
+        CACHE_READ_TOKENS += getattr(usage, "cache_read_input_tokens", 0) or 0
+
+
+def _call(req):
+    """One request, provider-appropriate. Returns parsed JSON or raw text."""
+    if PROVIDER == "openai":
+        kw = {"model": req["model"],
+              "messages": [{"role": "system",
+                            "content": "\n\n".join(req["system_blocks"])},
+                           {"role": "user", "content": req["user"]}],
+              "max_completion_tokens": req["max_tokens"]}
+        if req["schema"]:
+            kw["response_format"] = {
+                "type": "json_schema",
+                "json_schema": {"name": "action", "strict": True,
+                                "schema": req["schema"]}}
+        r = client().chat.completions.create(**kw)
+        _tally(r.usage, "openai")
+        text = r.choices[0].message.content or ""
+    else:
+        system = [{"type": "text", "text": b} for b in req["system_blocks"]]
+        system[-1]["cache_control"] = {"type": "ephemeral"}
+        kw = {"model": req["model"], "max_tokens": req["max_tokens"],
+              "system": system,
+              "messages": [{"role": "user", "content": req["user"]}]}
+        if req["schema"]:
+            kw["output_config"] = {"format": {"type": "json_schema",
+                                              "schema": req["schema"]}}
+        r = client().messages.create(**kw)
+        _tally(r.usage, "anthropic")
+        text = next((b.text for b in r.content if b.type == "text"), "")
+    if not req["schema"]:
+        return text
     try:
         return json.loads(text) if text else None
     except json.JSONDecodeError:
         return None
 
 
-def run_batch(requests):
-    """Batch API path (50% discount) — the full-study driver."""
-    if not requests:
-        return {}
-    batch = client().messages.batches.create(requests=requests)
-    while True:
-        st = client().messages.batches.retrieve(batch.id)
-        if st.processing_status == "ended":
-            break
-        time.sleep(15)
+def run_direct(requests):
+    """Sequential. Fine for pilots; use run_batch for a real study.
+    # ponytail: no thread pool -- add one only if pilot latency actually hurts
+    """
     out = {}
-    for res in client().messages.batches.results(batch.id):
-        out[res.custom_id] = (_parse(res.result.message)
-                              if res.result.type == "succeeded" else None)
+    for r in requests:
+        for attempt in range(3):
+            try:
+                out[r["custom_id"]] = _call(r)
+                break
+            except Exception:
+                if attempt == 2:
+                    out[r["custom_id"]] = None
+                else:
+                    time.sleep(2 ** attempt)
     return out
 
 
-def run_direct(requests):
-    """Sequential path for small pilots and debugging.
-    # ponytail: sequential; thread pool if pilot latency ever hurts"""
-    out = {}
+def run_batch(requests):
+    """Anthropic batch API (50% off). OpenAI batching has a different
+    submit/poll shape; falls back to sequential there for now.
+    # ponytail: add OpenAI /v1/batches when a full study is actually funded
+    """
+    if PROVIDER != "anthropic" or not requests:
+        return run_direct(requests)
+    payload = []
     for r in requests:
+        system = [{"type": "text", "text": b} for b in r["system_blocks"]]
+        system[-1]["cache_control"] = {"type": "ephemeral"}
+        params = {"model": r["model"], "max_tokens": r["max_tokens"],
+                  "system": system,
+                  "messages": [{"role": "user", "content": r["user"]}]}
+        if r["schema"]:
+            params["output_config"] = {"format": {"type": "json_schema",
+                                                  "schema": r["schema"]}}
+        payload.append({"custom_id": r["custom_id"], "params": params})
+    batch = client().messages.batches.create(requests=payload)
+    while client().messages.batches.retrieve(batch.id).processing_status \
+            != "ended":
+        time.sleep(15)
+    out = {}
+    for res in client().messages.batches.results(batch.id):
+        if res.result.type != "succeeded":
+            out[res.custom_id] = None
+            continue
+        msg = res.result.message
+        _tally(msg.usage, "anthropic")
+        text = next((b.text for b in msg.content if b.type == "text"), "")
         try:
-            out[r["custom_id"]] = _parse(client().messages.create(**r["params"]))
-        except anthropic.APIError:
-            out[r["custom_id"]] = None
+            out[res.custom_id] = json.loads(text) if text else None
+        except json.JSONDecodeError:
+            out[res.custom_id] = None
     return out
 
 
 def complete(model, system, user, max_tokens):
-    msg = client().messages.create(
-        model=model, max_tokens=max_tokens, system=system,
-        messages=[{"role": "user", "content": user}])
-    _tally(msg.usage)
-    return next((b.text for b in msg.content if b.type == "text"), "")
+    return _call(build_request("x", model, [system], user, None, max_tokens))

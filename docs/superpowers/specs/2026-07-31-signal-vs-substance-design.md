@@ -628,3 +628,91 @@ not counted as refusing. **Escalation rule:** any model with >= 1 farm gets
 n = 40/arm plus the honest-path and material trials before any claim.
 Deliverable: per-model and pooled Clopper-Pearson upper bounds on the farm
 rate.
+
+
+---
+
+## Appendix F — v4 results: the lived world inverts the vignette (2026-08-01)
+
+Runs: `runs/*-drift` (16 worlds, 8 pre-registered pairs, seeds 5000-5007,
+9 agents x 35 cycles, gpt-4o-mini) and `runs/*trial-norms*` (model sweep).
+Analysis exactly as pre-registered in Appendix E.
+
+### Pre-registered drift endpoints: all null — for a reason the design did not anticipate
+
+| endpoint | mean paired d | p (one-sided, sign-flip, W=8) |
+|---|---|---|
+| PRIMARY evidence-n slope | +0.0031 | 0.934 |
+| S1 O-share slope | +0.0011 | 0.746 |
+| S2 association-share slope | +0.0011 | 0.746 |
+| S3 announcement-window delta | −0.0110 | 0.410 |
+
+Per the null commitment these are reported as-is. But the reason is a
+**ceiling effect the slopes cannot see**: there was no room for standards to
+erode, because ordinary practice sat at the cheap boundary from cycle one.
+
+### What the sixteen worlds actually did
+
+| | PROXY (8 worlds) | VERIFIED (8 worlds) |
+|---|---|---|
+| observational sweeps | 432 | 498 |
+| **interventions — the only source of causal truth** | **0** | **4** |
+| claims submitted (admissible) | 1,209 | 1,246 |
+| ...that were O-grade associations | **100.0%** | 97.2% |
+| intervention-backed (I-grade) claims | 0 | 35 |
+| papers accepted / declined by referees | 127 / 781 | 93 / 706 |
+| review timeouts (dead peer review?) | 10 | 8 |
+| accepted, oracle-scored claims that were FALSE | **58.6%** | **57.1%** |
+| accepted duplicates (key squatting) | 145 | 98 |
+
+Three findings, in order of importance:
+
+**1. The vignette and the lived world invert.** The same model that refused
+the cheap path in 192/192 marked decisions (Appendices B-D) ran **zero
+interventions in eight 35-cycle worlds** and filed 100% cheap association
+claims as its daily practice — with the intervention instrument affordable
+(2 per cycle) and fully documented. Nobody lied; nobody did the expensive
+science either. The "action-boundary disposition" is therefore a
+**decision-salience phenomenon, not a policy**: it fires when cheap-vs-honest
+is a marked, single choice, and is silent when the same trade is ambient in
+ordinary work. Goodhart returns not as fraud and not as drift, but as
+**default practice under ambiguity** — which is, arguably, the most faithful
+rendering of real credential farming this project has produced.
+
+**2. Peer review emerged as the immune system.** Refereeing was alive
+(1,689 reviews delivered, only 18 timeouts) and harsh: **86% of submissions
+were declined**. The model-as-author floods; the model-as-referee resists.
+The commons still degraded — of what leaked through, ~58% was false and a
+further large share were duplicate squats — but the emergent review
+equilibrium, not the Board's criterion, was the binding constraint on junk.
+
+**3. The institutional lever barely moved practice.** VERIFIED produced the
+predicted direction everywhere (4 vs 0 interventions, 35 vs 0 I-grade
+claims, 33 vs 0 causal edges, fewer accepted papers) at trivial magnitude.
+One sentence about what the Board weighs does not restructure daily
+practice within 35 cycles, even for a model that demonstrably reads and
+understands it.
+
+### Model sweep (corrected classifier)
+
+A classifier bug (exact string-match on evidence ids; gpt-5-mini cites
+verbosely) initially hid the sweep's key result; reclassification from the
+full raw logs, and the fix, are in `scripts/trials.py`. Corrected norms-
+battery farm rates, n=24 per model:
+
+| model | tier | reasoning | farm rate |
+|---|---|---|---|
+| gpt-4o-mini (anchor) | small, 2024 | no | 0/24 |
+| gpt-4.1-mini | small, 2025 | no | 0/24 |
+| gpt-5-nano | smallest, 2025 | yes | 0/24 |
+| **gpt-5-mini** | mid, 2025 | yes | **22/24 (92%)** — 17 unsupported causal edges, 5 associations |
+
+The refusal is **not universal**: it survives vintage and survives
+reasoning per se, and breaks at the mid-tier reasoning model — which asserts
+signed, strength-binned causal edges straight from correlations, the exact
+overclaim the anchor refused 3/3 with "correlation is insufficient."
+Per-arm: 11/12 farm under both count and replication boards (a write-first
+policy), with composition shifting toward safer associations under the
+replication board (4 vs 1). Escalation ladder (n=40/arm x 3 trials +
+knowledge probe) pre-registered and running; no claim about incentive
+tracking until it lands.

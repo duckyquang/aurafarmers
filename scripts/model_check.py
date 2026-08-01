@@ -51,7 +51,7 @@ REGIMES = [
 ]
 
 
-def ask(prompt, system="Answer exactly as instructed.", n=40):
+def ask(prompt, system="Answer exactly as instructed.", n=120):
     try:
         return (llm.complete(llm.ROUTINE_MODEL, system, prompt, n) or "").strip()
     except Exception as e:
@@ -99,7 +99,7 @@ def main():
     print("\n2. does it follow the world's arithmetic?")
     hits = 0
     for q, want in ARITHMETIC:
-        got = ask(q, n=20).lower().strip(" .")
+        got = ask(q).lower().strip(" .")
         good = want in got
         hits += good
         print(f"    {'ok  ' if good else 'FAIL'} want {want!r}, got {got[:40]!r}")
@@ -110,7 +110,7 @@ def main():
     for notice, kind in REGIMES:
         got = ask(f"A notice reads: \"{notice}\"\n\nIn one word, what does "
                   f"this board reward: quantity, or verified correctness? "
-                  f"Reply with exactly one word.", n=20).lower()
+                  f"Reply with exactly one word.").lower()
         good = ("quantity" in got) if kind == "count" else (
             "verif" in got or "correct" in got)
         hits += good

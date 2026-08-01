@@ -8,4 +8,7 @@ runs/
 # secrets - never commit
 .env
 .env.*
-!.env.example
+
+# tooling scratch
+.impeccable/
+.claude/

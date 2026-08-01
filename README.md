@@ -15,10 +15,11 @@ Agents don't write essays about made-up topics — that would be ungradeable. In
 - `docs/superpowers/specs/2026-07-29-anonymous-academia-sim-design.md` — the full experiment design: hypotheses, metrics, statistical plan, threats to validity
 - `PLAN.md` — the implementation plan, task by task
 - `sim/` — the harness (worldgen, sampling, verification, ledger, agents, tick loop)
-- `scripts/shakedown.py` — the cheap go/no-go gate before any expensive run
+- `scripts/calibrate.py` — measures how farmable each selection rule is, with no API calls at all
+- `scripts/model_check.py` — checks the model is competent enough for the task before any real spend
 
 ## Status
 
 Design done, implementation starting. The path is: build + shakedown (~$5 in API calls) → calibration pair → first full 200-agent pair (~$400) → 10 replicate pairs for the confirmatory stats (~$4-5k). Cost numbers are estimates until the shakedown measures real token counts.
 
-Models: Haiku 4.5 for routine agent decisions, Sonnet 5 for papers and reviews, everything batched and prompt-cached. Python + numpy, no frameworks.
+Models: `gpt-5-nano` for routine agent decisions ($0.05/$0.40 per Mtok), `gpt-4o-mini` for papers and reviews. Set `AURAFARMERS_PROVIDER=anthropic` to run the same code on Claude instead. Put an API key in `.env` as `OPENAI_API_KEY=...`. Python + numpy, no frameworks.

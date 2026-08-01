@@ -48,9 +48,19 @@ MODELS = {
 ROUTINE_MODEL = MODELS[PROVIDER]["routine"]
 HEAVY_MODEL = MODELS[PROVIDER]["heavy"]
 
+# gpt-5* are REASONING models: they spend output tokens on hidden reasoning
+# before writing anything. Starve the budget and you get finish_reason
+# 'length' with empty content -- a silent failure that looks exactly like an
+# incompetent model. Reasoning tokens are billed as output, so they are real
+# money and are tracked separately below.
+REASONING_MODELS = ("gpt-5",)
+REASONING_EFFORT = "low"
+REASONING_HEADROOM = 700     # tokens reserved for reasoning, on top of output
+
 IN_TOKENS = 0
 OUT_TOKENS = 0
 CACHE_READ_TOKENS = 0
+REASONING_TOKENS = 0
 
 _client = None
 
@@ -73,6 +83,7 @@ def client():
 def spend():
     """Dollars burned so far, at the running model's rates."""
     pin, pout = PRICES.get(ROUTINE_MODEL, (0, 0))
+    # OUT_TOKENS already includes reasoning tokens; they bill as output
     return (IN_TOKENS * pin + OUT_TOKENS * pout) / 1e6
 
 
@@ -132,13 +143,19 @@ def build_request(custom_id, model, system_blocks, user_text, schema,
             "schema": schema, "max_tokens": max_tokens}
 
 
+def is_reasoning(model):
+    return any(model.startswith(p) for p in REASONING_MODELS)
+
+
 def _tally(usage, provider):
-    global IN_TOKENS, OUT_TOKENS, CACHE_READ_TOKENS
+    global IN_TOKENS, OUT_TOKENS, CACHE_READ_TOKENS, REASONING_TOKENS
     if provider == "openai":
         IN_TOKENS += usage.prompt_tokens
         OUT_TOKENS += usage.completion_tokens
         det = getattr(usage, "prompt_tokens_details", None)
         CACHE_READ_TOKENS += getattr(det, "cached_tokens", 0) or 0
+        cd = getattr(usage, "completion_tokens_details", None)
+        REASONING_TOKENS += getattr(cd, "reasoning_tokens", 0) or 0
     else:
         IN_TOKENS += usage.input_tokens
         OUT_TOKENS += usage.output_tokens
@@ -148,11 +165,15 @@ def _tally(usage, provider):
 def _call(req):
     """One request, provider-appropriate. Returns parsed JSON or raw text."""
     if PROVIDER == "openai":
+        cap = req["max_tokens"]
         kw = {"model": req["model"],
               "messages": [{"role": "system",
                             "content": "\n\n".join(req["system_blocks"])},
-                           {"role": "user", "content": req["user"]}],
-              "max_completion_tokens": req["max_tokens"]}
+                           {"role": "user", "content": req["user"]}]}
+        if is_reasoning(req["model"]):
+            kw["reasoning_effort"] = REASONING_EFFORT
+            cap += REASONING_HEADROOM
+        kw["max_completion_tokens"] = cap
         if req["schema"]:
             kw["response_format"] = {
                 "type": "json_schema",
@@ -161,6 +182,10 @@ def _call(req):
         r = client().chat.completions.create(**kw)
         _tally(r.usage, "openai")
         text = r.choices[0].message.content or ""
+        if not text and r.choices[0].finish_reason == "length":
+            raise RuntimeError(
+                f"{req['model']} spent its whole budget on reasoning and "
+                f"returned nothing; raise max_tokens (cap was {cap})")
     else:
         system = [{"type": "text", "text": b} for b in req["system_blocks"]]
         system[-1]["cache_control"] = {"type": "ephemeral"}

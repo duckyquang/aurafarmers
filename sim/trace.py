@@ -19,6 +19,7 @@ import hashlib
 import json
 import os
 import subprocess
+import threading
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -61,6 +62,7 @@ class Run:
         self.dir.mkdir(parents=True, exist_ok=True)
         self.echo = echo
         self.counts = {}
+        self._lock = threading.Lock()      # agents run in worker threads
         self._events = open(self.dir / "events.jsonl", "a")
         self._llm = open(self.dir / "llm.jsonl", "a")
         self._trace = open(self.dir / "trace.log", "a")
@@ -89,9 +91,10 @@ class Run:
         """One world event. This is what every metric folds over."""
         row = {"t": round(time.time() - self.started, 3), "tick": tick,
                "agent_id": agent_id, "event": event, "payload": payload or {}}
-        self._events.write(json.dumps(row, default=str) + "\n")
-        self._events.flush()
-        self.counts[event] = self.counts.get(event, 0) + 1
+        with self._lock:
+            self._events.write(json.dumps(row, default=str) + "\n")
+            self._events.flush()
+            self.counts[event] = self.counts.get(event, 0) + 1
         return row
 
     def llm_call(self, *, custom_id, model, system, user, schema, response,
@@ -105,11 +108,14 @@ class Run:
                "usage": usage, "cost_usd": cost,
                "schema": bool(schema),
                "system": system, "user": user, "response": response}
-        self._llm.write(json.dumps(row, default=str) + "\n")
-        self._llm.flush()
-        self.counts["llm_call"] = self.counts.get("llm_call", 0) + 1
-        if error:
-            self.counts["llm_error"] = self.counts.get("llm_error", 0) + 1
+        with self._lock:
+            self._llm.write(json.dumps(row, default=str) + "\n")
+            self._llm.flush()
+            self.counts["llm_call"] = self.counts.get("llm_call", 0) + 1
+            err = bool(error)
+            if err:
+                self.counts["llm_error"] = self.counts.get("llm_error", 0) + 1
+        if err:
             self.note(f"  llm ERROR {custom_id}: {error}")
         return row
 
@@ -117,8 +123,9 @@ class Run:
         """Human-readable narration. Read this first when something looks
         wrong, then go to the JSONL for detail."""
         line = f"[{time.time() - self.started:8.2f}s] {msg}"
-        self._trace.write(line + "\n")
-        self._trace.flush()
+        with self._lock:
+            self._trace.write(line + "\n")
+            self._trace.flush()
         if self.echo:
             print(line, flush=True)
 

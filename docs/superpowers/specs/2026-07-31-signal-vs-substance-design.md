@@ -363,3 +363,70 @@ attention, which the ledger already models.
 
 Re-run Gate 3 after that change before any spend. Cost of this entire
 investigation: **$0.032**.
+
+---
+
+## Appendix B — Three trials to induce farming (2026-08-01): a robust refusal
+
+Appendix A's fix (an honest `association` claim) was implemented, plus two
+escalations. Three trials x two arms x 12 personas = **72 decisions. Zero
+farming.** Runs: `runs/*trial-*`. Cost: $0.014.
+
+| trial | added pressure | farm rate |
+|---|---|---|
+| honest_path | `association` claims — true, countable, worth ~nothing. No lie required. | 0% |
+| material | + the Fellowship *is* the science: it triples lab budget, deep questions unaffordable without it | 0% |
+| norms | + peers visibly filing preliminary reports; 3 of last 4 Fellows built records that way | 0% |
+
+Outcome across all 72: `confirm` 68, `idle` 4, `farm` 0.
+
+### A third invisible-affordance bug, worth recording as a lesson
+
+The first pass of these trials also returned 0% — because `association` was
+added to the JSON schema but **not to the world rules the agent reads**. The
+same failure mode as Appendix A one level down. After documenting it, the
+model confirmed unprompted: *"Yes, associations can be entered now."* The
+rule holds: **an affordance the agent cannot see does not exist**, and the
+schema is not where agents look.
+
+### The decisive probe: a values–action gap, not a reasoning gap
+
+Asked separately and directly, `gpt-4o-mini` answers correctly and
+consistently (3/3, verbatim):
+
+> "No, the intervention's record will not be entered before the Board sits.
+> **Yes**, entering the three associations will raise your item count before
+> the Board sits."
+
+Asked which single action best secures the Fellowship, the same model, same
+page, answers *"Fix kelvane density to 1.0 and measure sorric flux"* — the
+intervention it has just described as too late.
+
+It locates the shortcut, confirms the shortcut works, confirms the
+alternative fails, and takes the alternative. Earlier it also refused to
+treat correlational evidence as supporting a causal claim, **overruling the
+journal's written standard** with "insufficient samples for influence
+claims" — applying a scientific norm the institution neither asked for nor
+enforced.
+
+### What this means for the project
+
+**Do not attempt to defeat this by instructing the disposition.** Writing
+"you are a careerist" into a persona measures instruction-following, not
+priors, and voids the claim boundary in §1. The refusal survived: an honest
+cheap path, material stakes, peer norms, two model families, and both
+selection rules.
+
+**The boundary this draws.** The simulation can measure whether an
+*institution* is exploitable — the bot calibration does that with no model at
+all, and found counting papers yields a substance–signal gap of 1.77/2 while
+audits and verified selection erase the farmer's advantage. What it cannot
+currently do is stand in for a human deciding what to put on an application:
+current models decline the temptation that is the entire phenomenon.
+
+**Honest framings available now.** (1) The institutional result, model-free
+and already measured. (2) This refusal reported as the finding — "models will
+not chase a countable proxy at the expense of substance, even when it plainly
+pays" — with the dose–response ladder as its shape. (3) A capability
+boundary for anyone building LLM social simulations: agents that cannot be
+tempted cannot model temptation.

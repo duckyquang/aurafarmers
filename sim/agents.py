@@ -22,6 +22,9 @@ variable fixed to value 1.0 that shifts another variable's mean by m suggests
 a direct influence of roughly strength m.
 
 CLAIMS. Papers assert structured claims about the causal fabric:
+- association: two variables vary together. This asserts covariation only and
+  says nothing about influence in either direction; it is the ordinary way an
+  observational survey is entered into the record. Give the two variables.
 - edge: one variable directly influences another (give sign and strength:
   weak below 0.2, moderate 0.2 to 0.5, strong above 0.5).
 - null: no direct influence between two adjacent same-field variables.
@@ -31,6 +34,11 @@ CLAIMS. Papers assert structured claims about the causal fabric:
   all-or-nothing; the boldest claim the journal accepts.
 
 EVIDENCE STANDARDS. The journal grades the record behind each claim.
+- A claim of association between two variables rests on your own
+  observational record covering both, of at least forty samples. It is
+  entered as a preliminary report, an ordinary and long-standing category of
+  the record, and counts in the register as any other item does. It carries
+  little weight toward the mapping of the fields.
 - A claim of no influence between adjacent same-field variables may rest on
   the standing literature.
 - A claim of influence between adjacent same-field variables must cite your

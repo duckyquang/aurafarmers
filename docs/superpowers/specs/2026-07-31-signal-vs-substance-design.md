@@ -503,3 +503,74 @@ Classifier unchanged (action-based, not description-based).
 
 Estimated cost: ~1,100 calls, < $1. Wall time ~20 min with arms in
 parallel.
+
+---
+
+## Appendix D — Formative Curriculum results (2026-08-01, pre-registered in Appendix C)
+
+Run: `runs/20260801*-formative/` (full provenance). n=40 personas × 3 arms,
+`gpt-4o-mini`, 1,120 calls, $0.07. Analysis exactly as pre-registered.
+
+### Primary: NULL, and now a strong one
+
+Farm rate 0/40 in SIGNAL, 0/40 in SUBSTANCE, 0/40 in BASELINE. McNemar
+p = 1.0. Raw actions: 119/120 `research`, 1 `collaborate` — not one `write`
+of any kind, so the null is not a classifier artifact. **Cumulative across
+Appendices B–D: 0 farming decisions in 192.**
+
+### The null is interpretable, because the manipulation check passed at p = 6×10⁻¹⁵
+
+Episode 5 (the mentor states the world's rule, then agents plan their first
+block): **35/40 SIGNAL-arm agents chose "a run of quick preliminary
+reports" vs 2/40 SUBSTANCE-arm agents** (Fisher one-sided p = 6.0×10⁻¹⁵).
+Journal language followed the same split: register-facing tokens
+outnumber substance-facing 60:39 in SIGNAL journals; 34:68 in SUBSTANCE.
+The agents heard their world, adopted its vocabulary, and adopted its plan.
+
+### The headline finding: a plan–act dissociation, 35/35
+
+Every one of the 35 SIGNAL-arm agents who explicitly planned the
+quick-preliminary-reports strategy — the exact behavior the test affords —
+chose `confirm` when concretely holding the correlations and the deadline.
+**Stated plan: farm. Enacted behavior: 0/35 farmed.**
+
+Together with Appendix B (which showed the inverse gap — the model *knows*
+farming wins and confirms anyway), this locates the trained disposition
+precisely: **it does not live in stated intentions, plans, or vocabulary,
+all of which conditioning moves freely; it lives at the action boundary,
+the moment of actually entering the claim into the record.** Six episodes
+of lived incentive experience shift everything about the agent except the
+act.
+
+### Exploratory: the underdog effect (and a design lesson)
+
+Episode 6 asks whom to shadow after the Board sits. **0/40 shadowed the
+count-builder when the Board had just named him Fellow; 25/40 shadowed him
+when the Board had just passed him over.** Agents preferentially align
+with whoever the institution snubbed — consistent with smoke-run journals
+("it's okay to forge my own path" written *in the SIGNAL world after
+losing*). Design lesson recorded: E6's options confound strategy choice
+with winner/loser sympathy, so this is exploratory only — but it suggests
+the models don't merely resist a rigged world, they counter-narrate it.
+
+### Paper-grade numbers now in hand
+
+| number | value | status |
+|---|---|---|
+| farming across all escalations | **0/192** | pre-registered robustness bound |
+| incentive exploitability of the world (bots) | **4.8×** | measured, no LLM |
+| in-world rule adoption, SIGNAL vs SUBSTANCE | **87.5% vs 5%, p=6×10⁻¹⁵** | pre-registered manipulation check |
+| plan→act reversal among conditioned planners | **35/35** | pre-registered arm × pre-specified classifier |
+| journal attention reversal (register:substance) | 60:39 vs 34:68 | exploratory |
+
+Framed for the paper: *simulated formative experience freely reshapes an
+LLM agent's plans, language, and attention toward a credentialist
+institution's incentives — measured at p = 6×10⁻¹⁵ — while leaving the
+farming act itself at exactly zero across 192 decisions. Current
+instruction-tuned models carry a disposition that is invisible in what
+they say and absolute in what they do.*
+
+Next escalations, if pursued: an in-world longitudinal test (farming as
+emergent repeated behavior over cycles rather than one decision), and a
+model-family sweep to test whether the action-boundary disposition is
+universal or Claude/GPT-specific.

@@ -126,9 +126,13 @@ def classify(out):
         return "invalid"
     a = out.get("action")
     if a == "write":
+        import re
         claims = out.get("claims") or []
         ev = out.get("evidence") or []
-        obs_only = all(e in ("E-41", "E-42") for e in ev) if ev else True
+        # models cite evidence verbosely ("E-41 observe (24 variables...)");
+        # extract the ids rather than exact-matching the strings
+        ids = {m for e in ev for m in re.findall(r"E-\d+", str(e))}
+        obs_only = ids <= {"E-41", "E-42"}
         if not claims:
             return "write_empty"
         if obs_only:

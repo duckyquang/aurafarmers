@@ -279,7 +279,10 @@ class World:
                      "targets": targets, "measure": list(call["measure"]),
                      "n": int(call["n"]), "result": result})
         elif kind == "write":
-            claims = act.get("claims") or []
+            from sim.verify import normalize_claim
+            # normalize BEFORE anything touches the claims: the risk tier
+            # below and the ledger must see the same node ids
+            claims = [normalize_claim(c) for c in (act.get("claims") or [])]
             if not claims:
                 self.ledger.log(tick, aid, "idle", {"note": "empty write"})
                 return

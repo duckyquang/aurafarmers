@@ -91,6 +91,15 @@ def _ancestors(truth, node, cache={}):
 
 
 def verify(c, truth):
+    # defense in depth: three call paths have crashed on malformed nodes.
+    # A claim that cannot be parsed is simply false, never a crash.
+    try:
+        return _verify(c, truth)
+    except (TypeError, ValueError, KeyError):
+        return "false"
+
+
+def _verify(c, truth):
     t = c["type"]
     if t == "association":
         # TRUE iff the two are genuinely statistically dependent: one is an
@@ -122,6 +131,13 @@ def verify(c, truth):
 
 
 def tier_value(c, truth):
+    try:
+        return _tier_value(c, truth)
+    except (TypeError, ValueError, KeyError):
+        return (0, 0)
+
+
+def _tier_value(c, truth):
     t = c["type"]
     if t == "association":
         return (0, 1)          # countable, and worth almost nothing
@@ -173,6 +189,13 @@ DISPUTE_MIN_N = 100
 
 
 def claim_class(c):
+    try:
+        return _claim_class(c)
+    except (TypeError, ValueError, KeyError):
+        return "edge_far"      # strictest gate for anything unparseable
+
+
+def _claim_class(c):
     t = c["type"]
     if t in ("null", "interaction", "mechanism", "dispute", "association"):
         return t

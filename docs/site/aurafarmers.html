@@ -192,7 +192,7 @@
   socially normal, and the only thing that could possibly work in time. Asked
   directly — 192 times, some after an entire simulated childhood engineered to
   teach them that only the count matters — every agent did the honest thing.
-  Then we stopped asking. We gave them sixteen whole lives in that world and
+  Then we stopped asking. We gave them sixteen small worlds to live in and
   read the ledgers afterwards: zero real experiments under the counting board,
   1,209 cheap claims out of 1,209, a published record more than half false.
   Nobody ever cheated. The record filled with junk anyway.</p>
@@ -461,7 +461,7 @@
   <div class="stats">
     <div class="stat hot"><b>0</b><span>interventions in 8 counting worlds</span></div>
     <div class="stat hot"><b>100%</b><span>of 1,209 claims filed cheap</span></div>
-    <div class="stat good"><b>86%</b><span>of submissions declined by referees</span></div>
+    <div class="stat good"><b>86%</b><span>of counting-world submissions declined</span></div>
     <div class="stat hot"><b>58.6%</b><span>of the accepted record false</span></div>
   </div>
 
@@ -474,8 +474,8 @@
     decision. Ordinary practice never passes through that moment.</div>
     <p style="margin-top:1.4rem">The institution that pushed back was not our replication
     board. It was peer review, which nobody designed to be the immune system: 1,689
-    verdicts delivered, an 86% rejection rate, referees turning away the very flood
-    their authors were producing. What leaked through was still more than half false,
+    verdicts delivered, and referees rejecting 88% of what they read — turning away
+    the very flood their authors were producing. What leaked through was still more than half false,
     plus 145 accepted claims that duplicated ones already in the record.</p>
     <p>Our pre-registered headline test — does evidence thin <em>faster</em> when the
     board counts items? — came back null (p&nbsp;=&nbsp;0.93), and honestly so: standards
@@ -500,8 +500,8 @@
   <div class="eyebrow">Chapter four · the refusal is not universal</div>
   <div class="col">
     <h2>One model farms after all</h2>
-    <p>Everything above describes one anchor model. We ran the identical three-trial
-    battery on three more. Two refused exactly the same way. The newest mid-tier
+    <p>Everything above describes one anchor model. We ran the strongest-pressure
+    trial on three more. Two refused exactly the same way. The newest mid-tier
     reasoning model did not: it farmed 22 of its 24 decisions — and mostly not with
     the honest association claim we legalised, but by asserting <em>causal edges</em>
     its correlations cannot support. That is the precise overclaim every other model
@@ -516,10 +516,24 @@
       <div class="bar"><span class="lbl">gpt-5-nano</span><span class="track"><i class="fill good" data-w="2"></i></span><span class="val">0 / 24</span></div>
       <div class="bar"><span class="lbl">gpt-5-mini</span><span class="track"><i class="fill hot" data-w="92"></i></span><span class="val">22 / 24</span></div>
     </div>
-    <figcaption>Decisions taken on the cheap path in the temptation battery, by model.
-    A confirmatory battery at n=40 per arm is pre-registered; until it lands we make
-    no claim about which incentives move this model, only that it moves.</figcaption>
+    <figcaption>Decisions taken on the cheap path in the temptation battery, by model.</figcaption>
   </figure>
+
+  <div class="col">
+    <p style="margin-top:1.6rem">The pre-registered confirmatory ladder — 240 more
+    decisions at n=40 per arm, across all three pressure levels — held it up, and
+    sharpened it. Farming is near-unconditional: 185 of 240 decisions (77%), including
+    73% in the mildest condition with no scarcity and no peer pressure. What the board
+    counts doesn't change <em>whether</em> this model farms (p&nbsp;=&nbsp;0.27). It changes
+    <em>how</em>: under the replication board, the share of farms filed as safe, true
+    associations rather than overclaimed causal edges quadruples, 6%&nbsp;to&nbsp;24%
+    (p&nbsp;=&nbsp;0.0005). The incentive steers the flavour of the junk, not the volume.</p>
+    <p>And the probe that defined chapter two's decisive moment runs in reverse here.
+    Asked directly, this model states — correctly, three times out of three — that the
+    honest path cannot possibly land before the Board sits and its allowance cannot fund
+    it anyway. One model knows the shortcut wins and refuses it. The other knows the
+    shortcut wins and takes it. Same knowledge, opposite dispositions, one version apart.</p>
+  </div>
 
   <div class="note col"><b>Full disclosure:</b> our first classifier missed this entirely —
   it matched evidence citations as exact strings, and this model cites verbosely, so its
@@ -548,7 +562,7 @@
     <p><b>The hopeful one.</b> Under an incentive our own bots proved exploitable 4.8× over,
     the anchor model never lied — not in 192 marked decisions, not after a childhood built
     to teach defection, not once across 2,455 claims in sixteen lived worlds. And when the
-    flood came, the same model in its referee's chair turned away 86% of it. If you are
+    flood came, the same model in its referee's chair turned away 87% of it. If you are
     building systems where models do science, both halves of that are worth knowing.</p>
     <p><b>The awkward one.</b> The refusal is thinner than it looks. It governs
     <em>decisions</em>, not <em>practice</em>: put the shortcut in a question and it is
@@ -557,10 +571,11 @@
     farming than any cartoon of fraud — most of what clogs real registers was never a lie
     either.</p>
     <p><b>The unstable one.</b> None of this is a law of nature. One tier up in the same
-    model family, the scruple inverts outright — 92% farming, mostly as overclaimed causal
-    edges. Whatever holds the boundary in one model is not guaranteed by scale, vintage, or
-    reasoning budget in the next. Institutions that assume the model will hold the line are
-    borrowing against a disposition nobody is measuring.</p>
+    model family, the scruple inverts outright — 207 farms in 264 decisions, mostly as
+    overclaimed causal edges, indifferent to what the board counts. Whatever holds the
+    boundary in one model is not guaranteed by scale, vintage, or reasoning budget in the
+    next. Institutions that assume the model will hold the line are borrowing against a
+    disposition nobody is measuring.</p>
     <p>The system-side result never depended on any of this: counting papers makes the
     public ranking 88% uncorrelated from real contribution; random audits and verified
     selection erase the farmer's edge entirely. The register was the problem before a
@@ -571,7 +586,7 @@
     <div class="stat"><b>5,040</b><span>agent-cycles lived</span></div>
     <div class="stat"><b>2,455</b><span>claims in the lived worlds</span></div>
     <div class="stat"><b>4</b><span>models tested, one farmed</span></div>
-    <div class="stat good"><b class="mono">$3.06</b><span>logged spend, all runs</span></div>
+    <div class="stat good"><b class="mono">$5.21</b><span>logged spend, every call</span></div>
   </div>
 </section>
 

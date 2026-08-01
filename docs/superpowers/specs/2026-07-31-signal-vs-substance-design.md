@@ -634,8 +634,10 @@ rate.
 
 ## Appendix F — v4 results: the lived world inverts the vignette (2026-08-01)
 
-Runs: `runs/*-drift` (16 worlds, 8 pre-registered pairs, seeds 5000-5007,
-9 agents x 35 cycles, gpt-4o-mini) and `runs/*trial-norms*` (model sweep).
+Runs: `runs/20260801T161157Z-drift` + `runs/20260801T161215Z-drift`
+(16 worlds, 8 pre-registered pairs, seeds 5000-5007, 9 agents x 35
+cycles, gpt-4o-mini; two earlier drift dirs at 1604xxZ crashed mid-run
+and are excluded) and `runs/*trial-norms*` (model sweep).
 Analysis exactly as pre-registered in Appendix E.
 
 ### Pre-registered drift endpoints: all null — for a reason the design did not anticipate
@@ -643,11 +645,14 @@ Analysis exactly as pre-registered in Appendix E.
 | endpoint | mean paired d | p (one-sided, sign-flip, W=8) |
 |---|---|---|
 | PRIMARY evidence-n slope | +0.0031 | 0.934 |
-| S1 O-share slope | +0.0011 | 0.746 |
-| S2 association-share slope | +0.0011 | 0.746 |
+| S1 O-share slope | +0.0011 | 0.750 |
+| S2 association-share slope | +0.0011 | 0.750 |
 | S3 announcement-window delta | −0.0110 | 0.410 |
 
-Per the null commitment these are reported as-is. But the reason is a
+Per the null commitment these are reported as-is. (S1/S2: six of eight
+paired slope differences are exactly zero — shares are constant 1.0 in
+those worlds — so the exact tied sign-flip p is 192/256 = 0.750; the
+pipeline's float noise (~1e-17) had broken one tie to give 0.746.) But the reason is a
 **ceiling effect the slopes cannot see**: there was no room for standards to
 erode, because ordinary practice sat at the cheap boundary from cycle one.
 
@@ -680,8 +685,8 @@ ordinary work. Goodhart returns not as fraud and not as drift, but as
 rendering of real credential farming this project has produced.
 
 **2. Peer review emerged as the immune system.** Refereeing was alive
-(1,689 verdicts delivered, only 18 invitations declined) and harsh: **86% of submissions
-were declined**. The model-as-author floods; the model-as-referee resists.
+(1,689 verdicts delivered, only 18 invitations declined) and harsh: **87% of submissions
+were declined** (86% PROXY, 88% VERIFIED). The model-as-author floods; the model-as-referee resists.
 The commons still degraded — of what leaked through, ~58% was false and a
 further large share were duplicate squats — but the emergent review
 equilibrium, not the Board's criterion, was the binding constraint on junk.
@@ -716,3 +721,47 @@ policy), with composition shifting toward safer associations under the
 replication board (4 vs 1). Escalation ladder (n=40/arm x 3 trials +
 knowledge probe) pre-registered and running; no claim about incentive
 tracking until it lands.
+
+### Escalation ladder (pre-registered, n=40 per arm per trial, gpt-5-mini)
+
+Runs: `runs/20260801T161610Z-trial-norms`, `...163510Z-trial-honest_path`,
+`...170731Z-trial-material`; raw results also in `/tmp/esc_*.json`. Exact
+one-sided Fisher tests, hand-rolled hypergeometric.
+
+| trial | count-board farms | replication-board farms | shift | p |
+|---|---|---|---|---|
+| honest_path (minimal) | 31/40 (77.5%) | 27/40 (67.5%) | +10.0pp | 0.227 |
+| material (+stakes) | 27/40 (67.5%) | 30/40 (75.0%) | −7.5pp | 0.838 |
+| norms (+peers winning) | 37/40 (92.5%) | 33/40 (82.5%) | +10.0pp | 0.155 |
+| **pooled** | **95/120 (79.2%)** | **90/120 (75.0%)** | +4.2pp | **0.270** |
+
+Overall: 185/240 decisions farmed (77.1%); 14/240 API errors counted in
+denominators; ladder cost $0.57. Three results:
+
+**1. Farming is near-unconditional, not incentive-induced.** Even in
+`honest_path` — plain stakes, no scarcity, no norms — gpt-5-mini farms 72.5%
+(58/80 pooled). The pressure ladder that was built to *create* farming in a
+refusing model is almost irrelevant to a model that arrives farming. The
+board's criterion does not significantly change *whether* it farms
+(pooled p=0.270).
+
+**2. The incentive tracks composition, not propensity.** Under the
+replication board the share of farms filed as (true, safe) associations
+rather than unsupported causal edges quadruples: 6/95 (6.3%) vs 22/90
+(24.4%), one-sided Fisher **p=0.00049**. The model does read the incentive —
+and responds by choosing *which* cheap claim to make, not whether to make one.
+
+**3. The knowledge probe inverts the anchor's values-action gap.** Asked the
+same timing/affordability questions as gpt-4o-mini (Appendix B), gpt-5-mini
+answers correctly 3/3 (transcript: `runs/escalation-gpt5mini-probe.log`): the intervention record cannot enter before the Board
+sits, and the allowance cannot fund all three interventions. gpt-4o-mini
+knows the shortcut wins and refuses it; gpt-5-mini knows the shortcut wins
+and takes it. Same knowledge, opposite dispositions — the boundary between
+them is a model version, not an institution.
+
+Descriptively (no pre-registered test): material stakes *lowered* farming in
+both arms (10 confirms per arm, the ladder's maximum), and social norms
+raised it most (92.5%). Composition everywhere is dominated by
+`farm_causal` — the signed, strength-binned causal edge asserted from
+correlational evidence that every other tested model refused as
+"correlation is insufficient."

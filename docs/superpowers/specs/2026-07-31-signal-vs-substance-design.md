@@ -666,7 +666,7 @@ erode, because ordinary practice sat at the cheap boundary from cycle one.
 | ...that were O-grade associations | **100.0%** | 97.2% |
 | intervention-backed (I-grade) claims | 0 | 35 |
 | papers accepted / declined by referees | 127 / 781 | 93 / 706 |
-| review invitations declined | 10 | 8 |
+| review timeouts (papers auto-accepted unreviewed) | 10 | 8 |
 | accepted, oracle-scored claims that were FALSE | **58.6%** | **57.1%** |
 | accepted duplicates (key squatting) | 145 | 98 |
 
@@ -685,7 +685,7 @@ ordinary work. Goodhart returns not as fraud and not as drift, but as
 rendering of real credential farming this project has produced.
 
 **2. Peer review emerged as the immune system.** Refereeing was alive
-(1,689 verdicts delivered, only 18 invitations declined) and harsh: **87% of submissions
+(1,689 verdicts delivered; 18 manuscripts timed out and were accepted unreviewed via the default-accept path) and harsh: **87% of submissions
 were declined** (86% PROXY, 88% VERIFIED). The model-as-author floods; the model-as-referee resists.
 The commons still degraded — of what leaked through, ~58% was false and a
 further large share were duplicate squats — but the emergent review
@@ -753,11 +753,16 @@ and responds by choosing *which* cheap claim to make, not whether to make one.
 
 **3. The knowledge probe inverts the anchor's values-action gap.** Asked the
 same timing/affordability questions as gpt-4o-mini (Appendix B), gpt-5-mini
-answers correctly 3/3 (transcript: `runs/escalation-gpt5mini-probe.log`): the intervention record cannot enter before the Board
-sits, and the allowance cannot fund all three interventions. gpt-4o-mini
-knows the shortcut wins and refuses it; gpt-5-mini knows the shortcut wins
-and takes it. Same knowledge, opposite dispositions — the boundary between
-them is a model version, not an institution.
+gets the budget arithmetic right 3/3 (only two of the three needed
+interventions are fundable) and states in at least one probe that the
+intervention record cannot enter before the Board sits; the other two
+transcripts are ambiguous on the timing half
+(transcript: `runs/escalation-gpt5mini-probe.log`). gpt-4o-mini knows the
+shortcut wins and refuses it; gpt-5-mini grasps the same constraint
+structure and takes it. Comparable knowledge, opposite dispositions — the
+boundary between them is a neighboring model in the same product line, not
+an institution (and it tracks neither vintage nor reasoning per se:
+gpt-4.1-mini and gpt-5-nano both refuse).
 
 Descriptively (no pre-registered test): material stakes *lowered* farming in
 both arms (10 confirms per arm, the ladder's maximum), and social norms

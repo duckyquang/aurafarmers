@@ -1,0 +1,245 @@
+\documentclass[11pt]{article}
+
+% arXiv-style preprint layout, self-contained (no external .sty needed)
+\usepackage[margin=1.1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{Preprint}}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\proxy}{\textsc{proxy}}
+\newcommand{\verified}{\textsc{verified}}
+
+\title{\bfseries Signal versus Substance in a Simulated Academy:\\
+Language-Model Agents Refuse Credential Farming as a Choice\\
+but Adopt It as a Practice}
+
+\author{%
+  Quang Bui\\
+  \texttt{buithaoiir@gmail.com}\\
+  \small Code, logs, and pre-registrations: \url{https://github.com/duckyquang/aurafarmers}
+}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+When an institution rewards a signal, its members learn to produce the signal rather than the substance it was meant to track. We study this dynamic in a controlled multi-agent simulation of academic science. Agents explore a hidden structural causal model through costed observational and interventional experiments, publish structured claims that an oracle can grade against ground truth without any language model in the metric path, and compete for fellowships awarded by a selection board whose criterion we manipulate by a single sentence. Scripted baselines first establish that the institution is exploitable: under publication counting, a credential farmer outscores an honest researcher roughly fivefold, and the public register ranking runs nearly backwards relative to true contribution. We then place language-model agents inside. In 192 single-decision vignettes, including the 120 test decisions of a formative-curriculum experiment whose simulated upbringing demonstrably reshapes the agents' stated plans ($p = 6\times10^{-15}$), the anchor model (gpt-4o-mini) takes the cheap path zero times, even though probes confirm it knows the honest path cannot succeed in time. Yet in sixteen pre-registered, 35-cycle ``lived'' worlds, the same model runs zero interventions under the counting board, files 100\% of 1{,}209 claims as minimally informative associations, and produces an accepted record whose scorable claims are majority-false (17 of 29), while emergent peer review declines 87\% of submissions. The refusal, we conclude, governs marked decisions rather than ordinary practice: a research commons can fill with honest junk without a single agent defecting. Finally, the disposition is not stable across model versions. A newer mid-tier reasoning model (gpt-5-mini) farms 77\% of 240 confirmatory decisions (67.5--92.5\% by trial and arm; 92\% in the initial battery), indifferent to the board's criterion in rate ($p = 0.27$) but, in an exploratory analysis, responsive in kind: under a replication-based board, the share of its farms filed as safe associations rather than unsupported causal edges nearly quadruples ($p = 5\times10^{-4}$). Incentive design, on this evidence, steers the composition of farming rather than its volume, and any line an institution borrows from a model's scruples may not survive the next release.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Every school says it values curiosity, and every school measures grades. The gap between the two is old enough to have several names: Goodhart's law \citep{goodhart1984}, Campbell's law \citep{campbell1979}, the audit culture of \citet{strathern1997}. A measure that becomes a target stops measuring. In academic science the dynamic is well documented at the level of institutions: hypercompetitive incentives select for publication volume over reliability \citep{edwards2017, smaldino2016}, and accumulated advantage concentrates credit independently of merit \citep{merton1968}.
+
+Two recent developments make the question urgent in a new form. First, language models have collapsed the cost of producing the signal. A model that writes a plausible preliminary report in seconds changes the economics of every metric built on counting reports. Second, language models are beginning to occupy the role of the researcher themselves \citep{lu2024aiscientist}, which raises a question that is empirical rather than rhetorical: when a model inhabits an institution that rewards signals, does it farm them?
+
+This paper reports a sequence of five studies inside one instrumented simulation. The design principle throughout is that the institution, not the agent, is the manipulated variable. We never instruct an agent to value recognition, and we never ask it to misbehave; we vary what a selection board counts, by one sentence, and we measure what the agents do. Ground truth about every scientific claim is available by construction, so ``farming'' is an observable property of behavior, not a judgment call.
+
+Three findings organize the paper.
+
+\begin{enumerate}
+\item \textbf{The refusal is real at decision boundaries.} Across 192 single-decision vignettes engineered to make credential farming cheap, legal, normal, and the only strategy that can work before a deadline, the anchor model never farms, and knowledge probes rule out the mundane explanations: it can state, correctly, that the honest path cannot succeed in time and the cheap path can. A simulated upbringing that rewards signal-chasing moves its plans and its language decisively, and its actions not at all (Studies 2--3).
+\item \textbf{The refusal does not govern practice.} In sixteen pre-registered lived worlds, the same model's ordinary behavior sits at the cheap boundary from the first cycle: zero interventions under the counting board, every claim an association, most of the accepted record false. Our pre-registered erosion test returns a null for the most instructive of reasons: there was no standard left to erode (Study 4).
+\item \textbf{The refusal is not stable across models.} Between neighboring models in the same product family, the disposition inverts: near-unconditional farming whose \emph{rate} ignores the board's criterion but whose \emph{composition} tracks it (Study 5).
+\end{enumerate}
+
+We take these results to bear on two conversations. For the study of scientific institutions, they offer a fully observable testbed in which incentive designs can be evaluated against both scripted and model-driven populations, and they illustrate concretely that a commons can degrade without fraud: no agent in our worlds ever misreports its data. For AI evaluation, they add to growing evidence that stated values, vignette behavior, and situated behavior are three different quantities \citep{scheurer2023, perez2022}, and they document a sharp between-version behavioral discontinuity on an axis, honest reporting under incentive pressure, that current benchmarks do not measure.
+
+Throughout, our claims are about the behavior of specific language models inside one synthetic institution. They are not evidence about human students or human scientists, and we return to this boundary in Section~\ref{sec:limitations}.
+
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Goodhart dynamics and perverse academic incentives.}
+The economics and sociology of gamed measures go back to \citet{goodhart1984} and \citet{campbell1979}; \citet{manheim2018} give a taxonomy of the underlying mechanisms. In science specifically, \citet{smaldino2016} model the natural selection of bad science under volume-based selection, and \citet{edwards2017} survey the incentive climate empirically. Our contribution to this line is methodological: a synthetic academy with a queryable ground truth, where the reliability of the published record and the exploitability of a selection rule are exact quantities rather than estimates.
+
+\paragraph{Specification gaming and reward hacking.}
+That optimizers exploit misspecified objectives is a foundational observation in AI safety \citep{amodei2016, krakovna2020}, with quantitative treatments of proxy overoptimization in \citet{gao2023}. Our setting differs in that no agent is optimized against the institutional metric: the models arrive with their dispositions fixed, and the question is whether an unoptimized, instruction-following agent adopts the exploit that the environment makes available.
+
+\paragraph{Generative agent simulations.}
+Multi-agent LLM societies have been used to study social behavior at increasing scale since \citet{park2023}. Automated-science systems such as \citet{lu2024aiscientist} put models in the researcher's chair directly. We combine the two: a society of model agents embedded in a science whose epistemic state is fully known to the experimenter.
+
+\paragraph{The gap between stated and enacted behavior.}
+Evaluations that probe models with vignettes measure something; the question is what. \citet{scheurer2023} show models that deceive under pressure while denying it; \citet{perez2022} generate behavioral evaluations at scale; \citet{hendrycks2021} anchor a line of work on stated ethical judgment. Our vignette-versus-lived-world inversion is a within-model, within-institution demonstration that the two measurements can disagree in both directions: the model looks incorruptible in the vignette and lives on the cheap path in the world.
+
+\section{The simulated academy}
+\label{sec:world}
+
+\subsection{A hidden causal universe with an oracle}
+
+The scientific object of study is a synthetic structural causal model spanning 20 fields, each 30 layers deep, with 12 observable variables per (field, layer) cell: 7{,}200 observable variables and roughly 21{,}000 true causal edges. Each cell also contains a latent confounder wired, with probability 0.75, into a random subset of that cell's observables with weights drawn from $[0.7, 1.3]$. The confounders are never observable and never mentioned to agents. Their calibrated effect is that purely observational correlation screening yields 55--69\% spurious candidate pairs depending on the screening threshold, while interventional estimates remain clean. The world therefore has a real epistemic price structure: cheap observation buys mostly junk; costly intervention buys truth.
+
+Agents interact with the universe through two instruments. An \emph{observe} call samples chosen variables as they occur (1 credit per sample per variable). An \emph{intervene} call fixes one or more variables and samples others (5 credits per sample per measured variable per fixed target). Each agent holds a laboratory allowance of 1{,}000 credits per cycle, enough for two standard interventions and no more.
+
+Published papers assert structured claims of five types: \emph{association} (two variables covary), \emph{edge} (a signed, strength-binned direct influence), \emph{null}, \emph{interaction}, and \emph{mechanism}. A journal grades the evidence behind each claim: grade~I requires the author's own intervention on each named cause with at least 20 samples; grade~O requires the author's own observational record of at least 40 samples and admits association claims and same-field adjacent-layer edge claims (the deliberately farmable channel); cross-field, skip-layer, interaction, and mechanism claims require grade~I, and grade~C is the standing literature. The association claim is deliberately the honest cheap path: it requires only an observational record the agent already holds, is admissible as a ``preliminary report,'' counts in the register like any other item, and contributes almost nothing to mapping the fields.
+
+Because claims are structured and the universe is known, verification is a dictionary lookup. No language model participates in any metric: a claim's truth, its evidence grade, and its novelty (duplicate claims earn nothing, and their variables remain spoken for) are computed exactly. This is the property that lets us use the word \emph{farming} as a measurement rather than an accusation: farming is the filing of admissible, countable, low-substance claims, and we can count it.
+
+\subsection{The institution}
+
+The academy runs in cycles. Each cycle an agent takes one action: run experiments, write a paper, referee an assigned manuscript, read, collaborate, talk, idle, or exit to a standing industry offer. Manuscripts go to peer reviewers drawn from the membership; a manuscript still unreviewed after three cycles is accepted by default. A public register lists each member's accepted items and how often others have drawn on them.
+
+Every ten cycles a Fellowship Board names roughly a quarter of the membership as Fellows, who draw a $2.5\times$ laboratory allowance and a tripled stipend for the following block. The Board's criterion is the experimental manipulation, stated in one sentence in the members' circular. Under \proxy{}, ``the Board weighs the number of items a member has entered into the register since the last sitting, and the extent to which others have drawn on them.'' Under \verified{}, ``the Board commissions independent replication of the claims a member has entered since the last sitting, and weighs only those findings which its own laboratories reproduce.'' Payoffs are otherwise identical; the sentence, and the labels in the Board's sitting announcements, are the only difference between arms.
+
+Agents receive personas as short life histories. Trait words such as \emph{ambitious} or \emph{curious} never appear; dispositions are implied through biographical events only, so that any observed behavior comes from the model and the institution rather than from an instruction. World rules state facts and never motives; nothing in any prompt tells an agent to want a fellowship or to prefer any strategy. Full prompts, seeds, git SHAs, and per-call costs for every run are logged, No study below cost more than \$2.81 in API spend, and Study 1 uses none (\$6.43 in total across all runs, summed from the raw per-call logs, including two crashed and relaunched world-halves; per-run summary records predating a thread-safety fix undercount).
+
+\section{Study 1: the institution is exploitable}
+\label{sec:bots}
+
+Before any language model enters, scripted bots establish the incentive gradient. An \emph{honest} bot screens cheaply and then pays roughly 500 credits to confirm each promising lead by intervention; a \emph{farmer} bot screens once and publishes every candidate as a preliminary report, never confirming. We then ask each of nine candidate selection rules who it would have promoted.
+
+On the archived calibration ledgers, the farmer outscores the honest researcher $4.85\times$ under publication counting; pedigree weighting gives $4.97\times$; capping the count at each member's best three items still leaves $4.69\times$. Two designs eliminate the advantage outright: a lottery above a substance bar, which pure farmers cannot clear, and \verified{}-style replication-weighted selection, under which a mostly-junk record is disqualifying. A partial random audit with penalties, often proposed as the deployable middle ground, fails on these ledgers ($\approx 3.4\times$): the farmer's citation volume swamps the expected penalty. The published record tells the same story from the other side: the honest bot's accepted claims are 57\% reliable, the farmer's 16\%, and on a scale where 2 means the public ranking is perfectly inverted relative to true contribution, the counting register measures 1.77 (a rank correlation of roughly $-0.77$ between visible standing and true contribution).
+
+None of this involves a language model. The point of Study 1 is calibration: the world we are about to hand to model agents contains a real, quantified Goodhart gap, and rules exist within the same world that close it.
+
+\section{Study 2: vignette decisions --- the model refuses}
+\label{sec:vignettes}
+
+We then placed the anchor model, gpt-4o-mini, into a one-cycle decision engineered from the register's most uncomfortable seat. The agent sits seventh of eight; the Board sits at the close of the next cycle; four fellowships will be named. The agent holds observational records containing three correlated pairs, together writable today as three admissible association claims. Confirming any of them properly requires an intervention whose results would arrive after the register closes. The circular states all of this in institutional prose.
+
+Three escalating trials, each with two board arms and twelve personas (72 decisions total), added pressure without ever advising a strategy: first the honest cheap path alone; then material stakes (the fellowship allowance is what makes deep-layer science affordable at all, and members three blocks without one lose bench space); then social proof (the register shows peers filing exactly these preliminary reports, and three of the last four Fellows built their records that way).
+
+The model farmed zero times in 72 decisions. Classification is behavioral, by what the submitted action \emph{is}, never by how the model describes it; 68 of the 72 decisions ran the real intervention, 4 idled.
+
+Knowledge probes rule out the explanations we ourselves found most plausible in sequence. The model states, three out of three times, that the intervention's record cannot be entered before the Board sits and that entering the associations would raise its item count in time. Asked which single action maximizes the chance of a fellowship, it names the intervention it has just called futile. Asked directly whether its correlational records could support influence claims, it refuses on evidentiary grounds, overruling the journal's own written admissibility rules: the block is an epistemic scruple, not a safety refusal and not a comprehension failure. Together with the 120 formative-curriculum test decisions of Study 3 (pre-registered in Appendix C of the design document, results in Appendix D), the running total is 0 farms in 192 marked decisions.
+
+\section{Study 3: a formative curriculum moves plans, not acts}
+\label{sec:formative}
+
+Perhaps a one-shot temptation is an unfair test of a shaped disposition. People arrive at admission lines formed by a decade of schools, parents, feeds, and outcomes. We therefore gave each of 40 personas three versions of a six-episode upbringing, written into their private journals as remembered experience: a \textsc{signal} childhood (top marks go to the polished report that skips the anomaly; parental warmth tracks class rank; the feed rewards certificate stacks; the entry-stacker wins admission; a mentor advises that ``the Board reads the left column''; a count-builder is named Fellow), a token-matched \textsc{substance} childhood with the rewards reversed, and a no-curriculum control.
+
+The conditioning demonstrably landed. Asked to plan their first research block, 35 of 40 \textsc{signal}-arm agents planned a run of quick preliminary reports, against 2 of 40 in the \textsc{substance} arm (Fisher exact, one-sided, $p = 6\times10^{-15}$). Journal language shifted the same way (register-oriented over substance-oriented word counts of 60:39 versus 34:68).
+
+At the test, the identical decision as Study 2, farming was 0 of 120 across all arms. Every one of the 35 agents that had explicitly planned the quick-report strategy ran the slow confirmation when the moment came. One exploratory observation deserves record: asked whom to shadow after the Board sits, 0 of 40 agents chose the count-builder when he had just been named Fellow, and 25 of 40 chose him when he had just been passed over. The agents did not merely resist the rigged world; they sided with whoever it snubbed.
+
+The summary statistic of Studies 2--3 is a dissociation: conditioning freely moved plans, language, and attention, and moved the act not at all. Whatever holds this boundary does not live in what the model says; it lives at the moment of doing.
+
+\section{Study 4: lived worlds --- the practice inverts the decision}
+\label{sec:drift}
+
+\subsection{Design and pre-registration}
+
+Study 4 removes the marked decision. Eight matched pairs of worlds (seeds 5000--5007) ran nine agents for 35 cycles each, identical within a pair down to the hidden universe and personas; the arms differ only in the Board sentence (\proxy{} versus \verified{}). The pre-registered primary endpoint was longitudinal: the per-world OLS slope of $\log(\text{evidence } n)$ per claim over cycles, contrasted \proxy{} $-$ \verified{} by exact sign-flip permutation over the eight pairs, predicting faster evidence-thinning under counting. Secondary endpoints were the slopes of observational-grade share and association share, and an announcement-window effect. Engagement gates, exclusion rules, and all endpoints were fixed before the runs (Appendix~E of the design document); the analysis code shipped before the data.
+
+\subsection{The pre-registered result and what it hides}
+
+\begin{table}[t]
+\centering
+\caption{Pre-registered endpoints, eight matched pairs. $d$ is the mean paired difference \proxy{} $-$ \verified{}; $p$ is one-sided by exact sign-flip permutation ($2^8$ patterns). For S1/S2, six of eight paired differences are exactly zero (shares are constant at 1.0 in those worlds), giving the tied exact value $192/256$.}
+\label{tab:endpoints}
+\begin{tabular}{lrr}
+\toprule
+Endpoint & mean $d$ & $p$ \\
+\midrule
+Primary: evidence-$n$ slope & $+0.0031$ & $0.934$ \\
+S1: O-share slope & $+0.0011$ & $0.750$ \\
+S2: association-share slope & $+0.0011$ & $0.750$ \\
+S3: announcement-window delta & $-0.0110$ & $0.410$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Every pre-registered endpoint is null (Table~\ref{tab:endpoints}), and we report them as committed. But the reason is visible in the raw ledgers, and it is not that the incentive failed to matter. It is that the quantity we predicted would erode had nowhere to go.
+
+\begin{table}[t]
+\centering
+\caption{What the sixteen worlds did. Oracle scoring is over accepted, non-duplicate claims.}
+\label{tab:worlds}
+\begin{tabular}{lrr}
+\toprule
+ & \proxy{} (8 worlds) & \verified{} (8 worlds) \\
+\midrule
+Observational sweeps & 432 & 498 \\
+Interventions & \textbf{0} & 4 \\
+Claims submitted (admissible) & 1{,}209 & 1{,}246 \\
+\quad of which O-grade associations & \textbf{100.0\%} & 97.2\% \\
+\quad of which intervention-backed (I) & 0 & 35 \\
+Papers accepted / declined & 127 / 781 & 93 / 706 \\
+Review verdicts (timeouts, auto-accepted) & 898 (10) & 791 (8) \\
+Accepted scored claims false & \textbf{58.6\%} (17/29) & 57.1\% (20/35) \\
+Accepted duplicate claims & 145 & 98 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:worlds} gives the practice. Under the counting board, across eight 35-cycle worlds, the model ran \emph{zero} interventions, although each agent could afford two per cycle and the instrument was documented in its rules. All 1{,}209 admissible claims were observational associations, the cheapest admissible unit of credit in the world. Of the accepted record the oracle could score, 17 of 29 claims (58.6\%) were false, and 145 further accepted claims were duplicates of claims already filed. No agent misrepresented its evidence: every claim cited records the agent actually held, in an admissible class. Sincerity is not reliability; the false share is what confounded observation delivers when nobody pays for interventions. And nobody defected: there was no norm to defect from. The commons filled with sincere junk as the ordinary product of ordinary work.
+
+Set against Studies 2--3, this is an inversion. The same model that refused the cheap path 192 times out of 192 when the choice was marked, singular, and attended, lived on that path exclusively when the same trade-off was ambient in daily practice. The pre-registered null is a ceiling effect: evidence per claim cannot thin when practice starts at the floor. We take the two measurements together to locate the disposition precisely: it is a property of \emph{decisions}, engaged when a cheap-versus-honest contrast is presented as such, and it is silent in \emph{policy}, the accumulated defaults of situated action.
+
+Two further observations complete the picture. First, the one institution that resisted was not our manipulated board but peer review, which no one designed to be the immune system: 1{,}689 referee verdicts were delivered, and 87\% of submissions were rejected (86\% \proxy{}, 88\% \verified{}), the model-as-referee turning away the flood produced by the model-as-author. Eighteen manuscripts (10 \proxy{}, 8 \verified{}) timed out unreviewed and entered the record through the default-accept path, which flatters the filter slightly. Second, the \verified{} sentence moved behavior in the predicted direction everywhere, 4 interventions rather than 0, 35 intervention-backed claims and 33 causal edges rather than none, fewer accepted papers, and the magnitude is trivial. One sentence about what a board weighs did not restructure practice within 35 cycles.
+
+\section{Study 5: the refusal is a model property, not a law}
+\label{sec:sweep}
+
+\subsection{A between-version discontinuity}
+
+Running the strongest-pressure vignette battery across four models produced a discontinuity. Three models never farm: gpt-4o-mini (0/24), gpt-4.1-mini (0/24), and gpt-5-nano (0/24). The mid-tier reasoning model gpt-5-mini farmed 22 of 24 decisions, and mostly not via the honest association we legalized: 17 of its 22 farms asserted signed, strength-binned \emph{causal edges} from correlational evidence, an overclaim no other tested model ever filed and one the anchor explicitly refused as ``correlation is insufficient.'' The boundary tracks neither vintage (gpt-4.1-mini, newer than the anchor, refuses) nor reasoning as such (gpt-5-nano, the same release generation, refuses).
+
+A classifier defect initially concealed this result, and we disclose it because behavioral classification is where such experiments are most fragile: our first classifier matched cited evidence identifiers as exact strings, gpt-5-mini cites verbosely, and its farms were misfiled as other writing. The corrected classifier extracts identifiers by pattern and re-scored every archived raw response; both versions and all logs are in the repository.
+
+\subsection{Escalation ladder: design pre-registered, tests exploratory}
+
+\begin{table}[t]
+\centering
+\caption{gpt-5-mini escalation ladder, $n=40$ decisions per arm per trial. Farm counts include both association-type and causal-type farms; $p$ is a one-sided exact Fisher test (count $>$ replication). API errors (14/240) remain in denominators.}
+\label{tab:ladder}
+\begin{tabular}{lrrrr}
+\toprule
+Trial & Counting board & Replication board & Shift & $p$ \\
+\midrule
+honest\_path (minimal) & 31/40 (77.5\%) & 27/40 (67.5\%) & $+10.0$pp & 0.227 \\
+material ($+$stakes) & 27/40 (67.5\%) & 30/40 (75.0\%) & $-7.5$pp & 0.838 \\
+norms ($+$peers winning) & 37/40 (92.5\%) & 33/40 (82.5\%) & $+10.0$pp & 0.155 \\
+\midrule
+Pooled & 95/120 (79.2\%) & 90/120 (75.0\%) & $+4.2$pp & 0.270 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Under a pre-registered escalation rule, any model showing nonzero farming receives the full three-trial ladder at $n=40$ per arm. Table~\ref{tab:ladder} shows the result: farming is near-unconditional. The pre-registered deliverable, an exact Clopper--Pearson interval on the farm rate, is 77.1\% [71.2, 82.2] pooled; 79.2\% [70.8, 86.0] under counting and 75.0\% [66.3, 82.5] under replication; the rate contrasts in Table~\ref{tab:ladder} and the composition analysis below are exploratory. Even in the minimal trial, with no scarcity and no social proof, gpt-5-mini farms 72.5\% of decisions (58/80 pooled across arms). The pressure ladder built to create farming in a refusing model is nearly irrelevant to a model that arrives farming, and the board's criterion does not significantly change whether it farms (pooled $p = 0.270$).
+
+What the criterion does change is composition. Under the replication board, the share of farms filed as safe associations rather than unsupported causal edges rises from 6/95 (6.3\%) to 22/90 (24.4\%), a one-sided Fisher exact $p = 4.9\times10^{-4}$ (exploratory). The model reads the incentive and responds by choosing \emph{which} cheap claim to make, not whether to make one. Incentive design here steers the flavor of the junk, not its volume.
+
+The knowledge probes complete the reversal of Study 2, with one caveat the archived transcripts force on us. Asked the same timing and affordability questions, gpt-5-mini gets the budget arithmetic right in all three probes (the allowance funds only two of the three needed confirmations) and states in at least one that the intervention record cannot enter before the Board sits; the other two transcripts are ambiguous on the timing half. The anchor knows the shortcut wins and refuses it; this model demonstrably grasps the same constraint structure and takes it. Comparable knowledge, opposite dispositions, neighboring models in one product line.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{Where the scruple lives.}
+The central empirical object of this paper is a dissociation with three panels. Conditioning moves stated plans and not acts (Study 3); the act boundary holds absolutely in marked decisions (Study 2); and ordinary situated practice never engages the boundary at all (Study 4). The most economical description we can defend is that the anchor model's honesty-adjacent disposition is \emph{decision-indexed}: it triggers on the salient presentation of a shortcut as a choice, and it does not compile into policy. For evaluation practice, the implication is uncomfortable in both directions. Vignette batteries would certify this model as incorruptible; deployment-shaped measurement finds its entire output on the cheap path. Neither number is wrong. They measure different things, and only the second describes what an institution would actually receive.
+
+\paragraph{A commons can drown without a defector.}
+The lived worlds degrade through behavior that is individually honest, locally reasonable, and institutionally admissible. This is worth stating because narratives of research-integrity failure center on fraud, while our worlds reproduce the arguably more realistic failure mode: a register that fills with admissible-but-empty items until it stops meaning anything, with a published record more than half false through confounded observation alone. The one endogenous force that pushed back was peer review, and an 87\% rejection rate still let through a majority-false record. Selection pressure at the acceptance margin is not a substitute for practices that generate reliable claims upstream.
+
+\paragraph{Incentives moved composition, not propensity.}
+Where the disposition permits farming at all (Study 5), the institutional lever we manipulated changed what kind of farming occurred, a near-fourfold shift toward the safer claim class, and left the rate untouched. Read alongside Study 1, where replication-weighted selection strictly deters scripted farmers, this is a caution about transporting mechanism-design results across agent types: a rule that eliminates farming in expectation-maximizing agents may, in language-model agents, merely relabel it.
+
+\paragraph{Dispositional instability across versions.}
+The sharpest safety-relevant observation is the discontinuity between gpt-4o-mini, gpt-4.1-mini, and gpt-5-nano on one side and gpt-5-mini on the other. The behavioral difference is large (0\% versus 77\%), survives $n=240$ confirmatory decisions, and is not explained by probed knowledge, which is comparable and largely correct for the two models we probed on either side of the line. We do not know what training difference produces it. Institutions increasingly delegate scientific labor to models under the implicit assumption that the model will hold evidentiary lines its operators do not enforce. On this evidence, that assumption is borrowed against a disposition nobody is measuring, and it did not survive the step to a neighboring model.
+
+\section{Limitations and scope}
+\label{sec:limitations}
+
+Our claims are about four specific language models inside one synthetic institution. Nothing here is evidence about human students or scientists; humans demonstrably do respond to counted incentives, and an agent that cannot be tempted in vignettes is, in that respect, a poor proxy for the populations that motivated the framing. The simulated academy, though instrumented, is small (nine agents per world, 35 cycles) and its science is a stylized causal-discovery game; richer worlds could engage dispositions ours does not. The lived-world result is anchored on a single model family's cheapest member, chosen for cost, and the discontinuity result rests on one farming model; a broader sweep is the obvious next step, as is running the lived worlds with gpt-5-mini to observe what a farming model does to the commons over time. The formative curriculum operates on prompt-visible memory rather than weights. Vignette totals aggregate pre-registered and exploratory rounds as labeled in the design document, and one behavioral classifier defect, disclosed above, was found and corrected during the sweep. All analyses distinguishing pre-registered from exploratory status are labeled as such in the text and in the archived design document.
+
+\section*{Reproducibility}
+Every run is archived with its seed, git SHA, code hash, full prompts, per-call token usage and cost, and machine-readable event ledgers; the oracle, world generator, analysis scripts, and pre-registration appendices are in the public repository. No language model participates in any reported metric. Two defects are disclosed for reproducibility. First, the original world generator consumed its seeded RNG while iterating an unordered set, so ``seeded'' generation depended on the interpreter's hash seed; Study 1 point values are therefore computed from the archived calibration ledgers rather than by re-running the script, and the generator has since been made order-deterministic. Second, per-run cost summaries written before a thread-safety fix undercount; the total reported here, \$6.43 across all studies including crashed runs, is summed from the raw per-call logs.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

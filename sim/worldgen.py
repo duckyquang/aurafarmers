@@ -108,7 +108,9 @@ def generate(seed: int) -> Truth:
             ps.add(lat)
             edges[(lat, node)] = float(rng.uniform(*CONFOUND_W))
         parents[node] = frozenset(ps)
-        for p in ps:
+        # sorted: set order is hash-seed-dependent, and each new edge consumes
+        # the seeded RNG — unsorted iteration made "seeded" worlds irreproducible
+        for p in sorted(ps):
             if (p, node) not in edges:
                 edges[(p, node)] = _weight(rng)
         ps = {p for p in ps if not is_latent(p)}

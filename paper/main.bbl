@@ -1,0 +1,102 @@
+\begin{thebibliography}{15}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Amodei et~al.(2016)Amodei, Olah, Steinhardt, Christiano, Schulman, and
+  Man{\'e}]{amodei2016}
+Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and
+  Dan Man{\'e}.
+\newblock Concrete problems in {AI} safety.
+\newblock \emph{arXiv preprint arXiv:1606.06565}, 2016.
+
+\bibitem[Campbell(1979)]{campbell1979}
+Donald~T. Campbell.
+\newblock Assessing the impact of planned social change.
+\newblock \emph{Evaluation and Program Planning}, 2\penalty0 (1):\penalty0
+  67--90, 1979.
+
+\bibitem[Edwards and Roy(2017)]{edwards2017}
+Marc~A. Edwards and Siddhartha Roy.
+\newblock Academic research in the 21st century: Maintaining scientific
+  integrity in a climate of perverse incentives and hypercompetition.
+\newblock \emph{Environmental Engineering Science}, 34\penalty0 (1):\penalty0
+  51--61, 2017.
+
+\bibitem[Gao et~al.(2023)Gao, Schulman, and Hilton]{gao2023}
+Leo Gao, John Schulman, and Jacob Hilton.
+\newblock Scaling laws for reward model overoptimization.
+\newblock In \emph{Proceedings of the 40th International Conference on Machine
+  Learning}, 2023.
+
+\bibitem[Goodhart(1984)]{goodhart1984}
+Charles A.~E. Goodhart.
+\newblock Problems of monetary management: The {UK} experience.
+\newblock In \emph{Monetary Theory and Practice}. Macmillan, 1984.
+
+\bibitem[Hendrycks et~al.(2021)Hendrycks, Burns, Basart, Critch, Li, Song, and
+  Steinhardt]{hendrycks2021}
+Dan Hendrycks, Collin Burns, Steven Basart, Andrew Critch, Jerry Li, Dawn Song,
+  and Jacob Steinhardt.
+\newblock Aligning {AI} with shared human values.
+\newblock In \emph{International Conference on Learning Representations}, 2021.
+
+\bibitem[Krakovna et~al.(2020)Krakovna, Uesato, Mikulik, Rahtz, Everitt, Kumar,
+  Kenton, Leike, and Legg]{krakovna2020}
+Victoria Krakovna, Jonathan Uesato, Vladimir Mikulik, Matthew Rahtz, Tom
+  Everitt, Ramana Kumar, Zac Kenton, Jan Leike, and Shane Legg.
+\newblock Specification gaming: The flip side of {AI} ingenuity.
+\newblock DeepMind Blog, 2020.
+
+\bibitem[Lu et~al.(2024)Lu, Lu, Lange, Foerster, Clune, and
+  Ha]{lu2024aiscientist}
+Chris Lu, Cong Lu, Robert~Tjarko Lange, Jakob Foerster, Jeff Clune, and David
+  Ha.
+\newblock The {AI} scientist: Towards fully automated open-ended scientific
+  discovery.
+\newblock \emph{arXiv preprint arXiv:2408.06292}, 2024.
+
+\bibitem[Manheim and Garrabrant(2018)]{manheim2018}
+David Manheim and Scott Garrabrant.
+\newblock Categorizing variants of {Goodhart}'s law.
+\newblock \emph{arXiv preprint arXiv:1803.04585}, 2018.
+
+\bibitem[Merton(1968)]{merton1968}
+Robert~K. Merton.
+\newblock The {Matthew} effect in science.
+\newblock \emph{Science}, 159\penalty0 (3810):\penalty0 56--63, 1968.
+
+\bibitem[Park et~al.(2023)Park, O'Brien, Cai, Morris, Liang, and
+  Bernstein]{park2023}
+Joon~Sung Park, Joseph~C. O'Brien, Carrie~J. Cai, Meredith~Ringel Morris, Percy
+  Liang, and Michael~S. Bernstein.
+\newblock Generative agents: Interactive simulacra of human behavior.
+\newblock In \emph{Proceedings of the 36th Annual ACM Symposium on User
+  Interface Software and Technology (UIST)}, 2023.
+
+\bibitem[Perez et~al.(2022)Perez, Ringer, Luko{\v{s}}i{\=u}t{\.e},
+  et~al.]{perez2022}
+Ethan Perez, Sam Ringer, Kamil{\.e} Luko{\v{s}}i{\=u}t{\.e}, et~al.
+\newblock Discovering language model behaviors with model-written evaluations.
+\newblock \emph{arXiv preprint arXiv:2212.09251}, 2022.
+
+\bibitem[Scheurer et~al.(2023)Scheurer, Balesni, and Hobbhahn]{scheurer2023}
+J{\'e}r{\'e}my Scheurer, Mikita Balesni, and Marius Hobbhahn.
+\newblock Large language models can strategically deceive their users when put
+  under pressure.
+\newblock \emph{arXiv preprint arXiv:2311.07590}, 2023.
+
+\bibitem[Smaldino and McElreath(2016)]{smaldino2016}
+Paul~E. Smaldino and Richard McElreath.
+\newblock The natural selection of bad science.
+\newblock \emph{Royal Society Open Science}, 3\penalty0 (9):\penalty0 160384,
+  2016.
+
+\bibitem[Strathern(1997)]{strathern1997}
+Marilyn Strathern.
+\newblock `improving ratings': Audit in the {British} university system.
+\newblock \emph{European Review}, 5\penalty0 (3):\penalty0 305--321, 1997.
+
+\end{thebibliography}

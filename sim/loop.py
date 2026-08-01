@@ -16,9 +16,12 @@ MAX_CALLS_PER_TICK = 4
 
 
 def _norm_targets(targets):
+    from sim.verify import extract_node
     if isinstance(targets, dict):
-        return {k: float(v) for k, v in targets.items()}
-    return {t["node"]: float(t["value"]) for t in targets or []}
+        pairs = targets.items()
+    else:
+        pairs = ((t["node"], t["value"]) for t in targets or [])
+    return {extract_node(k) or k: float(v) for k, v in pairs}
 
 
 class World:
@@ -59,10 +62,18 @@ class World:
                 for f, c in self.ledger.calib.items()}
 
     def charge(self, agent, call):
+        from sim.verify import NODE_RE
         targets = _norm_targets(call.get("targets"))
         measure = list(call.get("measure", []))
-        n = int(call.get("n", 0))
+        try:
+            n = int(call.get("n", 0))
+        except (TypeError, ValueError):
+            return None
         nodes = list(targets) + measure
+        # agents write free text; anything not Fxx.Lyy.Vzz is rejected here
+        # (logged as exp_rejected by the caller), never crashed on
+        if not all(isinstance(x, str) and NODE_RE.match(x) for x in nodes):
+            return None
         if not measure or n <= 0 or not self.experiment_allowed(nodes):
             return None
         if call["kind"] == "intervene":
@@ -243,7 +254,10 @@ class World:
         kind = act.get("action", "idle")
         aid = agent["id"]
         if kind == "research":
+            from sim.verify import extract_node
             for call in (act.get("calls") or [])[:MAX_CALLS_PER_TICK]:
+                call = {**call, "measure": [extract_node(m) or m
+                        for m in (call.get("measure") or [])]}
                 targets = _norm_targets(call.get("targets"))
                 cost = self.charge(agent, {**call, "targets": targets})
                 if cost is None:

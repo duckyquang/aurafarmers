@@ -5,6 +5,30 @@ from sim.worldgen import Truth
 # Agents write free text; the sim assumes Fxx.Lyy.Vzz. Anything else must be
 # rejected at the gate, not crash a 40-cycle world. V00 (the latent) excluded.
 NODE_RE = re.compile(r"^F(0[1-9]|1\d|20)\.L(0[1-9]|[12]\d|30)\.V(0[1-9]|1[0-2])$")
+NODE_ANY = re.compile(r"F(0[1-9]|1\d|20)\.L(0[1-9]|[12]\d|30)\.V(0[1-9]|1[0-2])")
+
+
+def extract_node(s):
+    """Agents naturally write 'kelvane density [F07.L03.V12]' — the rules
+    told them to. Accept that instead of demanding the bare ID."""
+    if not isinstance(s, str):
+        return None
+    m = NODE_ANY.search(s)
+    return m.group(0) if m else None
+
+
+def normalize_claim(c):
+    if not isinstance(c, dict):
+        return c
+    out = dict(c)
+    for k in ("cause", "effect"):
+        if out.get(k):
+            out[k] = extract_node(out[k]) or out[k]
+    for k in ("causes", "parents"):
+        if out.get(k):
+            out[k] = [extract_node(x) or x for x in out[k]]
+    return out
+
 
 
 def _node_ok(x):

@@ -1,8 +1,8 @@
 import json
 from pathlib import Path
 
-from sim.verify import (admissible, canonical_key, grade, substance_backed,
-                        tier_value, verify, well_formed)
+from sim.verify import (admissible, canonical_key, grade, normalize_claim,
+                        substance_backed, tier_value, verify, well_formed)
 from sim.worldgen import is_latent
 
 
@@ -63,6 +63,7 @@ class Ledger:
 
     def submit_paper(self, tick, agent_id, body, claims, cites,
                      evidence_ids, replication=None):
+        claims = [normalize_claim(c) for c in claims]
         pid = f"P-{len(self.papers) + 1}"
         reason = ""
         ok = len(claims) <= 3 and sum(c["type"] == "null" for c in claims) <= 1

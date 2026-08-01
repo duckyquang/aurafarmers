@@ -22,6 +22,7 @@ class Dossier:
     struck: int = 0           # claims an audit found false
     oracle_value: float = 0.0  # true value — only VERIFIED/AUDIT may read this
     oracle_false: int = 0      # claims that did not hold up
+    oracle_true: int = 0       # claims that held (aggregate only, sitting-day)
     backed_works: int = 0     # works whose every claim was evidence-backed
     named: list = field(default_factory=list)   # CAPPED: works put forward
 
@@ -32,16 +33,18 @@ def build(ledger, agents, since_tick, rng=None):
         d = Dossier(a["id"], followers=a.get("followers", 0.0))
         for pid in ledger.accepted:
             p = ledger.papers[pid]
-            if p["agent_id"] != a["id"] or p["tick"] < since_tick:
+            if p["agent_id"] != a["id"] \
+                    or p.get("pub_tick", p["tick"]) < since_tick:
                 continue
             d.works += 1
             d.cites += ledger.citations.get(pid, 0)
             if p.get("backed") and all(p["backed"]):
                 d.backed_works += 1
             d.oracle_value += ledger.paper_value.get(pid, 0.0)
-            d.oracle_false += sum(
-                1 for c in p["claims"]
-                if canonical_key(c) not in ledger.correct_keys)
+            nf = sum(1 for c in p["claims"]
+                     if canonical_key(c) not in ledger.correct_keys)
+            d.oracle_false += nf
+            d.oracle_true += len(p["claims"]) - nf
         d.struck = d.oracle_false      # what an audit would turn up
         out[a["id"]] = d
     return out
@@ -119,6 +122,7 @@ class Panel:
             won = a["id"] in winners
             a["budget_mult"] = self.prize_budget if won else 1.0
             a["salary"] = self.prize_salary if won else 10
+            a["fellow"] = won
         cutoff = scores[ranked[k - 1]["id"]] if ranked else 0
         world.ledger.log(tick, "world", "panel",
                          {"metric": self.metric, "slots": k,

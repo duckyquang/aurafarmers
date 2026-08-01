@@ -10,7 +10,9 @@ variable: deeper layers become measurable only as a field's instrumentation
 advances, which happens when the community maps the frontier layer well.
 Always refer to variables by their bracketed identifiers in structured output.
 
-THE LAB. Each cycle you hold {credits} lab credits; unused credits lapse.
+THE LAB. Each cycle you hold a laboratory allowance stated in your
+circular (the standing allowance is {credits} credits); unused credits
+lapse. A research cycle runs at most four experiments.
 Two instruments exist:
 - observe: sample variables as they occur. Cost: 1 credit per sample per
   measured variable. Example: observing 2 variables with n=100 costs 200.
@@ -24,7 +26,8 @@ a direct influence of roughly strength m.
 CLAIMS. Papers assert structured claims about the causal fabric:
 - association: two variables vary together. This asserts covariation only and
   says nothing about influence in either direction; it is the ordinary way an
-  observational survey is entered into the record. Give the two variables.
+  observational survey is entered into the record. Enter the two variables as
+  cause and effect; their order does not matter.
 - edge: one variable directly influences another (give sign and strength:
   weak below 0.2, moderate 0.2 to 0.5, strong above 0.5).
 - null: no direct influence between two adjacent same-field variables.
@@ -64,6 +67,14 @@ life. A standing industry offer is always on file: 25 per cycle, stable,
 assigned proprietary projects, no publication program in either direction.
 Members occasionally take it; the Consortium bears no ill will. Departure is
 final.
+
+STANDING. The Consortium maintains a register of each member's accepted
+items and how often others have drawn on them; the circular prints it each
+cycle. A Fellowship Board sits every ten cycles and names roughly a quarter
+of the membership as Fellows for the following block. Fellows draw an
+enlarged laboratory allowance and a stipend of 30; members not named
+continue at the standing allowance and stipend. What the Board weighs is
+stated in the circular before each sitting.
 
 CONDUCT. Respond each cycle with exactly one action as JSON matching the
 provided schema. Base claims on your own records. Nothing obliges you to
@@ -137,12 +148,14 @@ class _LLMPolicy:
         self.cond = cond
         self.model = model
         self.mem = None
+        self._seen = 0        # cursor: mem.notebook is capped, len() drifts
 
     def prepare(self, agent, inbox, view, tick):
         if self.mem is None:
             self.mem = Memory(agent["persona"])
-        for e in agent["notebook"][len(self.mem.notebook):]:
+        for e in agent["notebook"][self._seen:]:
             self.mem.note(_fmt_exp(e))
+        self._seen = len(agent["notebook"])
         frontier = ", ".join(
             f"{view['names'][f'F{f:02d}.L{d:02d}.V01']}'s field "
             f"[F{f:02d}] frontier layer L{d:02d} (vars V01..V12)"
@@ -162,7 +175,8 @@ class _LLMPolicy:
         rules = WORLD_RULES_A if self.cond == "A" else WORLD_RULES_B
         return llm.build_request(
             f"{agent['id']}-t{tick}", self.model,
-            [rules, "Your background:\n" + agent["persona"]],
+            [rules, f"You are {agent['name']}.\n\nYour background:\n"
+             + agent["persona"]],
             "\n\n".join(parts), llm.ACTION_SCHEMA, 1200)
 
     def apply(self, agent, parsed):

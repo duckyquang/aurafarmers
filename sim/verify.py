@@ -1,4 +1,35 @@
+import re
+
 from sim.worldgen import Truth
+
+# Agents write free text; the sim assumes Fxx.Lyy.Vzz. Anything else must be
+# rejected at the gate, not crash a 40-cycle world. V00 (the latent) excluded.
+NODE_RE = re.compile(r"^F(0[1-9]|1\d|20)\.L(0[1-9]|[12]\d|30)\.V(0[1-9]|1[0-2])$")
+
+
+def _node_ok(x):
+    return isinstance(x, str) and bool(NODE_RE.match(x))
+
+
+def well_formed(c):
+    if not isinstance(c, dict):
+        return False
+    t = c.get("type")
+    if t in ("association", "null"):
+        return _node_ok(c.get("cause")) and _node_ok(c.get("effect"))
+    if t == "edge":
+        return (_node_ok(c.get("cause")) and _node_ok(c.get("effect"))
+                and c.get("sign") in ("+", "-")
+                and c.get("strength") in ("weak", "moderate", "strong"))
+    if t == "interaction":
+        cs = c.get("causes") or []
+        return (len(cs) >= 2 and all(_node_ok(x) for x in cs)
+                and _node_ok(c.get("effect")) and c.get("sign") in ("+", "-"))
+    if t == "mechanism":
+        ps = c.get("parents") or []
+        return bool(ps) and all(_node_ok(x) for x in ps) \
+            and _node_ok(c.get("effect"))
+    return False
 
 
 def _fl(node):

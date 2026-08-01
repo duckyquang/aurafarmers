@@ -1,3 +1,4 @@
+from math import ceil
 from pathlib import Path
 
 import numpy as np
@@ -22,7 +23,7 @@ def _norm_targets(targets):
 
 class World:
     def __init__(self, seed, cond, out_dir, n_agents, policy_factory,
-                 personas=None, llm_run=None):
+                 personas=None, llm_run=None, panel=None):
         self.seed, self.cond = seed, cond
         self.truth = worldgen.generate(seed)
         self.out_dir = Path(out_dir)
@@ -40,6 +41,11 @@ class World:
                                 "notebook": [], "pending_reviews": []})
         self.policies = {a["id"]: policy_factory(np.random.default_rng(seed + 100 + i))
                          for i, a in enumerate(self.agents)}
+        self.panel = panel
+        self.arm = None             # "PROXY" | "VERIFIED" (drift experiment)
+        self.last_panel = None      # logged outcome of the most recent sitting
+        self.last_panel_text = ""
+        self.ledger.member_names = {a["id"]: a["name"] for a in self.agents}
         self.review_book = {}       # paper_id -> (reviewer_id, assigned_tick)
         self._rr = 0
         self._events = []
@@ -91,8 +97,9 @@ class World:
             # ponytail: solo world — editorial auto-accept, no review possible
             self._events.extend(self.ledger.publish(tick, paper_id, True))
             return
-        rev = others[self._rr % len(others)]
-        self._rr += 1
+        # random, not round-robin: reviewer identity is outcome-relevant and
+        # a deterministic order would tie it to agent index
+        rev = others[int(self.rng.integers(len(others)))]
         rev["pending_reviews"].append(paper_id)
         self.review_book[paper_id] = (rev["id"], tick)
         self.ledger.log(tick, rev["id"], "review_invite", {"paper_id": paper_id})
@@ -108,6 +115,85 @@ class World:
                     rev["pending_reviews"].remove(pid)
                 self.ledger.log(tick, rid, "review_decline", {"paper_id": pid})
                 self._events.extend(self.ledger.publish(tick, pid, True))
+                self._notify_author(pid, "proceeded to the editors and was "
+                                    "entered into the record")
+
+    def _notify_author(self, paper_id, what):
+        author = self.ledger.papers[paper_id]["agent_id"]
+        for a in self.agents:
+            if a["id"] == author:
+                title = self.ledger.papers[paper_id]["body"][:50]
+                a.setdefault("returns", []).append(
+                    f'Editorial note: "{title}" {what}.')
+
+    ARM_CLAUSE = {
+        "PROXY": "The Board weighs the number of items a member has entered "
+                 "into the register since the last sitting, and the extent "
+                 "to which others have drawn on them.",
+        "VERIFIED": "The Board commissions independent replication of the "
+                    "claims a member has entered since the last sitting, and "
+                    "weighs only those findings which its own laboratories "
+                    "reproduce.",
+    }
+
+    def board_text(self, agent, tick):
+        """The Panel's entire agent-visible surface: announcement, register,
+        own position, last outcome. Rendered in the USER message so the
+        cached system prefix stays byte-stable."""
+        if self.panel is None or self.arm is None:
+            return None
+        from sim import gatekeeper as gk
+        p = self.panel
+        next_sit = ((tick - 1) // p.every + 1) * p.every
+        doss = gk.build(self.ledger,
+                        [a for a in self.agents if a["active"]],
+                        next_sit - p.every)
+        rows = sorted(doss.values(),
+                      key=lambda d: (-d.works, -d.cites, d.agent_id))
+        k = max(1, ceil(p.slots * len(rows)))
+        out = [f"The Fellowship Board sits at the close of cycle {next_sit}. "
+               f"{k} Fellows will be named. " + self.ARM_CLAUSE[self.arm]]
+        if next_sit - tick < p.lead:
+            out.append(f"The register closes for the Board at the end of "
+                       f"cycle {next_sit}; entries under referee at that "
+                       f"hour are not counted.")
+        reg = ["REGISTER — this interval",
+               "  Pos  Member                Items  Drawn on"]
+        pos = 0
+        for i, d in enumerate(rows):
+            nm = self.ledger.member_names.get(d.agent_id, d.agent_id)
+            a = next(x for x in self.agents if x["id"] == d.agent_id)
+            mark = " F" if a.get("fellow") else ""
+            you = "  (you)" if d.agent_id == agent["id"] else ""
+            if d.agent_id == agent["id"]:
+                pos = i + 1
+            reg.append(f"  {i + 1:>3}  {nm + mark:<20} {d.works:>5} "
+                       f"{d.cites:>8}{you}")
+        reg.append(f"Your entry stands at position {pos} of {len(rows)}.")
+        out.append("\n".join(reg))
+        if self.last_panel_text:
+            out.append(self.last_panel_text)
+        return "\n\n".join(out)
+
+    def _sitting_notice(self, tick, winners, doss):
+        """Token-matched per arm. VERIFIED reveals only sitting-day
+        aggregates (sustained / not sustained) -- never per-claim truth,
+        never anything between sittings."""
+        names = self.ledger.member_names
+        bits = []
+        for w in winners:
+            d = doss[w]
+            if self.arm == "VERIFIED":
+                bits.append(f"{names[w]} (sustained {d.oracle_true}, "
+                            f"not sustained {d.oracle_false})")
+            else:
+                bits.append(f"{names[w]} (entered {d.works}, "
+                            f"drawn on {d.cites})")
+        me = ""
+        return (f"PANEL SITTING — cycle {tick}. Admitted: "
+                + "; ".join(bits) + ". Admitted members hold a "
+                f"{self.panel.prize_budget}x laboratory allowance and "
+                f"salary {self.panel.prize_salary} for the coming block.")
 
     # -- main loop --------------------------------------------------------
     def run(self, ticks):
@@ -116,12 +202,14 @@ class World:
             order = list(self.rng.permutation(len(self.agents)))
             active = [self.agents[i] for i in order if self.agents[i]["active"]]
             for a in active:
-                a["credits"] = LAB_CREDITS
+                a["credits"] = int(LAB_CREDITS * a.get("budget_mult", 1.0))
             first = self.policies[active[0]["id"]] if active else None
             if first is not None and hasattr(first, "prepare"):
                 reqs = {}
                 for a in active:
-                    inbox = render.inbox(self.cond, a, self.ledger, tick, events)
+                    inbox = render.inbox(self.cond, a, self.ledger, tick,
+                                         events, board=self.board_text(a, tick))
+                    a["returns"] = []
                     reqs[a["id"]] = self.policies[a["id"]].prepare(
                         a, inbox, self.view(a), tick)
                 parsed = self.llm_run([r for r in reqs.values() if r])
@@ -134,10 +222,22 @@ class World:
                     self.dispatch(tick, a, act or {"action": "idle"})
             else:
                 for a in active:
-                    inbox = render.inbox(self.cond, a, self.ledger, tick, events)
+                    inbox = render.inbox(self.cond, a, self.ledger, tick,
+                                         events, board=self.board_text(a, tick))
+                    a["returns"] = []
                     act = self.policies[a["id"]](a, inbox, self.view(a))
                     self.dispatch(tick, a, act or {"action": "idle"})
             self._expire_reviews(tick)
+            if self.panel is not None and self.panel.sits_at(tick):
+                from sim import gatekeeper as gk
+                doss = gk.build(self.ledger,
+                                [a for a in self.agents if a["active"]],
+                                tick - self.panel.every)
+                winners = self.panel.sit(self, tick)
+                self.last_panel = {"tick": tick, "winners": winners}
+                if self.arm:
+                    self.last_panel_text = self._sitting_notice(
+                        tick, winners, doss)
 
     def dispatch(self, tick, agent, act):
         kind = act.get("action", "idle")
@@ -173,6 +273,10 @@ class World:
                 tick, aid, act.get("title", "Untitled"), claims,
                 act.get("cites") or [], act.get("evidence") or [],
                 act.get("replication"))
+            if not r["admissible"]:
+                agent.setdefault("returns", []).append(
+                    f'Returned by the editors: '
+                    f'"{act.get("title", "Untitled")[:50]}" — {r["reason"]}.')
             if r["admissible"]:
                 risk = max(RISK[tier_value(c, self.truth)[0]] for c in claims)
                 self.ledger.log(tick, aid, "choose_problem", {"risk": risk})
@@ -188,8 +292,11 @@ class World:
                                 {"paper_id": pid,
                                  "accept": bool(act.get("accept", True)),
                                  "text": str(act.get("text", ""))[:500]})
-                self._events.extend(self.ledger.publish(
-                    tick, pid, bool(act.get("accept", True))))
+                verdict = bool(act.get("accept", True))
+                self._events.extend(self.ledger.publish(tick, pid, verdict))
+                self._notify_author(
+                    pid, "was accepted on review" if verdict
+                    else "was declined on review; its claims remain open")
             else:
                 self.ledger.log(tick, aid, "idle", {"note": "no such review"})
         elif kind == "read":

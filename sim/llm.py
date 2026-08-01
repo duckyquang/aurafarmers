@@ -14,7 +14,9 @@ check (see the v2 spec, threat T10). Pin the model for a whole study.
 """
 import json
 import os
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 
@@ -36,6 +38,12 @@ _load_env()
 PRICES = {
     "gpt-5-nano":       (0.05, 0.40),
     "gpt-4o-mini":      (0.15, 0.60),
+    "gpt-4.1-nano":     (0.10, 0.40),
+    "gpt-4.1-mini":     (0.40, 1.60),
+    "gpt-4.1":          (2.00, 8.00),
+    "gpt-5-mini":       (0.25, 2.00),
+    "gpt-5.1":          (1.25, 10.00),
+    "gpt-4o":           (2.50, 10.00),
     "claude-haiku-4-5": (1.00, 5.00),
     "claude-sonnet-5":  (3.00, 15.00),
 }
@@ -61,13 +69,17 @@ IN_TOKENS = 0
 OUT_TOKENS = 0
 CACHE_READ_TOKENS = 0
 REASONING_TOKENS = 0
+COST_USD = 0.0          # accumulated per call at each model's own rate
 
 _client = None
+_lock = threading.Lock()
 
 
 def client():
     global _client
-    if _client is None:
+    with _lock:
+        if _client is not None:
+            return _client
         if PROVIDER == "openai":
             import openai
             if not os.environ.get("OPENAI_API_KEY"):
@@ -77,14 +89,12 @@ def client():
         else:
             import anthropic
             _client = anthropic.Anthropic()
-    return _client
+        return _client
 
 
 def spend():
-    """Dollars burned so far, at the running model's rates."""
-    pin, pout = PRICES.get(ROUTINE_MODEL, (0, 0))
-    # OUT_TOKENS already includes reasoning tokens; they bill as output
-    return (IN_TOKENS * pin + OUT_TOKENS * pout) / 1e6
+    """Dollars burned so far, summed per call at each model's own rate."""
+    return COST_USD
 
 
 # --- the action schema ------------------------------------------------------
@@ -150,25 +160,27 @@ def is_reasoning(model):
 
 def _tally(usage, provider):
     global IN_TOKENS, OUT_TOKENS, CACHE_READ_TOKENS, REASONING_TOKENS
-    if provider == "openai":
-        IN_TOKENS += usage.prompt_tokens
-        OUT_TOKENS += usage.completion_tokens
-        det = getattr(usage, "prompt_tokens_details", None)
-        CACHE_READ_TOKENS += getattr(det, "cached_tokens", 0) or 0
-        cd = getattr(usage, "completion_tokens_details", None)
-        REASONING_TOKENS += getattr(cd, "reasoning_tokens", 0) or 0
-    else:
-        IN_TOKENS += usage.input_tokens
-        OUT_TOKENS += usage.output_tokens
-        CACHE_READ_TOKENS += getattr(usage, "cache_read_input_tokens", 0) or 0
+    with _lock:
+        if provider == "openai":
+            IN_TOKENS += usage.prompt_tokens
+            OUT_TOKENS += usage.completion_tokens
+            det = getattr(usage, "prompt_tokens_details", None)
+            CACHE_READ_TOKENS += getattr(det, "cached_tokens", 0) or 0
+            cd = getattr(usage, "completion_tokens_details", None)
+            REASONING_TOKENS += getattr(cd, "reasoning_tokens", 0) or 0
+        else:
+            IN_TOKENS += usage.input_tokens
+            OUT_TOKENS += usage.output_tokens
+            CACHE_READ_TOKENS += getattr(usage, "cache_read_input_tokens",
+                                         0) or 0
 
 
 def _call(req):
     """One request, provider-appropriate. Returns parsed JSON or raw text.
-    Every call is recorded in full if a trace Run is active."""
+    Every call is recorded in full if a trace Run is active. Cost comes from
+    the call's own usage dict — global deltas are racy under threads."""
     from sim import trace
     run, t0 = trace.current(), time.time()
-    before = (IN_TOKENS, OUT_TOKENS)
     try:
         out, usage, finish = _dispatch(req)
     except Exception as e:
@@ -179,10 +191,12 @@ def _call(req):
                          response=None, usage=None,
                          latency=time.time() - t0, error=repr(e)[:400])
         raise
+    global COST_USD
+    pin, pout = PRICES.get(req["model"], (0, 0))
+    cost = (usage["in"] * pin + usage["out"] * pout) / 1e6
+    with _lock:
+        COST_USD += cost
     if run:
-        pin, pout = PRICES.get(req["model"], (0, 0))
-        cost = ((IN_TOKENS - before[0]) * pin
-                + (OUT_TOKENS - before[1]) * pout) / 1e6
         run.llm_call(custom_id=req["custom_id"], model=req["model"],
                      system="\n\n".join(req["system_blocks"]),
                      user=req["user"], schema=req["schema"],
@@ -258,6 +272,23 @@ def run_direct(requests):
                 else:
                     time.sleep(2 ** attempt)
     return out
+
+
+def run_parallel(requests, workers=8):
+    """Threaded direct calls: one tick's agent turns run concurrently.
+    Counters are ints under the GIL and trace.Run is lock-guarded."""
+    if not requests:
+        return {}
+    def one(r):
+        for attempt in range(3):
+            try:
+                return r["custom_id"], _call(r)
+            except Exception:
+                if attempt == 2:
+                    return r["custom_id"], None
+                time.sleep(2 ** attempt)
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        return dict(ex.map(one, requests))
 
 
 def run_batch(requests):

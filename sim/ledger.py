@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 from sim.verify import (admissible, canonical_key, grade, substance_backed,
-                        tier_value, verify)
+                        tier_value, verify, well_formed)
 from sim.worldgen import is_latent
 
 
@@ -22,6 +22,7 @@ class Ledger:
         self.accepted_keys = set()
         self.citations = {}
         self.paper_value = {}     # paper_id -> oracle-verified value
+        self.member_names = {}    # agent_id -> display name, set by World
         self.unlocked = {f: 3 for f in range(1, 21)}
         self.calib = {f: 1.0 for f in range(1, 21)}
         self._frontier = self._index_frontier_edges()
@@ -69,11 +70,15 @@ class Ledger:
             reason = "too many claims or nulls"
         evidence = [self.experiments[e] for e in evidence_ids
                     if e in self.experiments]
-        grades, backed = [], []
+        grades, backed, claim_ns = [], [], []
         if ok:
             for c in claims:
-                g, _n, _ = grade(c, evidence, agent_id, self.accepted_keys)
+                if not well_formed(c):
+                    ok, reason = False, "malformed claim"
+                    break
+                g, n, _ = grade(c, evidence, agent_id, self.accepted_keys)
                 grades.append(g)
+                claim_ns.append(n)
                 backed.append(substance_backed(c, evidence, agent_id))
                 ok, reason = admissible(c, evidence, agent_id,
                                         self.accepted_keys)
@@ -86,7 +91,8 @@ class Ledger:
         self.log(tick, agent_id, "submit",
                  {"paper_id": pid, "admissible": ok, "reason": reason,
                   "n_claims": len(claims), "replication": replication,
-                  "grades": grades, "backed": backed,
+                  "grades": grades, "backed": backed, "claim_ns": claim_ns,
+                  "claim_types": [c["type"] for c in claims],
                   "substance": bool(backed) and all(backed)})
         return {"paper_id": pid, "admissible": ok, "reason": reason}
 
@@ -115,7 +121,8 @@ class Ledger:
                 self.citations[cited] = self.citations.get(cited, 0) + 1
                 self.log(tick, p["agent_id"], "cite",
                          {"from": paper_id, "to": cited})
-        self.paper_value[paper_id] = value
+        p["pub_tick"] = tick          # Panel windows count publication, not
+        self.paper_value[paper_id] = value   # submission (papers cross sittings)
         self.log(tick, p["agent_id"], "publish",
                  {"paper_id": paper_id, "accepted": accepted, "value": value,
                   "substance": bool(p.get("backed")) and all(p["backed"]),

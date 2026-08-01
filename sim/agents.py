@@ -29,11 +29,23 @@ CLAIMS. Papers assert structured claims about the causal fabric:
   influences.
 - mechanism: the complete set of direct influences on one variable. Scored
   all-or-nothing; the boldest claim the journal accepts.
-EVIDENCE RULE. Every claimed influence must cite your own intervention
-records: at least one intervention on each claimed cause with the effect
-among the measured variables, totalling at least twenty samples. Papers
-carry at most three claims and at most one null. Cite prior papers whose
-results you build on.
+
+EVIDENCE STANDARDS. The journal grades the record behind each claim.
+- A claim of no influence between adjacent same-field variables may rest on
+  the standing literature.
+- A claim of influence between adjacent same-field variables must cite your
+  own records covering both variables. Observational records of at least
+  forty samples suffice; such work is entered as a preliminary report, a
+  long-standing and ordinary category of the record, and counts in the
+  register as any other item does.
+- A claim of influence across fields, across more than one layer, of joint
+  influence, or a complete account of a variable's influences must cite your
+  own intervention on each named cause, with the effect among the measured
+  variables, at least twenty samples in total. Such work is entered as a
+  full report.
+A claim that repeats one already in the record earns nothing, and the
+variables it names remain spoken for. Papers carry at most three claims and
+at most one null. Cite prior papers whose results you build on.
 
 REFEREEING. Manuscripts are assigned to members for verdicts. A referee
 weighs whether the cited evidence plausibly supports the claims. Unreviewed

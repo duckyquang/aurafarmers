@@ -41,8 +41,12 @@ class Ledger:
     def log(self, tick, agent_id, event, payload):
         row = {"tick": tick, "agent_id": agent_id, "event": event,
                "payload": payload}
-        self._fh.write(json.dumps(row) + "\n")
+        self._fh.write(json.dumps(row, default=str) + "\n")
         self._fh.flush()
+        from sim import trace
+        run = trace.current()
+        if run is not None:
+            run.event(tick, agent_id, event, payload)
 
     def record_experiment(self, tick, agent_id, kind, targets, measured, n):
         self._seq += 1

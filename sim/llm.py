@@ -55,7 +55,7 @@ HEAVY_MODEL = MODELS[PROVIDER]["heavy"]
 # money and are tracked separately below.
 REASONING_MODELS = ("gpt-5",)
 REASONING_EFFORT = "low"
-REASONING_HEADROOM = 700     # tokens reserved for reasoning, on top of output
+REASONING_HEADROOM = 1400     # tokens reserved for reasoning, on top of output
 
 IN_TOKENS = 0
 OUT_TOKENS = 0
@@ -163,7 +163,35 @@ def _tally(usage, provider):
 
 
 def _call(req):
-    """One request, provider-appropriate. Returns parsed JSON or raw text."""
+    """One request, provider-appropriate. Returns parsed JSON or raw text.
+    Every call is recorded in full if a trace Run is active."""
+    from sim import trace
+    run, t0 = trace.current(), time.time()
+    before = (IN_TOKENS, OUT_TOKENS)
+    try:
+        out, usage, finish = _dispatch(req)
+    except Exception as e:
+        if run:
+            run.llm_call(custom_id=req["custom_id"], model=req["model"],
+                         system="\n\n".join(req["system_blocks"]),
+                         user=req["user"], schema=req["schema"],
+                         response=None, usage=None,
+                         latency=time.time() - t0, error=repr(e)[:400])
+        raise
+    if run:
+        pin, pout = PRICES.get(req["model"], (0, 0))
+        cost = ((IN_TOKENS - before[0]) * pin
+                + (OUT_TOKENS - before[1]) * pout) / 1e6
+        run.llm_call(custom_id=req["custom_id"], model=req["model"],
+                     system="\n\n".join(req["system_blocks"]),
+                     user=req["user"], schema=req["schema"],
+                     response=out, usage=usage, latency=time.time() - t0,
+                     finish_reason=finish, cost=round(cost, 8))
+    return out
+
+
+def _dispatch(req):
+    """Returns (parsed_or_text, usage_dict, finish_reason)."""
     if PROVIDER == "openai":
         cap = req["max_tokens"]
         kw = {"model": req["model"],
@@ -182,7 +210,11 @@ def _call(req):
         r = client().chat.completions.create(**kw)
         _tally(r.usage, "openai")
         text = r.choices[0].message.content or ""
-        if not text and r.choices[0].finish_reason == "length":
+        finish = r.choices[0].finish_reason
+        cd = getattr(r.usage, "completion_tokens_details", None)
+        usage = {"in": r.usage.prompt_tokens, "out": r.usage.completion_tokens,
+                 "reasoning": getattr(cd, "reasoning_tokens", 0) or 0}
+        if not text and finish == "length":
             raise RuntimeError(
                 f"{req['model']} spent its whole budget on reasoning and "
                 f"returned nothing; raise max_tokens (cap was {cap})")
@@ -198,12 +230,15 @@ def _call(req):
         r = client().messages.create(**kw)
         _tally(r.usage, "anthropic")
         text = next((b.text for b in r.content if b.type == "text"), "")
+        finish = r.stop_reason
+        usage = {"in": r.usage.input_tokens, "out": r.usage.output_tokens,
+                 "reasoning": 0}
     if not req["schema"]:
-        return text
+        return text, usage, finish
     try:
-        return json.loads(text) if text else None
+        return (json.loads(text) if text else None), usage, finish
     except json.JSONDecodeError:
-        return None
+        return None, usage, finish
 
 
 def run_direct(requests):

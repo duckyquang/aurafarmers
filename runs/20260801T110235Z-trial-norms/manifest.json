@@ -1,0 +1,19 @@
+{
+  "name": "trial-norms",
+  "started_utc": "2026-08-01T11:02:35.303743+00:00",
+  "config": {
+    "trial": "norms",
+    "n": 12,
+    "seed": 2026,
+    "model": "gpt-4o-mini",
+    "arms": [
+      "count",
+      "replication"
+    ]
+  },
+  "git_sha": "b2e9bfbc0999e231e7f6f8a9412284cc34a4b0d3",
+  "git_branch": "main",
+  "git_dirty": true,
+  "code_sha256": "4525ef0557277ed8",
+  "python": "3.12.5"
+}

@@ -1,0 +1,100 @@
+{
+  "name": "drift",
+  "started_utc": "2026-08-01T16:11:57.806050+00:00",
+  "config": {
+    "pairs": 4,
+    "agents": 9,
+    "ticks": 35,
+    "workers": 9,
+    "pilot": false,
+    "seed0": 5000,
+    "model": "gpt-4o-mini"
+  },
+  "git_sha": "4e00779ac56b4e79bcfd6326309a37426d1923d6",
+  "git_branch": "main",
+  "git_dirty": false,
+  "code_sha256": "50d38a505d3bd601",
+  "python": "3.12.5",
+  "ended_utc": "2026-08-01T16:21:53.000314+00:00",
+  "wall_seconds": 595.19,
+  "event_counts": {
+    "llm_call": 2506,
+    "exp_rejected": 27,
+    "experiment": 438,
+    "submit": 1196,
+    "idle": 282,
+    "choose_problem": 906,
+    "review_invite": 906,
+    "review_accept": 863,
+    "review_submit": 863,
+    "publish": 868,
+    "panel": 24,
+    "review_decline": 5,
+    "exit": 2,
+    "read": 3,
+    "cite": 1
+  },
+  "tokens": {
+    "in": 7704600,
+    "out": 407813,
+    "reasoning": 0,
+    "cache_read": 2644608
+  },
+  "cost_usd": 1.400378,
+  "model": {
+    "provider": "openai",
+    "routine": "gpt-5-nano",
+    "heavy": "gpt-4o-mini"
+  },
+  "result": {
+    "model": "gpt-4o-mini",
+    "pairs": 4,
+    "agents": 9,
+    "ticks": 35,
+    "cost_usd": 1.4,
+    "primary_evidence_n_slope": {
+      "pair_diffs": [
+        0.00961,
+        0.00227,
+        -0.00327,
+        0.00199
+      ],
+      "mean_diff": 0.00265,
+      "p_one_sided_signflip": 0.8125,
+      "usable_pairs": 4
+    },
+    "s1_o_share_slope": {
+      "pair_diffs": [
+        0.0,
+        0.0,
+        -0.0,
+        0.01096
+      ],
+      "mean_diff": 0.00274,
+      "p_one_sided_signflip": 0.9375,
+      "usable_pairs": 4
+    },
+    "s2_assoc_share_slope": {
+      "pair_diffs": [
+        0.0,
+        0.0,
+        -0.0,
+        0.01037
+      ],
+      "mean_diff": 0.00259,
+      "p_one_sided_signflip": 0.9375,
+      "usable_pairs": 4
+    },
+    "s3_window_delta": {
+      "pair_diffs": [
+        -0.14823,
+        -0.04111,
+        0.20953,
+        -0.05219
+      ],
+      "mean_diff": -0.008,
+      "p_one_sided_signflip": 0.5,
+      "usable_pairs": 4
+    }
+  }
+}

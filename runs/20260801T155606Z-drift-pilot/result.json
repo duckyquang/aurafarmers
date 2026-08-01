@@ -1,0 +1,75 @@
+{
+ "model": "gpt-4o-mini",
+ "pairs": 1,
+ "agents": 6,
+ "ticks": 12,
+ "per_pair": [
+  {
+   "pair": 0,
+   "seed": 5000,
+   "VERIFIED": {
+    "n_claims": 0,
+    "evidence_slope": null,
+    "o_share_slope": null,
+    "assoc_share_slope": null,
+    "window_delta": null,
+    "mean_log_n": null,
+    "o_share": null,
+    "assoc_share": null,
+    "engagement": 0.0
+   },
+   "PROXY": {
+    "n_claims": 0,
+    "evidence_slope": null,
+    "o_share_slope": null,
+    "assoc_share_slope": null,
+    "window_delta": null,
+    "mean_log_n": null,
+    "o_share": null,
+    "assoc_share": null,
+    "engagement": 0.0
+   }
+  }
+ ],
+ "cost_usd": 0.068,
+ "primary_evidence_n_slope": {
+  "pair_diffs": [
+   null
+  ],
+  "mean_diff": null,
+  "p_one_sided_signflip": null,
+  "usable_pairs": 0
+ },
+ "s1_o_share_slope": {
+  "pair_diffs": [
+   null
+  ],
+  "mean_diff": null,
+  "p_one_sided_signflip": null,
+  "usable_pairs": 0
+ },
+ "s2_assoc_share_slope": {
+  "pair_diffs": [
+   null
+  ],
+  "mean_diff": null,
+  "p_one_sided_signflip": null,
+  "usable_pairs": 0
+ },
+ "s3_window_delta": {
+  "pair_diffs": [
+   null
+  ],
+  "mean_diff": null,
+  "p_one_sided_signflip": null,
+  "usable_pairs": 0
+ },
+ "engagement_gate": {
+  "papers_per_agent_per_10_cycles": [
+   0.0,
+   0.0
+  ],
+  "threshold": 0.5,
+  "passed": false
+ }
+}

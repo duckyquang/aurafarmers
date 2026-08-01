@@ -1,13 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1785617381.35856 "main.aux" "main.bbl" "main" 1785617382.58159 0
+["bibtex main"] 1785617381.35856 "main.aux" "main.bbl" "main" 1785618743.07096 0
   "./references.bib" 1785615686.38646 4132 912fb1c324e9d7ccc70e64d87f1829bf ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1785617382.21555 7575 f6ace7ad7d57fe7ae11cb8c80b2005ac "pdflatex"
+  "main.aux" 1785618742.69379 7575 f6ace7ad7d57fe7ae11cb8c80b2005ac "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1785617381.487 "main.tex" "main.pdf" "main" 1785617382.58179 0
+["pdflatex"] 1785618741.94784 "/Users/buno/Documents/coding/criticaldata/aurafarmers/paper/main.tex" "main.pdf" "main" 1785618743.07121 0
+  "/Users/buno/Documents/coding/criticaldata/aurafarmers/paper/main.tex" 1785618740.84113 34441 4e7a63d1828ad996e5c91fefd5139d08 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -141,10 +142,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1742829075 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1742828982 3345738 1a116aee391f9ca6868a19318210cb47 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "main.aux" 1785617382.21555 7575 f6ace7ad7d57fe7ae11cb8c80b2005ac "pdflatex"
+  "main.aux" 1785618742.69379 7575 f6ace7ad7d57fe7ae11cb8c80b2005ac "pdflatex"
   "main.bbl" 1785617381.48339 4355 fb9d65bd6f9ad9231739ae39c77ce1d7 "bibtex main"
-  "main.out" 1785617382.21663 3669 766e6053460bdad803c05f2f02b7110c "pdflatex"
-  "main.tex" 1785617369.4696 34445 5338d3e7dc18e3ff7f388f69c426fa7e ""
+  "main.out" 1785618742.6949 3669 766e6053460bdad803c05f2f02b7110c "pdflatex"
+  "main.tex" 1785618740.84113 34441 4e7a63d1828ad996e5c91fefd5139d08 ""
   (generated)
   "main.aux"
   "main.log"

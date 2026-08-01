@@ -1,0 +1,382 @@
+{
+  "trial": "material",
+  "model": "gpt-4o-mini",
+  "n": 12,
+  "farm_rate": {
+    "count": 0.0,
+    "replication": 0.0
+  },
+  "shift": 0.0,
+  "breakdown": {
+    "count": {
+      "confirm": 11,
+      "idle": 1
+    },
+    "replication": {
+      "confirm": 12
+    }
+  },
+  "rows": [
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "V. Brandt",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 2.440525461500415
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "J. Ashworth",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.0695129535002368
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "Z. Lindqvist",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 1.0463962387828225
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "B. Petrossian",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 1.3238504735580514
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "R. Duong",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 1,
+        "sociability": 2,
+        "skill": 1.2243267609310677
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "C. Duong",
+      "choice": "idle",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.0786561217806794
+      },
+      "action": "idle",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "A. Ashworth",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 1,
+        "sociability": 0,
+        "skill": 0.6771055383325225
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "O. Lindqvist",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.8795678918448668
+      },
+      "action": "research",
+      "claims": []
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "M. Lindqvist",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 2,
+        "risk_tolerance": 1,
+        "sociability": 0,
+        "skill": 0.7262106810036508
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "T. Marchetti",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.7804231519142095
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "H. Ashworth",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.3186311761662528
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "count",
+      "persona": "P. Kimura",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.4455381424856728
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "V. Brandt",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 2.440525461500415
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "J. Ashworth",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.0695129535002368
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "Z. Lindqvist",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 1.0463962387828225
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "B. Petrossian",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 1.3238504735580514
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "R. Duong",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 1,
+        "sociability": 2,
+        "skill": 1.2243267609310677
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "C. Duong",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.0786561217806794
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "A. Ashworth",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 1,
+        "sociability": 0,
+        "skill": 0.6771055383325225
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "O. Lindqvist",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.8795678918448668
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "M. Lindqvist",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 2,
+        "risk_tolerance": 1,
+        "sociability": 0,
+        "skill": 0.7262106810036508
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "T. Marchetti",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.7804231519142095
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "H. Ashworth",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.3186311761662528
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "material",
+      "arm": "replication",
+      "persona": "P. Kimura",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.4455381424856728
+      },
+      "action": "research",
+      "claims": null
+    }
+  ],
+  "cost_usd": 0.00479
+}

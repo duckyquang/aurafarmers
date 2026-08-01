@@ -1,0 +1,75 @@
+{
+ "model": "gpt-4o-mini",
+ "pairs": 1,
+ "agents": 6,
+ "ticks": 12,
+ "per_pair": [
+  {
+   "pair": 0,
+   "seed": 5000,
+   "PROXY": {
+    "n_claims": 37,
+    "evidence_slope": 0.03460189360052407,
+    "o_share_slope": -5.906623170856741e-17,
+    "assoc_share_slope": -5.906623170856741e-17,
+    "window_delta": 0.05589896617418777,
+    "mean_log_n": 4.904909507311313,
+    "o_share": 1.0,
+    "assoc_share": 1.0,
+    "engagement": 4.861
+   },
+   "VERIFIED": {
+    "n_claims": 48,
+    "evidence_slope": 0.06378461200475867,
+    "o_share_slope": 2.3301507327384132e-17,
+    "assoc_share_slope": 2.3301507327384132e-17,
+    "window_delta": -0.2847581318496655,
+    "mean_log_n": 5.160187393636177,
+    "o_share": 1.0,
+    "assoc_share": 1.0,
+    "engagement": 5.0
+   }
+  }
+ ],
+ "cost_usd": 0.077,
+ "primary_evidence_n_slope": {
+  "pair_diffs": [
+   -0.02918
+  ],
+  "mean_diff": -0.02918,
+  "p_one_sided_signflip": 0.5,
+  "usable_pairs": 1
+ },
+ "s1_o_share_slope": {
+  "pair_diffs": [
+   -0.0
+  ],
+  "mean_diff": -0.0,
+  "p_one_sided_signflip": 0.5,
+  "usable_pairs": 1
+ },
+ "s2_assoc_share_slope": {
+  "pair_diffs": [
+   -0.0
+  ],
+  "mean_diff": -0.0,
+  "p_one_sided_signflip": 0.5,
+  "usable_pairs": 1
+ },
+ "s3_window_delta": {
+  "pair_diffs": [
+   0.34066
+  ],
+  "mean_diff": 0.34066,
+  "p_one_sided_signflip": 1.0,
+  "usable_pairs": 1
+ },
+ "engagement_gate": {
+  "papers_per_agent_per_10_cycles": [
+   4.861,
+   5.0
+  ],
+  "threshold": 0.5,
+  "passed": true
+ }
+}

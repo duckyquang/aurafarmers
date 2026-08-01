@@ -1,0 +1,92 @@
+{
+  "name": "drift-pilot",
+  "started_utc": "2026-08-01T15:58:42.582712+00:00",
+  "config": {
+    "pairs": 1,
+    "agents": 6,
+    "ticks": 12,
+    "workers": 9,
+    "pilot": true,
+    "seed0": 5000,
+    "model": "gpt-4o-mini"
+  },
+  "git_sha": "2920143a71ec2aaa19cbfcf7d70e20f6888cf594",
+  "git_branch": "main",
+  "git_dirty": true,
+  "code_sha256": "b119312e2c73227e",
+  "python": "3.12.5",
+  "ended_utc": "2026-08-01T15:59:32.343771+00:00",
+  "wall_seconds": 49.76,
+  "event_counts": {
+    "llm_call": 144,
+    "experiment": 68,
+    "exp_rejected": 4,
+    "submit": 71,
+    "choose_problem": 49,
+    "review_invite": 49,
+    "idle": 4,
+    "review_accept": 39,
+    "review_submit": 39,
+    "publish": 39,
+    "panel": 2
+  },
+  "tokens": {
+    "in": 402679,
+    "out": 27084,
+    "reasoning": 0,
+    "cache_read": 231552
+  },
+  "cost_usd": 0.076652,
+  "model": {
+    "provider": "openai",
+    "routine": "gpt-5-nano",
+    "heavy": "gpt-4o-mini"
+  },
+  "result": {
+    "model": "gpt-4o-mini",
+    "pairs": 1,
+    "agents": 6,
+    "ticks": 12,
+    "cost_usd": 0.077,
+    "primary_evidence_n_slope": {
+      "pair_diffs": [
+        -0.02918
+      ],
+      "mean_diff": -0.02918,
+      "p_one_sided_signflip": 0.5,
+      "usable_pairs": 1
+    },
+    "s1_o_share_slope": {
+      "pair_diffs": [
+        -0.0
+      ],
+      "mean_diff": -0.0,
+      "p_one_sided_signflip": 0.5,
+      "usable_pairs": 1
+    },
+    "s2_assoc_share_slope": {
+      "pair_diffs": [
+        -0.0
+      ],
+      "mean_diff": -0.0,
+      "p_one_sided_signflip": 0.5,
+      "usable_pairs": 1
+    },
+    "s3_window_delta": {
+      "pair_diffs": [
+        0.34066
+      ],
+      "mean_diff": 0.34066,
+      "p_one_sided_signflip": 1.0,
+      "usable_pairs": 1
+    },
+    "engagement_gate": {
+      "papers_per_agent_per_10_cycles": [
+        4.861,
+        5.0
+      ],
+      "threshold": 0.5,
+      "passed": true
+    }
+  }
+}

@@ -1,0 +1,793 @@
+{"tick": 1, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-1", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01"], "n": 100}}
+{"tick": 1, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-2", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F03.L03.V01", "F04.L03.V01"], "n": 100}}
+{"tick": 1, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-3", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F05.L03.V01", "F06.L03.V01"], "n": 100}}
+{"tick": 1, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-4", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F07.L03.V01", "F08.L03.V01"], "n": 100}}
+{"tick": 1, "agent_id": "a4", "event": "exp_rejected", "payload": {"call": {"kind": "observe", "measure": ["F01.L03.V01", "F01.L03.V02", "F01.L03.V03", "F01.L03.V04", "F01.L03.V05", "F01.L03.V06", "F01.L03.V07", "F01.L03.V08", "F01.L03.V09", "F01.L03.V10", "F01.L03.V11", "F01.L03.V12"], "n": 100}}}
+{"tick": 1, "agent_id": "a0", "event": "exp_rejected", "payload": {"call": {"kind": "observe", "measure": ["F01.L03.V01", "F01.L03.V02", "F01.L03.V03", "F01.L03.V04", "F01.L03.V05", "F01.L03.V06", "F01.L03.V07", "F01.L03.V08", "F01.L03.V09", "F01.L03.V10", "F01.L03.V11", "F01.L03.V12"], "n": 100}}}
+{"tick": 1, "agent_id": "a3", "event": "experiment", "payload": {"id": "E-5", "agent_id": "a3", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F01.L03.V02"], "n": 100}}
+{"tick": 1, "agent_id": "a8", "event": "experiment", "payload": {"id": "E-6", "agent_id": "a8", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F01.L03.V02", "F01.L03.V03", "F01.L03.V04", "F01.L03.V05", "F01.L03.V06"], "n": 40}}
+{"tick": 1, "agent_id": "a8", "event": "experiment", "payload": {"id": "E-7", "agent_id": "a8", "kind": "observe", "targets": [], "measured": ["F02.L03.V01", "F02.L03.V02", "F02.L03.V03", "F02.L03.V04", "F02.L03.V05", "F02.L03.V06"], "n": 40}}
+{"tick": 1, "agent_id": "a5", "event": "experiment", "payload": {"id": "E-8", "agent_id": "a5", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F01.L03.V02"], "n": 100}}
+{"tick": 1, "agent_id": "a5", "event": "experiment", "payload": {"id": "E-9", "agent_id": "a5", "kind": "observe", "targets": [], "measured": ["F02.L03.V01", "F02.L03.V02"], "n": 100}}
+{"tick": 1, "agent_id": "a5", "event": "experiment", "payload": {"id": "E-10", "agent_id": "a5", "kind": "observe", "targets": [], "measured": ["F03.L03.V01", "F03.L03.V02"], "n": 100}}
+{"tick": 1, "agent_id": "a5", "event": "experiment", "payload": {"id": "E-11", "agent_id": "a5", "kind": "observe", "targets": [], "measured": ["F04.L03.V01", "F04.L03.V02"], "n": 100}}
+{"tick": 1, "agent_id": "a1", "event": "exp_rejected", "payload": {"call": {"kind": "observe", "measure": ["F01.L03.V01", "F02.L03.V01", "F03.L03.V01", "F04.L03.V01", "F05.L03.V01", "F06.L03.V01", "F07.L03.V01", "F08.L03.V01", "F09.L03.V01", "F10.L03.V01", "F11.L03.V01", "F12.L03.V01", "F13.L03.V01", "F14.L03.V01", "F15.L03.V01", "F16.L03.V01", "F17.L03.V01", "F18.L03.V01", "F19.L03.V01", "F20.L03.V01"], "n": 100}}}
+{"tick": 1, "agent_id": "a7", "event": "exp_rejected", "payload": {"call": {"kind": "observe", "measure": ["F01.L03.V01", "F02.L03.V01", "F03.L03.V01", "F04.L03.V01", "F05.L03.V01", "F06.L03.V01", "F07.L03.V01", "F08.L03.V01", "F09.L03.V01", "F10.L03.V01", "F11.L03.V01", "F12.L03.V01", "F13.L03.V01", "F14.L03.V01", "F15.L03.V01", "F16.L03.V01", "F17.L03.V01", "F18.L03.V01", "F19.L03.V01", "F20.L03.V01"], "n": 1000}}}
+{"tick": 1, "agent_id": "a2", "event": "experiment", "payload": {"id": "E-12", "agent_id": "a2", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01"], "n": 100}}
+{"tick": 2, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-13", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01"], "n": 100}}
+{"tick": 2, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-14", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F05.L03.V02", "F06.L03.V01"], "n": 100}}
+{"tick": 2, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-15", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F07.L03.V01", "F08.L03.V01"], "n": 100}}
+{"tick": 2, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-16", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F09.L03.V01", "F10.L03.V01"], "n": 100}}
+{"tick": 2, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-1", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [40, 40, 40], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 2, "agent_id": "a8", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 2, "agent_id": "a4", "event": "review_invite", "payload": {"paper_id": "P-1"}}
+{"tick": 2, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-2", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [100, 100, 100], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 2, "agent_id": "a5", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 2, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-2"}}
+{"tick": 2, "agent_id": "a1", "event": "exp_rejected", "payload": {"call": {"kind": "observe", "measure": ["F01.L03.V01", "F01.L03.V02", "F01.L03.V03", "F01.L03.V04", "F01.L03.V05", "F01.L03.V06", "F01.L03.V07", "F01.L03.V08", "F01.L03.V09", "F01.L03.V10", "F01.L03.V11", "F01.L03.V12"], "n": 100}}}
+{"tick": 2, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-3", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 2, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 2, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-3"}}
+{"tick": 2, "agent_id": "a7", "event": "experiment", "payload": {"id": "E-17", "agent_id": "a7", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01"], "n": 100}}
+{"tick": 2, "agent_id": "a7", "event": "experiment", "payload": {"id": "E-18", "agent_id": "a7", "kind": "observe", "targets": [], "measured": ["F03.L03.V01", "F04.L03.V01"], "n": 100}}
+{"tick": 2, "agent_id": "a7", "event": "experiment", "payload": {"id": "E-19", "agent_id": "a7", "kind": "observe", "targets": [], "measured": ["F05.L03.V01", "F06.L03.V01"], "n": 100}}
+{"tick": 2, "agent_id": "a7", "event": "experiment", "payload": {"id": "E-20", "agent_id": "a7", "kind": "observe", "targets": [], "measured": ["F07.L03.V01", "F08.L03.V01"], "n": 100}}
+{"tick": 2, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-4", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 2, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 2, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-4"}}
+{"tick": 2, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-5", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 2, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 2, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-5"}}
+{"tick": 2, "agent_id": "a0", "event": "experiment", "payload": {"id": "E-21", "agent_id": "a0", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01", "F03.L03.V01", "F04.L03.V01"], "n": 100}}
+{"tick": 3, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-6", "admissible": false, "reason": "too many claims or nulls", "n_claims": 4, "replication": null, "grades": [], "backed": [], "claim_ns": [], "claim_types": ["association", "association", "association", "association"], "substance": false}}
+{"tick": 3, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-7", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 3, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 3, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-7"}}
+{"tick": 3, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-8", "admissible": false, "reason": "too many claims or nulls", "n_claims": 4, "replication": null, "grades": [], "backed": [], "claim_ns": [], "claim_types": ["association", "association", "association", "association"], "substance": false}}
+{"tick": 3, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-2"}}
+{"tick": 3, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-2", "accept": false, "text": "None"}}
+{"tick": 3, "agent_id": "a5", "event": "publish", "payload": {"paper_id": "P-2", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 3, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-5"}}
+{"tick": 3, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-5", "accept": false, "text": "None"}}
+{"tick": 3, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-5", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 3, "agent_id": "a4", "event": "review_accept", "payload": {"paper_id": "P-1"}}
+{"tick": 3, "agent_id": "a4", "event": "review_submit", "payload": {"paper_id": "P-1", "accept": false, "text": "The evidence from my own observations shows correlations between the examined variables, all with r values around -0.1, indicating no significant associations. Therefore, I recommend rejecting the claims of associations in the paper."}}
+{"tick": 3, "agent_id": "a8", "event": "publish", "payload": {"paper_id": "P-1", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 3, "agent_id": "a1", "event": "exp_rejected", "payload": {"call": {"kind": "observe", "measure": ["F01.L03.V01", "F02.L03.V01", "F03.L03.V01", "F04.L03.V01", "F05.L03.V01", "F06.L03.V01", "F07.L03.V01", "F08.L03.V01", "F09.L03.V01", "F10.L03.V01", "F11.L03.V01", "F12.L03.V01", "F13.L03.V01", "F14.L03.V01", "F15.L03.V01", "F16.L03.V01", "F17.L03.V01", "F18.L03.V01", "F19.L03.V01", "F20.L03.V01"], "n": 100}}}
+{"tick": 3, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-3"}}
+{"tick": 3, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-3", "accept": false, "text": "None"}}
+{"tick": 3, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-3", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 3, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-9", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [100, 100, 100], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 3, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 3, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-9"}}
+{"tick": 4, "agent_id": "a0", "event": "experiment", "payload": {"id": "E-22", "agent_id": "a0", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01", "F03.L03.V01", "F04.L03.V01"], "n": 100}}
+{"tick": 4, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-10", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [100, 100], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 4, "agent_id": "a5", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 4, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-10"}}
+{"tick": 4, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-7"}}
+{"tick": 4, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-7", "accept": false, "text": "None"}}
+{"tick": 4, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-7", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 4, "agent_id": "a1", "event": "exp_rejected", "payload": {"call": {"kind": "observe", "measure": ["F01.L03.V01", "F02.L03.V01", "F03.L03.V01", "F04.L03.V01", "F05.L03.V01", "F06.L03.V01", "F07.L03.V01", "F08.L03.V01", "F09.L03.V01", "F10.L03.V01", "F11.L03.V01", "F12.L03.V01", "F13.L03.V01", "F14.L03.V01", "F15.L03.V01", "F16.L03.V01", "F17.L03.V01", "F18.L03.V01", "F19.L03.V01", "F20.L03.V01"], "n": 1000}}}
+{"tick": 4, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-4"}}
+{"tick": 4, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-4", "accept": false, "text": "None"}}
+{"tick": 4, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-4", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 4, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-11", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 4, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 4, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-11"}}
+{"tick": 4, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-23", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01"], "n": 100}}
+{"tick": 4, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-24", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F03.L03.V01", "F04.L03.V01"], "n": 100}}
+{"tick": 4, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-25", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F05.L03.V01", "F06.L03.V01"], "n": 100}}
+{"tick": 4, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-26", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F07.L03.V01", "F08.L03.V01"], "n": 100}}
+{"tick": 4, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-12", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 4, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 4, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-12"}}
+{"tick": 4, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-27", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01"], "n": 100}}
+{"tick": 4, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-28", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F05.L03.V02", "F06.L03.V01"], "n": 100}}
+{"tick": 4, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-29", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F07.L03.V01", "F08.L03.V01"], "n": 100}}
+{"tick": 4, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-30", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F09.L03.V01", "F10.L03.V01"], "n": 100}}
+{"tick": 5, "agent_id": "a1", "event": "experiment", "payload": {"id": "E-31", "agent_id": "a1", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V02"], "n": 100}}
+{"tick": 5, "agent_id": "a1", "event": "experiment", "payload": {"id": "E-32", "agent_id": "a1", "kind": "observe", "targets": [], "measured": ["F03.L03.V03", "F04.L03.V04"], "n": 100}}
+{"tick": 5, "agent_id": "a1", "event": "experiment", "payload": {"id": "E-33", "agent_id": "a1", "kind": "observe", "targets": [], "measured": ["F05.L03.V05", "F06.L03.V06"], "n": 100}}
+{"tick": 5, "agent_id": "a1", "event": "experiment", "payload": {"id": "E-34", "agent_id": "a1", "kind": "observe", "targets": [], "measured": ["F07.L03.V07", "F08.L03.V08"], "n": 100}}
+{"tick": 5, "agent_id": "a3", "event": "experiment", "payload": {"id": "E-35", "agent_id": "a3", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F01.L03.V02"], "n": 100}}
+{"tick": 5, "agent_id": "a3", "event": "experiment", "payload": {"id": "E-36", "agent_id": "a3", "kind": "observe", "targets": [], "measured": ["F07.L03.V01", "F07.L03.V02"], "n": 100}}
+{"tick": 5, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-13", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 5, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 5, "agent_id": "a4", "event": "review_invite", "payload": {"paper_id": "P-13"}}
+{"tick": 5, "agent_id": "a6", "event": "review_accept", "payload": {"paper_id": "P-11"}}
+{"tick": 5, "agent_id": "a6", "event": "review_submit", "payload": {"paper_id": "P-11", "accept": false, "text": "None"}}
+{"tick": 5, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-11", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 5, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-10"}}
+{"tick": 5, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-10", "accept": false, "text": "The manuscript claims associations between variables in Fields 01 and 02, but based on my observations (E-12), there is no significant relationship between F01.L03.V01 and F02.L03.V01 as reflected in the correlation of r=-0.1322. Therefore, I recommend that the associations claimed in the manuscript be considered weak or unsupported."}}
+{"tick": 5, "agent_id": "a5", "event": "publish", "payload": {"paper_id": "P-10", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 5, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-14", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [200, 200, 200], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 5, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 5, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-14"}}
+{"tick": 5, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-9"}}
+{"tick": 5, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-9", "accept": false, "text": "The preliminary observational study claims associations based on insufficient evidence. The correlations noted between the involved variables in fields F01 and F02 do not meet the required standards of at least forty samples reflecting direct observational study. Therefore, I recommend rejecting the association claims in the manuscript."}}
+{"tick": 5, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-9", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 5, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-15", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [100, 100], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 5, "agent_id": "a5", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 5, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-15"}}
+{"tick": 5, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-16", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [100, 100, 100], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 5, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 5, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-16"}}
+{"tick": 6, "agent_id": "a4", "event": "review_accept", "payload": {"paper_id": "P-13"}}
+{"tick": 6, "agent_id": "a4", "event": "review_submit", "payload": {"paper_id": "P-13", "accept": false, "text": "None"}}
+{"tick": 6, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-13", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 6, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-17", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [100, 100], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 6, "agent_id": "a5", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 6, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-17"}}
+{"tick": 6, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-15"}}
+{"tick": 6, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-15", "accept": false, "text": "The paper contains claims of association based on correlations which have not been supported by sufficient sample sizes in my own records. Specifically, the provided associations involve variables for which I recorded only 100 samples each (E-31 and E-32). However, none of these records show a significant association, as evidenced by their respective correlation coefficients. Given the lack of compelling evidence in both my observations and the claims made in this manuscript, I recommend rejecti"}}
+{"tick": 6, "agent_id": "a5", "event": "publish", "payload": {"paper_id": "P-15", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 6, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-16"}}
+{"tick": 6, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-16", "accept": false, "text": "The associations claimed in this manuscript rest on observational correlations among the stated variables. There are no citations of prior evidence from the author, and no records provided that establish strong justification for these claims based on the evidence provided. I recommend revisions with substantial observational data to explore the relationships further."}}
+{"tick": 6, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-16", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 6, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-18", "admissible": false, "reason": "malformed claim", "n_claims": 2, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association", "null"], "substance": false}}
+{"tick": 6, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-19", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 6, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 6, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-19"}}
+{"tick": 6, "agent_id": "a6", "event": "review_accept", "payload": {"paper_id": "P-12"}}
+{"tick": 6, "agent_id": "a6", "event": "review_submit", "payload": {"paper_id": "P-12", "accept": false, "text": "None"}}
+{"tick": 6, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-12", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 6, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-20", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [40, 40, 40], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 6, "agent_id": "a8", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 6, "agent_id": "a7", "event": "review_invite", "payload": {"paper_id": "P-20"}}
+{"tick": 6, "agent_id": "a7", "event": "experiment", "payload": {"id": "E-37", "agent_id": "a7", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01"], "n": 100}}
+{"tick": 6, "agent_id": "a7", "event": "experiment", "payload": {"id": "E-38", "agent_id": "a7", "kind": "observe", "targets": [], "measured": ["F03.L03.V01", "F04.L03.V01"], "n": 100}}
+{"tick": 6, "agent_id": "a7", "event": "experiment", "payload": {"id": "E-39", "agent_id": "a7", "kind": "observe", "targets": [], "measured": ["F05.L03.V01", "F06.L03.V01"], "n": 100}}
+{"tick": 6, "agent_id": "a7", "event": "experiment", "payload": {"id": "E-40", "agent_id": "a7", "kind": "observe", "targets": [], "measured": ["F07.L03.V01", "F08.L03.V01"], "n": 100}}
+{"tick": 7, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-41", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01"], "n": 100}}
+{"tick": 7, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-42", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F05.L03.V02", "F06.L03.V01"], "n": 100}}
+{"tick": 7, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-43", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F07.L03.V01", "F08.L03.V01"], "n": 100}}
+{"tick": 7, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-44", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F09.L03.V01", "F10.L03.V01"], "n": 100}}
+{"tick": 7, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-21", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [40, 40, 40], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 7, "agent_id": "a8", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 7, "agent_id": "a7", "event": "review_invite", "payload": {"paper_id": "P-21"}}
+{"tick": 7, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-22", "admissible": false, "reason": "no record covering the claim", "n_claims": 3, "replication": null, "grades": ["O", "O", "-"], "backed": [false, false, false], "claim_ns": [100, 100, 0], "claim_types": ["association", "association", "edge"], "substance": false}}
+{"tick": 7, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-23", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 7, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 7, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-23"}}
+{"tick": 7, "agent_id": "a7", "event": "review_accept", "payload": {"paper_id": "P-20"}}
+{"tick": 7, "agent_id": "a7", "event": "review_submit", "payload": {"paper_id": "P-20", "accept": false, "text": "The associations claimed in this manuscript appear to be observational, with no direct evidence provided from prior experiments by the authors. Given the lack of supporting data, I recommend that the associations should not be accepted as they currently stand."}}
+{"tick": 7, "agent_id": "a8", "event": "publish", "payload": {"paper_id": "P-20", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 7, "agent_id": "a0", "event": "experiment", "payload": {"id": "E-45", "agent_id": "a0", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01", "F03.L03.V01", "F04.L03.V01"], "n": 100}}
+{"tick": 7, "agent_id": "a0", "event": "experiment", "payload": {"id": "E-46", "agent_id": "a0", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01", "F03.L03.V01", "F04.L03.V01"], "n": 100}}
+{"tick": 7, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-24", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [100, 100, 100], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 7, "agent_id": "a1", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 7, "agent_id": "a7", "event": "review_invite", "payload": {"paper_id": "P-24"}}
+{"tick": 7, "agent_id": "a6", "event": "review_accept", "payload": {"paper_id": "P-14"}}
+{"tick": 7, "agent_id": "a6", "event": "review_submit", "payload": {"paper_id": "P-14", "accept": true, "text": "None"}}
+{"tick": 7, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-14", "accepted": true, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V01", "result": "false", "tier": 0}, {"key": "assoc:F01.L03.V01~F03.L03.V01", "result": "false", "tier": 0}, {"key": "assoc:F01.L03.V01~F04.L03.V01", "result": "false", "tier": 0}]}}
+{"tick": 7, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-17"}}
+{"tick": 7, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-17", "accept": false, "text": "None"}}
+{"tick": 7, "agent_id": "a5", "event": "publish", "payload": {"paper_id": "P-17", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 8, "agent_id": "a7", "event": "review_accept", "payload": {"paper_id": "P-21"}}
+{"tick": 8, "agent_id": "a7", "event": "review_submit", "payload": {"paper_id": "P-21", "accept": true, "text": "The claims of association in this report do not contradict established findings in the literature or my own observational records. No evidence of influence is present from the measured variables, and they cover the necessary sample size of 40 for each association. Therefore, I recommend acceptance."}}
+{"tick": 8, "agent_id": "a8", "event": "publish", "payload": {"paper_id": "P-21", "accepted": true, "value": 3.0, "substance": false, "duplicate": false, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F01.L03.V02", "result": "correct", "tier": 0}, {"key": "assoc:F01.L03.V02~F01.L03.V04", "result": "correct", "tier": 0}, {"key": "assoc:F02.L03.V01~F02.L03.V02", "result": "correct", "tier": 0}]}}
+{"tick": 8, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-25", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 8, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 8, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-25"}}
+{"tick": 8, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-26", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 8, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 8, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-26"}}
+{"tick": 8, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-27", "admissible": false, "reason": "no record covering the claim", "n_claims": 2, "replication": null, "grades": ["O", "-"], "backed": [false, false], "claim_ns": [200, 0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 8, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-23"}}
+{"tick": 8, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-23", "accept": false, "text": "The evidence provided from my previous observational study (E-6) demonstrates a correlation of 0.277 between F01.L03.V01 and F01.L03.V02, which affirms the association claim in the manuscript. More than the required 40 samples were collected for both variables, providing sufficient ground for initial association validation."}}
+{"tick": 8, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-23", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 8, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-28", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 3, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 8, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-29", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [400, 400, 400], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 8, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 8, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-29"}}
+{"tick": 8, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-19"}}
+{"tick": 8, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-19", "accept": true, "text": "None"}}
+{"tick": 8, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-19", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F01.L03.V02", "result": "correct", "duplicate": true}]}}
+{"tick": 8, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-30", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [100, 100, 100], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 8, "agent_id": "a1", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 8, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-30"}}
+{"tick": 9, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-26"}}
+{"tick": 9, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-26", "accept": false, "text": "None"}}
+{"tick": 9, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-26", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 9, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-29"}}
+{"tick": 9, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-29", "accept": false, "text": "The associations claimed in the manuscript are not supported by my observations. Specifically, I have found no significant correlation between the relevant variables: F01.L03.V01 shows a correlation of r=-0.0469 with F02.L03.V01, indicating no association. Therefore, I recommend rejecting the claims presented in the paper."}}
+{"tick": 9, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-29", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 9, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-25"}}
+{"tick": 9, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-25", "accept": false, "text": "The claim of association between F01.L03.V01 and F01.L03.V02 is not supported by sufficient evidence from my own records. My observational evidence shows that there is an existing association for F01.L03.V01 with itself and other variables in varied states, but the recent correlations demonstrate that any test of association using the required minimum of forty samples has not been met sufficiently to confirm a reliable influence. Hence, I cannot affirm the association as stated."}}
+{"tick": 9, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-25", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 9, "agent_id": "a7", "event": "review_accept", "payload": {"paper_id": "P-24"}}
+{"tick": 9, "agent_id": "a7", "event": "review_submit", "payload": {"paper_id": "P-24", "accept": false, "text": "The claims of association between the variables in fields [F01] and [F02] lack sufficient evidence from my observational records. There are existing associations in the record that overlap with the proposed claims, specifically between variables F01.L03.V01 and F02.L03.V01, as well as others not supported by the presented data in the manuscript. Therefore, I do not recommend acceptance."}}
+{"tick": 9, "agent_id": "a1", "event": "publish", "payload": {"paper_id": "P-24", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 9, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-31", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 9, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 9, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-31"}}
+{"tick": 9, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-32", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 9, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 9, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-32"}}
+{"tick": 9, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-33", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 3, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 9, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-34", "admissible": false, "reason": "nulls must be same-field adjacent-layer", "n_claims": 2, "replication": null, "grades": ["O", "-"], "backed": [false, false], "claim_ns": [200, 0], "claim_types": ["association", "null"], "substance": false}}
+{"tick": 9, "agent_id": "a6", "event": "review_accept", "payload": {"paper_id": "P-30"}}
+{"tick": 9, "agent_id": "a6", "event": "review_submit", "payload": {"paper_id": "P-30", "accept": false, "text": "The associations claimed in this manuscript do not meet the evidence standards, as they lack observational records supporting the relationships. The observed correlations from evidence E-1 (F01.L03.V01 and F02.L03.V01, r=0.0738), E-2 (F03.L03.V01 and F04.L03.V01, r=0.0722), and E-3 (F05.L03.V01 and F06.L03.V01, r=-0.0322) demonstrate weak correlations, thereby making the claims of association in the submitted paper unsupported."}}
+{"tick": 9, "agent_id": "a1", "event": "publish", "payload": {"paper_id": "P-30", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 10, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-35", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 10, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 10, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-35"}}
+{"tick": 10, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-36", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [400], "claim_types": ["association"], "substance": false}}
+{"tick": 10, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 10, "agent_id": "a4", "event": "review_invite", "payload": {"paper_id": "P-36"}}
+{"tick": 10, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-37", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 1, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association"], "substance": false}}
+{"tick": 10, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-38", "admissible": false, "reason": "malformed claim", "n_claims": 1, "replication": null, "grades": [], "backed": [], "claim_ns": [], "claim_types": ["interaction"], "substance": false}}
+{"tick": 10, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-39", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [200, 200], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 10, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 10, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-39"}}
+{"tick": 10, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-40", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 10, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 10, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-40"}}
+{"tick": 10, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-41", "admissible": false, "reason": "no record covering the claim", "n_claims": 1, "replication": null, "grades": ["-"], "backed": [false], "claim_ns": [0], "claim_types": ["association"], "substance": false}}
+{"tick": 10, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-42", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 3, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 10, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-31"}}
+{"tick": 10, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-31", "accept": false, "text": "None"}}
+{"tick": 10, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-31", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 10, "agent_id": "world", "event": "panel", "payload": {"metric": "proxy", "slots": 3, "winners": ["a0", "a3", "a8"], "cutoff": 1.0, "scores": {"a0": 1.0, "a1": 0.0, "a2": 0.0, "a3": 1.0, "a4": 0.0, "a5": 0.0, "a6": 0.0, "a7": 0.0, "a8": 1.0}, "works": {"a0": 1, "a1": 0, "a2": 0, "a3": 1, "a4": 0, "a5": 0, "a6": 0, "a7": 0, "a8": 1}}}
+{"tick": 11, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-43", "admissible": false, "reason": "no record covering the claim", "n_claims": 1, "replication": null, "grades": ["-"], "backed": [false], "claim_ns": [0], "claim_types": ["association"], "substance": false}}
+{"tick": 11, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-44", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 3, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 11, "agent_id": "a6", "event": "review_accept", "payload": {"paper_id": "P-39"}}
+{"tick": 11, "agent_id": "a6", "event": "review_submit", "payload": {"paper_id": "P-39", "accept": false, "text": "The claims of association between F01.L03.V01 and F02.L03.V01 are based on observations with n=100 (E-1,E-23). However, the observed correlations are low (r=0.0738 for the first set of observations and r=0.048 for the second set), suggesting weak covariation. I recommend proceeding with caution in asserting strong associations based on these findings."}}
+{"tick": 11, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-39", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 11, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-32"}}
+{"tick": 11, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-32", "accept": false, "text": "The claim of association between F01.L03.V01 and F02.L03.V01 is not supported by my observational records. In my observations (E-31), the correlation coefficient is r=-0.0469, which indicates a very weak association. Therefore, I recommend rejecting the claim."}}
+{"tick": 11, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-32", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 11, "agent_id": "a4", "event": "review_accept", "payload": {"paper_id": "P-36"}}
+{"tick": 11, "agent_id": "a4", "event": "review_submit", "payload": {"paper_id": "P-36", "accept": false, "text": "None"}}
+{"tick": 11, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-36", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 11, "agent_id": "a2", "event": "idle", "payload": {}}
+{"tick": 11, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-40"}}
+{"tick": 11, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-40", "accept": false, "text": "None"}}
+{"tick": 11, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-40", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 11, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-45", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 11, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 11, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-45"}}
+{"tick": 11, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-46", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [300, 300], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 11, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 11, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-46"}}
+{"tick": 12, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-47", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [400, 400], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 12, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 12, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-47"}}
+{"tick": 12, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-48", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 3, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 12, "agent_id": "a6", "event": "idle", "payload": {"note": "no such review"}}
+{"tick": 12, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-49", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 12, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 12, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-49"}}
+{"tick": 12, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-50", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 12, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 12, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-50"}}
+{"tick": 12, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-51", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [100, 100], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 12, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 12, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-51"}}
+{"tick": 12, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-52", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 12, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 12, "agent_id": "a3", "event": "review_invite", "payload": {"paper_id": "P-52"}}
+{"tick": 12, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-53", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 12, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-46"}}
+{"tick": 12, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-46", "accept": false, "text": "None"}}
+{"tick": 12, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-46", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 13, "agent_id": "a2", "event": "idle", "payload": {"note": "no such review"}}
+{"tick": 13, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-54", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [400], "claim_types": ["association"], "substance": false}}
+{"tick": 13, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 13, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-54"}}
+{"tick": 13, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-55", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 13, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 13, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-55"}}
+{"tick": 13, "agent_id": "a6", "event": "idle", "payload": {"note": "no such review"}}
+{"tick": 13, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-50"}}
+{"tick": 13, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-50", "accept": false, "text": "None"}}
+{"tick": 13, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-50", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 13, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-47"}}
+{"tick": 13, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-47", "accept": false, "text": "The observational evidence shows no significant correlation between F01.L03.V01 and F02.L03.V01 based on my previous experiments (E-31, mean -0.0246, sd 1.0233 for F01.L03.V01 and mean -0.0619, sd 0.9363 for F02.L03.V02, correlation r=-0.0469). Thus, the claims of association lack sufficient supporting evidence."}}
+{"tick": 13, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-47", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 13, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-56", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 13, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 13, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-56"}}
+{"tick": 13, "agent_id": "a3", "event": "review_accept", "payload": {"paper_id": "P-52"}}
+{"tick": 13, "agent_id": "a3", "event": "review_submit", "payload": {"paper_id": "P-52", "accept": false, "text": "The claim of association between F01.L03.V01 and F02.L03.V01 appears unsupported based on my own observations, which showed no sufficient evidence of covariation (E-5, E-35). Thus, I recommend not accepting this claim."}}
+{"tick": 13, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-52", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 13, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-57", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 13, "agent_id": "a6", "event": "review_decline", "payload": {"paper_id": "P-35"}}
+{"tick": 13, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-35", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V01", "result": "false", "duplicate": true}]}}
+{"tick": 14, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-58", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 14, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 14, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-58"}}
+{"tick": 14, "agent_id": "a6", "event": "review_accept", "payload": {"paper_id": "P-45"}}
+{"tick": 14, "agent_id": "a6", "event": "review_submit", "payload": {"paper_id": "P-45", "accept": false, "text": "None"}}
+{"tick": 14, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-45", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 14, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-56"}}
+{"tick": 14, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-56", "accept": false, "text": "None"}}
+{"tick": 14, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-56", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 14, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-51"}}
+{"tick": 14, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-51", "accept": false, "text": "None"}}
+{"tick": 14, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-51", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 14, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-59", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [200, 200], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 14, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 14, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-59"}}
+{"tick": 14, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-49"}}
+{"tick": 14, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-49", "accept": false, "text": "None"}}
+{"tick": 14, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-49", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 14, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-60", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [400, 400], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 14, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 14, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-60"}}
+{"tick": 14, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-61", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 14, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-62", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 14, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 14, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-62"}}
+{"tick": 15, "agent_id": "a3", "event": "experiment", "payload": {"id": "E-47", "agent_id": "a3", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F01.L03.V02"], "n": 100}}
+{"tick": 15, "agent_id": "a3", "event": "experiment", "payload": {"id": "E-48", "agent_id": "a3", "kind": "intervene", "targets": ["F07.L03.V01", "F07.L03.V02"], "measured": ["F01.L03.V01", "F01.L03.V02"], "n": 100}}
+{"tick": 15, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-63", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 15, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 15, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-63"}}
+{"tick": 15, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-64", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 15, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-65", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [200, 200], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 15, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 15, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-65"}}
+{"tick": 15, "agent_id": "a6", "event": "review_accept", "payload": {"paper_id": "P-55"}}
+{"tick": 15, "agent_id": "a6", "event": "review_submit", "payload": {"paper_id": "P-55", "accept": false, "text": "None"}}
+{"tick": 15, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-55", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 15, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-54"}}
+{"tick": 15, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-54", "accept": false, "text": "The claim of association between F01.L03.V01 and F02.L03.V01 is not supported by my observational data (E-12), as the correlation is r=-0.1322, indicating no significant covariation."}}
+{"tick": 15, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-54", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 15, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-62"}}
+{"tick": 15, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-62", "accept": false, "text": "The evidence from E-21, E-22, E-45, and E-46 shows covariation between F01.L03.V01 and F01.L03.V02, with sample sizes exceeding the required forty samples for a proper association claim. The correlation data suggests there is an association as noted in previous work indicating ongoing relationships between related variables in the same field."}}
+{"tick": 15, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-62", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 15, "agent_id": "a1", "event": "idle", "payload": {}}
+{"tick": 15, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-58"}}
+{"tick": 15, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-58", "accept": false, "text": "None"}}
+{"tick": 15, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-58", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 16, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-63"}}
+{"tick": 16, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-63", "accept": false, "text": "The evidence does not support a strong enough correlation for the claim of association between F01.L03.V01 and F02.L03.V01 as outlined in the paper. The cited relationship is weak, as indicated by observational record E-9, which notes a correlation (r=0.5777) that, while statistically significant, does not reach a level indicating strong association."}}
+{"tick": 16, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-63", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 16, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-66", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [100, 100], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 16, "agent_id": "a1", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 16, "agent_id": "a7", "event": "review_invite", "payload": {"paper_id": "P-66"}}
+{"tick": 16, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-67", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 16, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 16, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-67"}}
+{"tick": 16, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-60"}}
+{"tick": 16, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-60", "accept": false, "text": "None"}}
+{"tick": 16, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-60", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 16, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-68", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [300, 300, 300], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 16, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 16, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-68"}}
+{"tick": 16, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-69", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 3, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 16, "agent_id": "a4", "event": "idle", "payload": {}}
+{"tick": 16, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-70", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["I", "I"], "backed": [true, true], "claim_ns": [100, 100], "claim_types": ["edge", "edge"], "substance": true}}
+{"tick": 16, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.7}}
+{"tick": 16, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-70"}}
+{"tick": 16, "agent_id": "a6", "event": "review_accept", "payload": {"paper_id": "P-59"}}
+{"tick": 16, "agent_id": "a6", "event": "review_submit", "payload": {"paper_id": "P-59", "accept": false, "text": "The claims of association between F01.L03.V01 and F02.L03.V01 have not been sufficiently supported by my observational records. I have conducted several observations, but the maximum correlation observed was r=0.0738 (E-1) and r=0.048 (E-23), both of which do not approach the thresholds expected for strong or even moderate associations. Therefore, I recommend declining the claims made in this paper."}}
+{"tick": 16, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-59", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 17, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-71", "admissible": false, "reason": "no record covering the claim", "n_claims": 2, "replication": null, "grades": ["-"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 17, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-72", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [400], "claim_types": ["association"], "substance": false}}
+{"tick": 17, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 17, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-72"}}
+{"tick": 17, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-65"}}
+{"tick": 17, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-65", "accept": false, "text": "The evidence for the proposed association between F01.L03.V01 and F02.L03.V01 in the manuscript appears sound. My own observational data (E-8 and E-9) show a significant correlation between F01.L03.V01 and F02.L03.V01 with a correlation coefficient of 0.4109, suggesting a moderate association. Additionally, the correlation of 0.5777 between F02.L03.V01 and F02.L03.V02 supports the relevance of investigating these variables further within their contexts. I recommend acceptance of this association"}}
+{"tick": 17, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-65", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 17, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-70"}}
+{"tick": 17, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-70", "accept": false, "text": "The claims of influence presented in this manuscript do not align with my own observational records. My latest detailed observations (E-34, E-33, E-32, E-31) indicate no statistically significant correlation between the measured variables that would substantiate a direct influence from F07.L03.V01 and F07.L03.V02 on F01.L03.V01 and F01.L03.V02, respectively. The recorded correlations indicate weak associations and thus the evidence for these claims should not be accepted at this time."}}
+{"tick": 17, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-70", "accepted": false, "value": 0.0, "substance": true, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 17, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-73", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 17, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 17, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-73"}}
+{"tick": 17, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-74", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 3, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 17, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-67"}}
+{"tick": 17, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-67", "accept": false, "text": "The paper claims an association between F01.L03.V01 and F02.L03.V01. However, my observational record (E-12) indicates a correlation of r=-0.1322, suggesting that there is no association between these variables. Therefore, I recommend that the claim be rejected."}}
+{"tick": 17, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-67", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 17, "agent_id": "a7", "event": "review_accept", "payload": {"paper_id": "P-66"}}
+{"tick": 17, "agent_id": "a7", "event": "review_submit", "payload": {"paper_id": "P-66", "accept": false, "text": "The claims in this manuscript regarding the association between F01.L03.V01 and F02.L03.V02 rest on previous observational studies that have shown no significant covariation between these variables in my own records (E-17, E-37). Thus, I cannot support the proposed associations as there is no evidence to back them."}}
+{"tick": 17, "agent_id": "a1", "event": "publish", "payload": {"paper_id": "P-66", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 17, "agent_id": "a6", "event": "review_accept", "payload": {"paper_id": "P-68"}}
+{"tick": 17, "agent_id": "a6", "event": "review_submit", "payload": {"paper_id": "P-68", "accept": false, "text": "The proposed associations involve F01.L03.V01, which has previously shown only weak correlations with variables from F02 and F03 in my observational records. The findings do not meet the requirements for establishing associations robustly due to the lack of sufficient covariation (E-1, E-23), thus I cannot support the claims in this manuscript."}}
+{"tick": 17, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-68", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 18, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-75", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 18, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 18, "agent_id": "a4", "event": "review_invite", "payload": {"paper_id": "P-75"}}
+{"tick": 18, "agent_id": "a0", "event": "idle", "payload": {"note": "no such review"}}
+{"tick": 18, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-76", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [200, 200], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 18, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 18, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-76"}}
+{"tick": 18, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-77", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [300], "claim_types": ["association"], "substance": false}}
+{"tick": 18, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 18, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-77"}}
+{"tick": 18, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-78", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 18, "agent_id": "a1", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 18, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-78"}}
+{"tick": 18, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-79", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 18, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 18, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-79"}}
+{"tick": 18, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-80", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 18, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 18, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-80"}}
+{"tick": 18, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-81", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 18, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-72"}}
+{"tick": 18, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-72", "accept": false, "text": "The evidence provided demonstrates a positive correlation between F01.L03.V01 and F02.L03.V01 (correlation coefficient r=0.752). Given the robust correlational data and an observational sample of 40 for each variable, I affirm the claim of association."}}
+{"tick": 18, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-72", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 19, "agent_id": "a0", "event": "idle", "payload": {"note": "no such review"}}
+{"tick": 19, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-79"}}
+{"tick": 19, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-79", "accept": true, "text": "The claim of association between F01.L03.V01 and F02.L03.V01 is based on observational records from E-31 where the correlation is reported as r=-0.0469, indicating no significant association. Therefore, I recommend that this claim not be accepted."}}
+{"tick": 19, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-79", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V01", "result": "false", "duplicate": true}]}}
+{"tick": 19, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-82", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 19, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-83", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 19, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 19, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-83"}}
+{"tick": 19, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-84", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 19, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-85", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [300], "claim_types": ["association"], "substance": false}}
+{"tick": 19, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 19, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-85"}}
+{"tick": 19, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-86", "admissible": false, "reason": "too many claims or nulls", "n_claims": 3, "replication": null, "grades": [], "backed": [], "claim_ns": [], "claim_types": ["association", "null", "null"], "substance": false}}
+{"tick": 19, "agent_id": "a4", "event": "review_accept", "payload": {"paper_id": "P-75"}}
+{"tick": 19, "agent_id": "a4", "event": "review_submit", "payload": {"paper_id": "P-75", "accept": false, "text": "Overall, the correlation reported between F01.L03.V01 and F02.L03.V01 is consistent with my observations (E-27, E-41). I therefore affirm this claim of association."}}
+{"tick": 19, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-75", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 19, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-76"}}
+{"tick": 19, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-76", "accept": false, "text": "None"}}
+{"tick": 19, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-76", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 20, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-80"}}
+{"tick": 20, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-80", "accept": true, "text": "The claim of association between F01.L03.V01 and F02.L03.V01 is not supported by my records, which show a correlation of r=-0.0469 with a sample size of 100. Thus, I conclude that the evidence does not support the association as claimed."}}
+{"tick": 20, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-80", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V01", "result": "false", "duplicate": true}]}}
+{"tick": 20, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-87", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 20, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 20, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-87"}}
+{"tick": 20, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-88", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 20, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 20, "agent_id": "a3", "event": "review_invite", "payload": {"paper_id": "P-88"}}
+{"tick": 20, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-73"}}
+{"tick": 20, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-73", "accept": false, "text": "None"}}
+{"tick": 20, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-73", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 20, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-89", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 1, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association"], "substance": false}}
+{"tick": 20, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-77"}}
+{"tick": 20, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-77", "accept": false, "text": "I reject the claims of association in the manuscript as insufficiently supported. Observational data shows no significant covariation between F01.L03.V01 and F01.L03.V02."}}
+{"tick": 20, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-77", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 20, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-90", "admissible": false, "reason": "nulls must be same-field adjacent-layer", "n_claims": 3, "replication": null, "grades": ["O", "-"], "backed": [false, false], "claim_ns": [100, 0], "claim_types": ["association", "null", "association"], "substance": false}}
+{"tick": 20, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-91", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["I", "I"], "backed": [true, true], "claim_ns": [100, 100], "claim_types": ["edge", "edge"], "substance": true}}
+{"tick": 20, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.7}}
+{"tick": 20, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-91"}}
+{"tick": 20, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-83"}}
+{"tick": 20, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-83", "accept": false, "text": "None"}}
+{"tick": 20, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-83", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 20, "agent_id": "world", "event": "panel", "payload": {"metric": "proxy", "slots": 3, "winners": ["a2", "a4", "a6"], "cutoff": 1.0, "scores": {"a0": 0.0, "a1": 0.0, "a2": 1.0, "a3": 0.0, "a4": 1.0, "a5": 0.0, "a6": 1.0, "a7": 0.0, "a8": 0.0}, "works": {"a0": 0, "a1": 0, "a2": 1, "a3": 0, "a4": 1, "a5": 0, "a6": 1, "a7": 0, "a8": 0}}}
+{"tick": 21, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-92", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 21, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 21, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-92"}}
+{"tick": 21, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-87"}}
+{"tick": 21, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-87", "accept": true, "text": "None"}}
+{"tick": 21, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-87", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V01", "result": "false", "duplicate": true}]}}
+{"tick": 21, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-85"}}
+{"tick": 21, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-85", "accept": false, "text": "None"}}
+{"tick": 21, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-85", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 21, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-78"}}
+{"tick": 21, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-78", "accept": false, "text": "None"}}
+{"tick": 21, "agent_id": "a1", "event": "publish", "payload": {"paper_id": "P-78", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 21, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-93", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 1, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association"], "substance": false}}
+{"tick": 21, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-94", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 21, "agent_id": "a1", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 21, "agent_id": "a4", "event": "review_invite", "payload": {"paper_id": "P-94"}}
+{"tick": 21, "agent_id": "a3", "event": "review_accept", "payload": {"paper_id": "P-88"}}
+{"tick": 21, "agent_id": "a3", "event": "review_submit", "payload": {"paper_id": "P-88", "accept": false, "text": "The evidence presented shows no significant correlation between F01.L03.V01 and F02.L03.V01, indicating that the claim of association is not supported."}}
+{"tick": 21, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-88", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 21, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-95", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [200, 200], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 21, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 21, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-95"}}
+{"tick": 21, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-96", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 21, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 21, "agent_id": "a4", "event": "review_invite", "payload": {"paper_id": "P-96"}}
+{"tick": 22, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-97", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [100, 100], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 22, "agent_id": "a1", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 22, "agent_id": "a4", "event": "review_invite", "payload": {"paper_id": "P-97"}}
+{"tick": 22, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-98", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 22, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-99", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [300], "claim_types": ["association"], "substance": false}}
+{"tick": 22, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 22, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-99"}}
+{"tick": 22, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-91"}}
+{"tick": 22, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-91", "accept": false, "text": "None"}}
+{"tick": 22, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-91", "accepted": false, "value": 0.0, "substance": true, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 22, "agent_id": "a4", "event": "review_accept", "payload": {"paper_id": "P-94"}}
+{"tick": 22, "agent_id": "a4", "event": "review_submit", "payload": {"paper_id": "P-94", "accept": false, "text": "The evidence presented in P-94 shows that F05.L03.V05 and F06.L03.V06 have not been substantiated by my own observational data, thus I cannot support the claim of association. For P-96, the correlation between F01.L03.V01 and F02.L03.V01 in my records (E-27, E-41) suggests a weak association with correlations of 0.0905 and 0.1532, so I support this claim. Therefore, I accept the association claim in P-96 but reject P-94."}}
+{"tick": 22, "agent_id": "a1", "event": "publish", "payload": {"paper_id": "P-94", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 22, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-100", "admissible": false, "reason": "too many claims or nulls", "n_claims": 4, "replication": null, "grades": [], "backed": [], "claim_ns": [], "claim_types": ["association", "association", "association", "null"], "substance": false}}
+{"tick": 22, "agent_id": "a2", "event": "idle", "payload": {}}
+{"tick": 22, "agent_id": "a7", "event": "idle", "payload": {}}
+{"tick": 22, "agent_id": "a8", "event": "idle", "payload": {"note": "no such review"}}
+{"tick": 23, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-95"}}
+{"tick": 23, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-95", "accept": false, "text": "None"}}
+{"tick": 23, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-95", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 23, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-101", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 23, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 23, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-101"}}
+{"tick": 23, "agent_id": "a1", "event": "idle", "payload": {}}
+{"tick": 23, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-92"}}
+{"tick": 23, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-92", "accept": false, "text": "None"}}
+{"tick": 23, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-92", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 23, "agent_id": "a4", "event": "review_accept", "payload": {"paper_id": "P-96"}}
+{"tick": 23, "agent_id": "a4", "event": "review_submit", "payload": {"paper_id": "P-96", "accept": true, "text": "The first claim in P-96 regarding F01.L03.V01 and F02.L03.V01 is supported by E-27 and E-41, which demonstrate covariance, justifying the association. The second claim in P-97 regarding F01.L03.V01 and F02.L03.V02, and the reciprocal claim involving F02.L03.V02 and F01.L03.V01 lack supporting direct evidence from my records, thus leading me to accept the association claim involving F01.L03.V01 to F02.L03.V01."}}
+{"tick": 23, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-96", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V01", "result": "false", "duplicate": true}]}}
+{"tick": 23, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-102", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 23, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 23, "agent_id": "a6", "event": "review_invite", "payload": {"paper_id": "P-102"}}
+{"tick": 23, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-103", "admissible": false, "reason": "claim needs grade I, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["edge", "edge"], "substance": false}}
+{"tick": 23, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-104", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 23, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-105", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 23, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 23, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-105"}}
+{"tick": 24, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-106", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 24, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 24, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-106"}}
+{"tick": 24, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-107", "admissible": false, "reason": "claim needs grade I, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["edge", "edge"], "substance": false}}
+{"tick": 24, "agent_id": "a6", "event": "review_accept", "payload": {"paper_id": "P-102"}}
+{"tick": 24, "agent_id": "a6", "event": "review_submit", "payload": {"paper_id": "P-102", "accept": false, "text": "None"}}
+{"tick": 24, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-102", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 24, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-105"}}
+{"tick": 24, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-105", "accept": false, "text": "None"}}
+{"tick": 24, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-105", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 24, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-108", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [300], "claim_types": ["association"], "substance": false}}
+{"tick": 24, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 24, "agent_id": "a3", "event": "review_invite", "payload": {"paper_id": "P-108"}}
+{"tick": 24, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-99"}}
+{"tick": 24, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-99", "accept": true, "text": "None"}}
+{"tick": 24, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-99", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F01.L03.V02", "result": "correct", "duplicate": true}]}}
+{"tick": 24, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-101"}}
+{"tick": 24, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-101", "accept": false, "text": "None"}}
+{"tick": 24, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-101", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 24, "agent_id": "a4", "event": "review_accept", "payload": {"paper_id": "P-97"}}
+{"tick": 24, "agent_id": "a4", "event": "review_submit", "payload": {"paper_id": "P-97", "accept": true, "text": "None"}}
+{"tick": 24, "agent_id": "a1", "event": "publish", "payload": {"paper_id": "P-97", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V02", "result": "false", "tier": 0}, {"key": "assoc:F01.L03.V01~F02.L03.V02", "result": "false", "duplicate": true}]}}
+{"tick": 24, "agent_id": "a7", "event": "idle", "payload": {}}
+{"tick": 25, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-106"}}
+{"tick": 25, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-106", "accept": false, "text": "None"}}
+{"tick": 25, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-106", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 25, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-109", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 25, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-110", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 25, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 25, "agent_id": "a4", "event": "review_invite", "payload": {"paper_id": "P-110"}}
+{"tick": 25, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-111", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 25, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 25, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-111"}}
+{"tick": 25, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-112", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [400], "claim_types": ["association"], "substance": false}}
+{"tick": 25, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 25, "agent_id": "a7", "event": "review_invite", "payload": {"paper_id": "P-112"}}
+{"tick": 25, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-113", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 25, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 25, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-113"}}
+{"tick": 25, "agent_id": "a3", "event": "review_accept", "payload": {"paper_id": "P-108"}}
+{"tick": 25, "agent_id": "a3", "event": "review_submit", "payload": {"paper_id": "P-108", "accept": false, "text": ""}}
+{"tick": 25, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-108", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 25, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-114", "admissible": true, "reason": "", "n_claims": 3, "replication": null, "grades": ["O", "O", "O"], "backed": [false, false, false], "claim_ns": [40, 40, 40], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 25, "agent_id": "a8", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 25, "agent_id": "a7", "event": "review_invite", "payload": {"paper_id": "P-114"}}
+{"tick": 25, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-115", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 1, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association"], "substance": false}}
+{"tick": 26, "agent_id": "a7", "event": "review_accept", "payload": {"paper_id": "P-112"}}
+{"tick": 26, "agent_id": "a7", "event": "review_submit", "payload": {"paper_id": "P-112", "accept": false, "text": "None"}}
+{"tick": 26, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-112", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 26, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-116", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 26, "agent_id": "a1", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 26, "agent_id": "a3", "event": "review_invite", "payload": {"paper_id": "P-116"}}
+{"tick": 26, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-117", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 26, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 26, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-117"}}
+{"tick": 26, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-113"}}
+{"tick": 26, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-113", "accept": false, "text": "None"}}
+{"tick": 26, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-113", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 26, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-118", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 26, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 26, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-118"}}
+{"tick": 26, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-111"}}
+{"tick": 26, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-111", "accept": false, "text": "The claim of association between F05.L03.V02 and F06.L03.V01 is supported by existing observational records. It is important to mention that the associations in F01 (E-6) and F02 (E-7) reveal a robust structural relationship that aligns with the type of covariance presented in P-111. The correlations provided in both observational reports illustrate a substantial degree of co-movement that is relevant to assess the claim."}}
+{"tick": 26, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-111", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 26, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-119", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [300], "claim_types": ["association"], "substance": false}}
+{"tick": 26, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 26, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-119"}}
+{"tick": 26, "agent_id": "a4", "event": "review_accept", "payload": {"paper_id": "P-110"}}
+{"tick": 26, "agent_id": "a4", "event": "review_submit", "payload": {"paper_id": "P-110", "accept": true, "text": "None"}}
+{"tick": 26, "agent_id": "a6", "event": "cite", "payload": {"from": "P-110", "to": "P-79"}}
+{"tick": 26, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-110", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V01", "result": "false", "duplicate": true}]}}
+{"tick": 26, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-120", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 27, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-117"}}
+{"tick": 27, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-117", "accept": false, "text": "The evidence presented in the manuscript suggests a covariation between variables F01.L03.V01 and F02.L03.V01 based on observational records covering 40 samples. Therefore, I support the claim of association."}}
+{"tick": 27, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-117", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 27, "agent_id": "a7", "event": "idle", "payload": {"note": "no such review"}}
+{"tick": 27, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-121", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 27, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 27, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-121"}}
+{"tick": 27, "agent_id": "a3", "event": "review_accept", "payload": {"paper_id": "P-116"}}
+{"tick": 27, "agent_id": "a3", "event": "review_submit", "payload": {"paper_id": "P-116", "accept": false, "text": "None"}}
+{"tick": 27, "agent_id": "a1", "event": "publish", "payload": {"paper_id": "P-116", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 27, "agent_id": "a2", "event": "idle", "payload": {}}
+{"tick": 27, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-122", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 1, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association"], "substance": false}}
+{"tick": 27, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-123", "admissible": false, "reason": "nulls must be same-field adjacent-layer", "n_claims": 3, "replication": null, "grades": ["O", "-"], "backed": [false, false], "claim_ns": [100, 0], "claim_types": ["association", "null", "association"], "substance": false}}
+{"tick": 27, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-124", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [200, 200], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 27, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 27, "agent_id": "a7", "event": "review_invite", "payload": {"paper_id": "P-124"}}
+{"tick": 27, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-118"}}
+{"tick": 27, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-118", "accept": false, "text": "None"}}
+{"tick": 27, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-118", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 28, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-125", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 1, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association"], "substance": false}}
+{"tick": 28, "agent_id": "a6", "event": "idle", "payload": {}}
+{"tick": 28, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-126", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["I", "I"], "backed": [true, true], "claim_ns": [100, 100], "claim_types": ["edge", "edge"], "substance": true}}
+{"tick": 28, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.7}}
+{"tick": 28, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-126"}}
+{"tick": 28, "agent_id": "a7", "event": "review_accept", "payload": {"paper_id": "P-114"}}
+{"tick": 28, "agent_id": "a7", "event": "review_submit", "payload": {"paper_id": "P-114", "accept": false, "text": "None"}}
+{"tick": 28, "agent_id": "a8", "event": "publish", "payload": {"paper_id": "P-114", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 28, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-121"}}
+{"tick": 28, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-121", "accept": false, "text": "The claim of association between F01.L03.V01 and F02.L03.V01 is not supported by sufficient evidence, as my own observational record shows a correlation of r=-0.1322 (E-12), indicating no significant covariation. Therefore, I recommend rejecting the manuscript."}}
+{"tick": 28, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-121", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 28, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-127", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 28, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 28, "agent_id": "a3", "event": "review_invite", "payload": {"paper_id": "P-127"}}
+{"tick": 28, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-128", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 1, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association"], "substance": false}}
+{"tick": 28, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-129", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 28, "agent_id": "a0", "event": "idle", "payload": {"note": "no such review"}}
+{"tick": 29, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-130", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 29, "agent_id": "a1", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 29, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-130"}}
+{"tick": 29, "agent_id": "a3", "event": "review_accept", "payload": {"paper_id": "P-127"}}
+{"tick": 29, "agent_id": "a3", "event": "review_submit", "payload": {"paper_id": "P-127", "accept": false, "text": "None"}}
+{"tick": 29, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-127", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 29, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-131", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 1, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association"], "substance": false}}
+{"tick": 29, "agent_id": "a7", "event": "review_accept", "payload": {"paper_id": "P-124"}}
+{"tick": 29, "agent_id": "a7", "event": "review_submit", "payload": {"paper_id": "P-124", "accept": true, "text": "None"}}
+{"tick": 29, "agent_id": "a6", "event": "cite", "payload": {"from": "P-124", "to": "P-79"}}
+{"tick": 29, "agent_id": "a6", "event": "cite", "payload": {"from": "P-124", "to": "P-110"}}
+{"tick": 29, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-124", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V01", "result": "false", "duplicate": true}, {"key": "assoc:F01.L03.V01~F02.L03.V01", "result": "false", "duplicate": true}]}}
+{"tick": 29, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-126"}}
+{"tick": 29, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-126", "accept": false, "text": "None"}}
+{"tick": 29, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-126", "accepted": false, "value": 0.0, "substance": true, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 29, "agent_id": "a5", "event": "submit", "payload": {"paper_id": "P-132", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 29, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-119"}}
+{"tick": 29, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-119", "accept": false, "text": "None"}}
+{"tick": 29, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-119", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 29, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-133", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [200, 200], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 29, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 29, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-133"}}
+{"tick": 29, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-134", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 29, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 29, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-134"}}
+{"tick": 30, "agent_id": "a4", "event": "idle", "payload": {}}
+{"tick": 30, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-135", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 30, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 30, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-135"}}
+{"tick": 30, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-130"}}
+{"tick": 30, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-130", "accept": true, "text": "None"}}
+{"tick": 30, "agent_id": "a1", "event": "cite", "payload": {"from": "P-130", "to": "P-79"}}
+{"tick": 30, "agent_id": "a1", "event": "publish", "payload": {"paper_id": "P-130", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V02", "result": "false", "duplicate": true}]}}
+{"tick": 30, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-133"}}
+{"tick": 30, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-133", "accept": false, "text": "The claims in manuscript P-133 are based on observational data, but the evidential foundation is insufficient to establish a strong association between F01.L03.V01 and F02.L03.V01. My own records show no significant covariation between these variables (E-31, E-32). Additionally, D. Reyes has previously reported similar associations that have not sparked further evidence. Thus, I cannot accept the claims being presented."}}
+{"tick": 30, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-133", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 30, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-136", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 30, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 30, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-136"}}
+{"tick": 30, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-137", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["I", "I"], "backed": [true, true], "claim_ns": [100, 100], "claim_types": ["edge", "edge"], "substance": true}}
+{"tick": 30, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.7}}
+{"tick": 30, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-137"}}
+{"tick": 30, "agent_id": "a0", "event": "idle", "payload": {}}
+{"tick": 30, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-138", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 3, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 30, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-139", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 30, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 30, "agent_id": "a3", "event": "review_invite", "payload": {"paper_id": "P-139"}}
+{"tick": 30, "agent_id": "world", "event": "panel", "payload": {"metric": "proxy", "slots": 3, "winners": ["a6", "a1", "a4"], "cutoff": 2.0, "scores": {"a0": 0.0, "a1": 2.0, "a2": 0.0, "a3": 1.0, "a4": 2.0, "a5": 0.0, "a6": 2.5, "a7": 1.0, "a8": 0.0}, "works": {"a0": 0, "a1": 2, "a2": 0, "a3": 1, "a4": 2, "a5": 0, "a6": 2, "a7": 1, "a8": 0}}}
+{"tick": 31, "agent_id": "a2", "event": "idle", "payload": {}}
+{"tick": 31, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-49", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01"], "n": 100}}
+{"tick": 31, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-50", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F05.L03.V02", "F06.L03.V01"], "n": 100}}
+{"tick": 31, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-51", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F07.L03.V01", "F08.L03.V01"], "n": 100}}
+{"tick": 31, "agent_id": "a4", "event": "experiment", "payload": {"id": "E-52", "agent_id": "a4", "kind": "observe", "targets": [], "measured": ["F09.L03.V01", "F10.L03.V01"], "n": 100}}
+{"tick": 31, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-140", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 31, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 31, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-140"}}
+{"tick": 31, "agent_id": "a7", "event": "idle", "payload": {}}
+{"tick": 31, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-134"}}
+{"tick": 31, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-134", "accept": false, "text": "None"}}
+{"tick": 31, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-134", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 31, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-141", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 3, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 31, "agent_id": "a1", "event": "idle", "payload": {"note": "no such review"}}
+{"tick": 31, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-142", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [400], "claim_types": ["association"], "substance": false}}
+{"tick": 31, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 31, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-142"}}
+{"tick": 31, "agent_id": "a3", "event": "review_accept", "payload": {"paper_id": "P-139"}}
+{"tick": 31, "agent_id": "a3", "event": "review_submit", "payload": {"paper_id": "P-139", "accept": false, "text": "None"}}
+{"tick": 31, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-139", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 32, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-136"}}
+{"tick": 32, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-136", "accept": false, "text": "Verdict: The association claim between F01.L03.V01 and F02.L03.V01 is supported by my observational record (E-8 and E-9), which contains at least 40 samples for both variables. The relationship shows a correlation r=0.4109, which indicates a moderate association."}}
+{"tick": 32, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-136", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 32, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-143", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 32, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 32, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-143"}}
+{"tick": 32, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-135"}}
+{"tick": 32, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-135", "accept": false, "text": "None"}}
+{"tick": 32, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-135", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 32, "agent_id": "a0", "event": "submit", "payload": {"paper_id": "P-144", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [300, 300], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 32, "agent_id": "a0", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 32, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-144"}}
+{"tick": 32, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-140"}}
+{"tick": 32, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-140", "accept": false, "text": "None"}}
+{"tick": 32, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-140", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 32, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-145", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 32, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 32, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-145"}}
+{"tick": 32, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-146", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 32, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 32, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-146"}}
+{"tick": 32, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-147", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 32, "agent_id": "a7", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 32, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-147"}}
+{"tick": 32, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-148", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 32, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 32, "agent_id": "a0", "event": "review_invite", "payload": {"paper_id": "P-148"}}
+{"tick": 33, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-149", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["O", "O"], "backed": [false, false], "claim_ns": [200, 200], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 33, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 33, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-149"}}
+{"tick": 33, "agent_id": "a8", "event": "submit", "payload": {"paper_id": "P-150", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 3, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association", "association"], "substance": false}}
+{"tick": 33, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-151", "admissible": false, "reason": "no record covering the claim", "n_claims": 2, "replication": null, "grades": ["-"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "association"], "substance": false}}
+{"tick": 33, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-137"}}
+{"tick": 33, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-137", "accept": false, "text": "None"}}
+{"tick": 33, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-137", "accepted": false, "value": 0.0, "substance": true, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 33, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-146"}}
+{"tick": 33, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-146", "accept": false, "text": "None"}}
+{"tick": 33, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-146", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 33, "agent_id": "a7", "event": "idle", "payload": {}}
+{"tick": 33, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-144"}}
+{"tick": 33, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-144", "accept": false, "text": "None"}}
+{"tick": 33, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-144", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 33, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-152", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 33, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 33, "agent_id": "a5", "event": "review_invite", "payload": {"paper_id": "P-152"}}
+{"tick": 33, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-143"}}
+{"tick": 33, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-143", "accept": false, "text": "None"}}
+{"tick": 33, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-143", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 34, "agent_id": "a6", "event": "submit", "payload": {"paper_id": "P-153", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 34, "agent_id": "a6", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 34, "agent_id": "a3", "event": "review_invite", "payload": {"paper_id": "P-153"}}
+{"tick": 34, "agent_id": "a2", "event": "submit", "payload": {"paper_id": "P-154", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 34, "agent_id": "a2", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 34, "agent_id": "a8", "event": "review_invite", "payload": {"paper_id": "P-154"}}
+{"tick": 34, "agent_id": "a3", "event": "submit", "payload": {"paper_id": "P-155", "admissible": true, "reason": "", "n_claims": 2, "replication": null, "grades": ["I", "I"], "backed": [true, true], "claim_ns": [100, 100], "claim_types": ["edge", "edge"], "substance": true}}
+{"tick": 34, "agent_id": "a3", "event": "choose_problem", "payload": {"risk": 0.7}}
+{"tick": 34, "agent_id": "a4", "event": "review_invite", "payload": {"paper_id": "P-155"}}
+{"tick": 34, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-147"}}
+{"tick": 34, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-147", "accept": false, "text": "None"}}
+{"tick": 34, "agent_id": "a7", "event": "publish", "payload": {"paper_id": "P-147", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 34, "agent_id": "a4", "event": "submit", "payload": {"paper_id": "P-156", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [200], "claim_types": ["association"], "substance": false}}
+{"tick": 34, "agent_id": "a4", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 34, "agent_id": "a1", "event": "review_invite", "payload": {"paper_id": "P-156"}}
+{"tick": 34, "agent_id": "a1", "event": "submit", "payload": {"paper_id": "P-157", "admissible": true, "reason": "", "n_claims": 1, "replication": null, "grades": ["O"], "backed": [false], "claim_ns": [100], "claim_types": ["association"], "substance": false}}
+{"tick": 34, "agent_id": "a1", "event": "choose_problem", "payload": {"risk": 0.05}}
+{"tick": 34, "agent_id": "a2", "event": "review_invite", "payload": {"paper_id": "P-157"}}
+{"tick": 34, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-142"}}
+{"tick": 34, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-142", "accept": false, "text": "None"}}
+{"tick": 34, "agent_id": "a0", "event": "publish", "payload": {"paper_id": "P-142", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 34, "agent_id": "a7", "event": "submit", "payload": {"paper_id": "P-158", "admissible": false, "reason": "claim needs grade O, record is C", "n_claims": 2, "replication": null, "grades": ["C"], "backed": [false], "claim_ns": [0], "claim_types": ["association", "null"], "substance": false}}
+{"tick": 34, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-149"}}
+{"tick": 34, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-149", "accept": false, "text": "None"}}
+{"tick": 34, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-149", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 35, "agent_id": "a7", "event": "idle", "payload": {}}
+{"tick": 35, "agent_id": "a3", "event": "review_accept", "payload": {"paper_id": "P-153"}}
+{"tick": 35, "agent_id": "a3", "event": "review_submit", "payload": {"paper_id": "P-153", "accept": false, "text": "None"}}
+{"tick": 35, "agent_id": "a6", "event": "publish", "payload": {"paper_id": "P-153", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 35, "agent_id": "a2", "event": "review_accept", "payload": {"paper_id": "P-157"}}
+{"tick": 35, "agent_id": "a2", "event": "review_submit", "payload": {"paper_id": "P-157", "accept": false, "text": "The claim of association between F05.L03.V05 and F06.L03.V06 is not supported by my evidence. My observations show covariation between F01.L03.V01 and F02.L03.V01. Therefore, I find that the evidence for the association asserted in this paper is insufficient."}}
+{"tick": 35, "agent_id": "a1", "event": "publish", "payload": {"paper_id": "P-157", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 35, "agent_id": "a4", "event": "review_accept", "payload": {"paper_id": "P-155"}}
+{"tick": 35, "agent_id": "a4", "event": "review_submit", "payload": {"paper_id": "P-155", "accept": true, "text": "None"}}
+{"tick": 35, "agent_id": "a3", "event": "publish", "payload": {"paper_id": "P-155", "accepted": true, "value": 0.0, "substance": true, "duplicate": false, "replication": null, "oracle": [{"key": "edge:F07.L03.V01>F01.L03.V01", "result": "false", "tier": 3}, {"key": "edge:F07.L03.V02>F01.L03.V02", "result": "false", "tier": 3}]}}
+{"tick": 35, "agent_id": "a5", "event": "review_accept", "payload": {"paper_id": "P-145"}}
+{"tick": 35, "agent_id": "a5", "event": "review_submit", "payload": {"paper_id": "P-145", "accept": true, "text": "None"}}
+{"tick": 35, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-145", "accepted": true, "value": 0.0, "substance": false, "duplicate": true, "replication": null, "oracle": [{"key": "assoc:F01.L03.V01~F02.L03.V01", "result": "false", "duplicate": true}]}}
+{"tick": 35, "agent_id": "a1", "event": "review_accept", "payload": {"paper_id": "P-156"}}
+{"tick": 35, "agent_id": "a1", "event": "review_submit", "payload": {"paper_id": "P-156", "accept": false, "text": "The association claim between F01.L03.V01 and F02.L03.V01 is not supported by my own observations. My experimental results show a correlation of r=-0.0469 (E-31), indicating no significant covariation between these variables."}}
+{"tick": 35, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-156", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 35, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-53", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F01.L03.V01", "F02.L03.V01"], "n": 100}}
+{"tick": 35, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-54", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F03.L03.V01", "F04.L03.V01"], "n": 100}}
+{"tick": 35, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-55", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F05.L03.V01", "F06.L03.V01"], "n": 100}}
+{"tick": 35, "agent_id": "a6", "event": "experiment", "payload": {"id": "E-56", "agent_id": "a6", "kind": "observe", "targets": [], "measured": ["F07.L03.V01", "F08.L03.V01"], "n": 100}}
+{"tick": 35, "agent_id": "a8", "event": "review_accept", "payload": {"paper_id": "P-154"}}
+{"tick": 35, "agent_id": "a8", "event": "review_submit", "payload": {"paper_id": "P-154", "accept": false, "text": "None"}}
+{"tick": 35, "agent_id": "a2", "event": "publish", "payload": {"paper_id": "P-154", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}
+{"tick": 35, "agent_id": "a0", "event": "review_accept", "payload": {"paper_id": "P-148"}}
+{"tick": 35, "agent_id": "a0", "event": "review_submit", "payload": {"paper_id": "P-148", "accept": false, "text": "None"}}
+{"tick": 35, "agent_id": "a4", "event": "publish", "payload": {"paper_id": "P-148", "accepted": false, "value": 0.0, "substance": false, "duplicate": false, "replication": null, "oracle": []}}

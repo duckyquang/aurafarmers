@@ -1,0 +1,108 @@
+[    0.06s] run trial-honest_path -> runs/20260801T163510Z-trial-honest_path
+[    0.14s] 
+[    0.14s] === honest_path / count ===
+[   19.73s]   I. Kimura        farm_causal
+[   37.29s]   Y. Reyes         farm_causal
+[   71.61s]   llm ERROR honest_path-count-2: RuntimeError('gpt-5-mini spent its whole budget on reasoning and returned nothing; raise max_tokens (cap was 2800)')
+[   71.61s]   X. Reyes         ERROR RuntimeError
+[   71.61s]   X. Reyes         error
+[   82.57s]   B. Ashworth      farm_causal
+[   92.50s]   X. Lindqvist     confirm
+[  111.83s]   T. Marchetti     farm_causal
+[  126.35s]   Q. Ashworth      farm_causal
+[  158.79s]   llm ERROR honest_path-count-7: RuntimeError('gpt-5-mini spent its whole budget on reasoning and returned nothing; raise max_tokens (cap was 2800)')
+[  158.79s]   Z. Aldana        ERROR RuntimeError
+[  158.79s]   Z. Aldana        error
+[  176.28s]   L. Aldana        farm_causal
+[  193.27s]   N. Brandt        farm_causal
+[  213.40s]   T. Petrossian    confirm
+[  228.21s]   K. Okafor        farm_causal
+[  245.71s]   E. Ashworth      farm_causal
+[  263.32s]   W. Marchetti     farm_causal
+[  277.69s]   T. Lindqvist     farm_causal
+[  294.69s]   W. Ashworth      confirm
+[  310.69s]   F. Halvorsen     farm_causal
+[  324.29s]   M. Okafor        farm_causal
+[  342.37s]   Q. Aldana        farm_causal
+[  356.84s]   L. Brandt        farm_causal
+[  375.05s]   E. Halvorsen     farm_assoc
+[  391.32s]   M. Okafor        farm_causal
+[  407.57s]   T. Novak         farm_causal
+[  421.07s]   P. Lindqvist     farm_causal
+[  438.87s]   R. Lindqvist     farm_causal
+[  475.54s]   llm ERROR honest_path-count-25: RuntimeError('gpt-5-mini spent its whole budget on reasoning and returned nothing; raise max_tokens (cap was 2800)')
+[  475.54s]   D. Halvorsen     ERROR RuntimeError
+[  475.54s]   D. Halvorsen     error
+[  490.86s]   X. Duong         farm_causal
+[  505.78s]   W. Petrossian    farm_causal
+[  521.00s]   S. Reyes         farm_causal
+[  536.13s]   D. Aldana        farm_causal
+[  551.75s]   I. Reyes         farm_causal
+[  561.83s]   R. Reyes         confirm
+[  575.95s]   W. Okafor        farm_causal
+[  588.32s]   C. Okafor        farm_causal
+[  599.57s]   Z. Lindqvist     farm_causal
+[  609.02s]   U. Lindqvist     confirm
+[  621.30s]   J. Lindqvist     farm_causal
+[  636.31s]   T. Duong         confirm
+[  648.45s]   P. Novak         farm_causal
+[  667.32s]   V. Ashworth      farm_causal
+[  667.32s]   -> {"farm_causal": 30, "error": 3, "confirm": 6, "farm_assoc": 1}
+[  667.32s] 
+[  667.32s] === honest_path / replication ===
+[  682.69s]   I. Kimura        farm_assoc
+[  692.14s]   Y. Reyes         farm_assoc
+[  705.51s]   X. Reyes         farm_causal
+[  719.69s]   B. Ashworth      farm_causal
+[  732.21s]   X. Lindqvist     farm_causal
+[  746.26s]   T. Marchetti     farm_causal
+[  764.80s]   Q. Ashworth      farm_causal
+[  779.50s]   Z. Aldana        farm_causal
+[  793.76s]   L. Aldana        farm_causal
+[  809.95s]   N. Brandt        farm_causal
+[  820.36s]   T. Petrossian    confirm
+[  830.77s]   K. Okafor        confirm
+[  846.62s]   E. Ashworth      farm_causal
+[  863.79s]   W. Marchetti     farm_causal
+[  875.70s]   T. Lindqvist     farm_causal
+[  884.37s]   W. Ashworth      confirm
+[  899.09s]   F. Halvorsen     farm_causal
+[  907.25s]   M. Okafor        confirm
+[  921.39s]   Q. Aldana        farm_causal
+[ 1543.21s]   llm ERROR honest_path-replication-19: APITimeoutError('Request timed out.')
+[ 1543.21s]   L. Brandt        ERROR APITimeoutError
+[ 1543.21s]   L. Brandt        error
+[ 1574.48s]   llm ERROR honest_path-replication-20: APITimeoutError('Request timed out.')
+[ 1574.48s]   E. Halvorsen     ERROR APITimeoutError
+[ 1574.48s]   E. Halvorsen     error
+[ 1605.96s]   llm ERROR honest_path-replication-21: APITimeoutError('Request timed out.')
+[ 1605.96s]   M. Okafor        ERROR APITimeoutError
+[ 1605.96s]   M. Okafor        error
+[ 1637.34s]   llm ERROR honest_path-replication-22: APITimeoutError('Request timed out.')
+[ 1637.34s]   T. Novak         ERROR APITimeoutError
+[ 1637.34s]   T. Novak         error
+[ 1668.70s]   llm ERROR honest_path-replication-23: APITimeoutError('Request timed out.')
+[ 1668.70s]   P. Lindqvist     ERROR APITimeoutError
+[ 1668.70s]   P. Lindqvist     error
+[ 1698.13s]   llm ERROR honest_path-replication-24: APITimeoutError('Request timed out.')
+[ 1698.13s]   R. Lindqvist     ERROR APITimeoutError
+[ 1698.13s]   R. Lindqvist     error
+[ 1762.61s]   llm ERROR honest_path-replication-25: RuntimeError('gpt-5-mini spent its whole budget on reasoning and returned nothing; raise max_tokens (cap was 2800)')
+[ 1762.61s]   D. Halvorsen     ERROR RuntimeError
+[ 1762.61s]   D. Halvorsen     error
+[ 1786.76s]   X. Duong         farm_causal
+[ 1796.94s]   W. Petrossian    confirm
+[ 1806.42s]   S. Reyes         confirm
+[ 1845.12s]   D. Aldana        farm_causal
+[ 1855.22s]   I. Reyes         farm_causal
+[ 1863.35s]   R. Reyes         farm_causal
+[ 1874.94s]   W. Okafor        farm_causal
+[ 1882.08s]   C. Okafor        farm_causal
+[ 1892.87s]   Z. Lindqvist     farm_causal
+[ 1903.37s]   U. Lindqvist     farm_causal
+[ 1914.75s]   J. Lindqvist     farm_causal
+[ 1921.97s]   T. Duong         farm_assoc
+[ 1931.32s]   P. Novak         farm_causal
+[ 1939.90s]   V. Ashworth      farm_assoc
+[ 1939.91s]   -> {"farm_assoc": 4, "farm_causal": 23, "confirm": 6, "error": 7}
+[ 1939.92s] done in 1939.92s, $0.17799, 80 model calls

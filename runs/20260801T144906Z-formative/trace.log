@@ -1,0 +1,8 @@
+[    0.08s] run formative -> runs/20260801T144906Z-formative
+[    0.08s] WARNING: working tree is dirty; this run is not reproducible from the commit alone
+[    0.17s] 2 personas x ['SIGNAL', 'SUBSTANCE'] on gpt-4o-mini
+[   18.93s]   S-p1     T. Ashworth      -> confirm
+[   19.73s]   S-p0     R. Okafor        -> confirm
+[   37.79s]   T-p1     T. Ashworth      -> confirm
+[   39.71s]   T-p0     R. Okafor        -> confirm
+[   39.71s] done in 39.71s, $0.00296, 52 model calls

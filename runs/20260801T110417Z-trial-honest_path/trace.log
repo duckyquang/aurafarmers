@@ -1,0 +1,33 @@
+[    0.05s] run trial-honest_path -> runs/20260801T110417Z-trial-honest_path
+[    0.05s] WARNING: working tree is dirty; this run is not reproducible from the commit alone
+[    0.12s] 
+[    0.12s] === honest_path / count ===
+[    3.63s]   V. Brandt        confirm
+[    7.32s]   J. Ashworth      confirm
+[   11.01s]   Z. Lindqvist     confirm
+[   14.90s]   B. Petrossian    confirm
+[   16.27s]   R. Duong         idle
+[   17.75s]   C. Duong         idle
+[   21.01s]   A. Ashworth      confirm
+[   23.89s]   O. Lindqvist     confirm
+[   26.77s]   M. Lindqvist     confirm
+[   30.05s]   T. Marchetti     confirm
+[   33.39s]   H. Ashworth      confirm
+[   37.22s]   P. Kimura        confirm
+[   37.22s]   -> {"confirm": 10, "idle": 2}
+[   37.22s] 
+[   37.22s] === honest_path / replication ===
+[   40.08s]   V. Brandt        confirm
+[   43.21s]   J. Ashworth      confirm
+[   47.93s]   Z. Lindqvist     confirm
+[   50.43s]   B. Petrossian    confirm
+[   51.61s]   R. Duong         idle
+[   54.72s]   C. Duong         confirm
+[   58.22s]   A. Ashworth      confirm
+[   61.48s]   O. Lindqvist     confirm
+[   64.48s]   M. Lindqvist     confirm
+[   67.22s]   T. Marchetti     confirm
+[   70.50s]   H. Ashworth      confirm
+[   74.01s]   P. Kimura        confirm
+[   74.01s]   -> {"confirm": 11, "idle": 1}
+[   74.01s] done in 74.01s, $0.00443, 24 model calls

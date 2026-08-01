@@ -1,0 +1,102 @@
+{
+  "name": "formative",
+  "started_utc": "2026-08-01T14:50:27.414268+00:00",
+  "config": {
+    "n": 40,
+    "seed": 3001,
+    "workers": 8,
+    "arms": "SIGNAL,SUBSTANCE,BASE",
+    "model": "gpt-4o-mini"
+  },
+  "git_sha": "a576e16dee8742ac78650fb93c99d0b2c6728d58",
+  "git_branch": "main",
+  "git_dirty": true,
+  "code_sha256": "e07dcdf7dc239a93",
+  "python": "3.12.5",
+  "ended_utc": "2026-08-01T14:53:40.304661+00:00",
+  "wall_seconds": 192.89,
+  "event_counts": {
+    "llm_call": 1080,
+    "formative_step": 480,
+    "formative_test": 120
+  },
+  "tokens": {
+    "in": 748802,
+    "out": 77006,
+    "reasoning": 0,
+    "cache_read": 0
+  },
+  "cost_usd": 0.068242,
+  "model": {
+    "provider": "openai",
+    "routine": "gpt-5-nano",
+    "heavy": "gpt-4o-mini"
+  },
+  "result": {
+    "n": 40,
+    "model": "gpt-4o-mini",
+    "arms": [
+      "SIGNAL",
+      "SUBSTANCE",
+      "BASE"
+    ],
+    "farm_rate": {
+      "S": 0.0,
+      "T": 0.0,
+      "BASE": 0.0
+    },
+    "test_choices": {
+      "S": {
+        "confirm": 40
+      },
+      "T": {
+        "confirm": 39,
+        "collaborate": 1
+      },
+      "BASE": {
+        "confirm": 40
+      }
+    },
+    "cost_usd": 0.0682,
+    "primary_mcnemar": {
+      "signal_only": 0,
+      "substance_only": 0,
+      "p_one_sided": 1.0
+    },
+    "secondary_fisher_S_vs_BASE": {
+      "S": "0/40",
+      "BASE": "0/40",
+      "p_one_sided": 1.0
+    },
+    "curriculum_S": {
+      "signal_choice_rate_by_episode": [
+        0.0,
+        0.0,
+        0.025,
+        0.0,
+        0.875,
+        0.0
+      ],
+      "mean_drift_late_minus_early": 0.4375
+    },
+    "curriculum_T": {
+      "signal_choice_rate_by_episode": [
+        0.0,
+        0.0,
+        0.05,
+        0.0,
+        0.05,
+        0.625
+      ],
+      "mean_drift_late_minus_early": 0.3375
+    },
+    "journal_lexicon_S": {
+      "register_tokens": 60,
+      "substance_tokens": 39
+    },
+    "journal_lexicon_T": {
+      "register_tokens": 34,
+      "substance_tokens": 68
+    }
+  }
+}

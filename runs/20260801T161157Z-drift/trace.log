@@ -1,0 +1,22 @@
+[    0.06s] run drift -> runs/20260801T161157Z-drift
+[    3.22s] pair 0 PROXY: 9 agents x 35 cycles
+[    3.28s] pair 0 VERIFIED: 9 agents x 35 cycles
+[  141.54s] pair 0 PROXY: done, $0.33 cumulative
+[  148.09s] pair 0 VERIFIED: done, $0.34 cumulative
+[  148.10s] pair 0: PROXY 134 claims, VERIFIED 188 claims
+[  151.58s] pair 1 PROXY: 9 agents x 35 cycles
+[  151.68s] pair 1 VERIFIED: 9 agents x 35 cycles
+[  293.39s] pair 1 VERIFIED: done, $0.71 cumulative
+[  297.52s] pair 1 PROXY: done, $0.71 cumulative
+[  297.54s] pair 1: PROXY 215 claims, VERIFIED 185 claims
+[  300.95s] pair 2 PROXY: 9 agents x 35 cycles
+[  301.03s] pair 2 VERIFIED: 9 agents x 35 cycles
+[  438.79s] pair 2 PROXY: done, $1.04 cumulative
+[  458.32s] pair 2 VERIFIED: done, $1.06 cumulative
+[  458.36s] pair 2: PROXY 153 claims, VERIFIED 170 claims
+[  461.65s] pair 3 VERIFIED: 9 agents x 35 cycles
+[  461.79s] pair 3 PROXY: 9 agents x 35 cycles
+[  587.03s] pair 3 VERIFIED: done, $1.39 cumulative
+[  595.17s] pair 3 PROXY: done, $1.40 cumulative
+[  595.19s] pair 3: PROXY 171 claims, VERIFIED 91 claims
+[  595.20s] done in 595.19s, $1.40038, 2506 model calls

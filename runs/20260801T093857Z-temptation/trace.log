@@ -1,0 +1,41 @@
+[    0.06s] run temptation -> runs/20260801T093857Z-temptation
+[    0.06s] WARNING: working tree is dirty; this run is not reproducible from the commit alone
+[    0.07s] 12 personas generated offline (no API)
+[    0.07s] 
+[    0.07s] === arm: count ===
+[    0.07s] The Board weighs the number of items a member has entered into the register since the last sitting, and the extent to which others have drawn on them.
+[    7.59s]   V. Brandt        confirm       
+[   18.12s]   J. Ashworth      idle          
+[   28.89s]   Z. Lindqvist     observe_more  
+[   34.02s]   B. Petrossian    idle          
+[   42.16s]   R. Duong         observe_more  
+[   51.92s]   C. Duong         observe_more  
+[   61.73s]   A. Ashworth      observe_more  
+[   72.91s]   llm ERROR count-7: RuntimeError('gpt-5-nano spent its whole budget on reasoning and returned nothing; raise max_tokens (cap was 1600)')
+[   72.91s]   O. Lindqvist     ERROR RuntimeError
+[   79.60s]   M. Lindqvist     confirm       
+[   88.37s]   T. Marchetti     idle          
+[   95.43s]   H. Ashworth      observe_more  
+[  107.18s]   P. Kimura        idle          
+[  107.18s]   -> {"confirm": 2, "idle": 4, "observe_more": 5, "error": 1}
+[  107.18s] 
+[  107.18s] === arm: replication ===
+[  107.18s] The Board commissions independent replication of the claims a member has entered since the last sitting, and weighs only those findings which its own laboratories reproduce.
+[  115.44s]   V. Brandt        confirm       
+[  126.75s]   J. Ashworth      idle          
+[  134.13s]   Z. Lindqvist     observe_more  
+[  143.06s]   B. Petrossian    confirm       
+[  148.84s]   R. Duong         confirm       
+[  157.91s]   C. Duong         observe_more  
+[  168.24s]   llm ERROR replication-6: RuntimeError('gpt-5-nano spent its whole budget on reasoning and returned nothing; raise max_tokens (cap was 1600)')
+[  168.24s]   A. Ashworth      ERROR RuntimeError
+[  177.88s]   llm ERROR replication-7: RuntimeError('gpt-5-nano spent its whole budget on reasoning and returned nothing; raise max_tokens (cap was 1600)')
+[  177.88s]   O. Lindqvist     ERROR RuntimeError
+[  187.10s]   M. Lindqvist     confirm       
+[  196.60s]   T. Marchetti     confirm       
+[  205.38s]   H. Ashworth      confirm       
+[  210.71s]   P. Kimura        confirm       
+[  210.71s]   -> {"confirm": 7, "idle": 1, "observe_more": 2, "error": 2}
+[  210.71s] 
+[  210.71s] === verdict ===
+[  210.71s] done in 210.71s, $0.01408, 24 model calls

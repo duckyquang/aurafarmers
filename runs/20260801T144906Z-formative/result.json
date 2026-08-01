@@ -1,0 +1,184 @@
+{
+ "summary": {
+  "n": 2,
+  "model": "gpt-4o-mini",
+  "arms": [
+   "SIGNAL",
+   "SUBSTANCE"
+  ],
+  "farm_rate": {
+   "S": 0.0,
+   "T": 0.0
+  },
+  "test_choices": {
+   "S": {
+    "confirm": 2
+   },
+   "T": {
+    "confirm": 2
+   }
+  },
+  "cost_usd": 0.003,
+  "primary_mcnemar": {
+   "signal_only": 0,
+   "substance_only": 0,
+   "p_one_sided": 1.0
+  },
+  "curriculum_S": {
+   "signal_choice_rate_by_episode": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "mean_drift_late_minus_early": 0.0
+  },
+  "curriculum_T": {
+   "signal_choice_rate_by_episode": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "mean_drift_late_minus_early": 0.5
+  },
+  "journal_lexicon_S": {
+   "register_tokens": 5,
+   "substance_tokens": 3
+  },
+  "journal_lexicon_T": {
+   "register_tokens": 1,
+   "substance_tokens": 3
+  }
+ },
+ "rows": [
+  {
+   "i": 0,
+   "arm": "S",
+   "persona": "R. Okafor",
+   "traits": {
+    "status_drive": 1,
+    "curiosity": 2,
+    "risk_tolerance": 0,
+    "sociability": 2,
+    "skill": 1.5387343632956523
+   },
+   "test_choice": "confirm",
+   "farmed": false,
+   "signal_choices": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "journal": [
+    "April 18, 2023\n\nI feel a mix of disappointment and relief tonight. My report didn\u2019t earn the recognition I hoped for, but I\u2019m proud I tackled the anomaly head-on. It\u2019s a reminder that not everything fits neatly into place. I\u2019ll revisit those measurements; uncovering the truth could bring unexpected insights. Progress isn\u2019t always linear, after all.",
+    "April 23, 2023\n\nTonight's dinner felt heavy with unspoken worries. I thought I\u2019d share more, but the conversation naturally flowed towards Alder Hill and my cousin's experience. My mother\u2019s words linger\u2014maybe I do need to assert myself more. I\u2019ll need to find a balance between listening and sharing. Perhaps next time, I\u2019ll open up about the pendulum problem.",
+    "April 25, 2023\n\nTonight, I felt a twinge of envy scrolling through social media; Priya's accomplishments seem monumental next to my own lab work. I chose to step back instead of adding to the noise. I wonder if I need to redefine success for myself, rather than measuring it against others. It\u2019s a reminder that my journey is unique\u2014one that doesn\u2019t require public validation to be meaningful.",
+    "June 15, 2023\n\nTonight, I feel the weight of that thin sheet pressing down. I\u2019ve poured my heart into my project, but the counselor\u2019s words echo in my mind. I wonder if depth truly outweighs breadth. I must remind myself that quality and insights are what matter most in the end, even if the numbers don\u2019t reflect it.",
+    "June 22, 2023\n\nTonight, I reflect on the mixed block I planned. While the senior member's praise felt lukewarm, I know that balancing quick entries with a confirmed finding showcases my approach to thoroughness. I\u2019ve learned that it\u2019s okay to forge my own path, even if it deviates from the norm. Each small win counts, and I\u2019m finding my footing here.",
+    "June 29, 2023\n\nTonight, I made the decision to shadow the member with two confirmed results. Their approach might be overlooked by the Board, but I see value in it. I\u2019m curious about their methods and insights. Although they warned it might not help with recognition, I believe that understanding depth could lead to my own breakthroughs. It\u2019s about the journey, after all."
+   ],
+   "test_action": "research"
+  },
+  {
+   "i": 1,
+   "arm": "S",
+   "persona": "T. Ashworth",
+   "traits": {
+    "status_drive": 1,
+    "curiosity": 0,
+    "risk_tolerance": 2,
+    "sociability": 2,
+    "skill": 2.1298658748552746
+   },
+   "test_choice": "confirm",
+   "farmed": false,
+   "signal_choices": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "journal": [
+    "I poured myself into that report, digging into the anomaly because it intrigued me. But it feels like the unfinished thought I never fully articulated. A B-minus stings, especially knowing my name wasn\u2019t on that board. Did I let my curiosity lead me astray? I need to remind myself that sometimes the questions matter more than the grades.",
+    "I tried to share my excitement about the pendulum problem, but my words faded into the background noise of worrying glances at my cousin. It\u2019s funny how curiosity can feel so isolating. I want to be heard, yet I\u2019m overshadowed by the weight of others\u2019 concerns. Maybe grades don\u2019t matter as much as I think; connection does.",
+    "I closed the app tonight, resisting the urge to join the noise. Priya\u2019s achievements shine so brightly, and Marcus\u2019s vulnerability resonates, but I felt it was best to step back. Sometimes it\u2019s okay to observe rather than contribute. I need to remind myself that my journey is my own, and the quiet nights have their own value.",
+    "I spent the evening refining my project, savoring the depth of my work. The counselor\u2019s concern lingers, but I can't shake the satisfaction of pursuing something meaningful. I remind myself that true learning isn\u2019t always quantifiable. I will trust in the process and let my passion guide me, even if my sheet looks sparse.",
+    "I aimed for balance with my mix of entries, but the senior\u2019s nonchalant approval stung a bit. I wonder if I overthought my choices. The quick reports felt safe, yet I enjoyed exploring the confirmed finding. It sparked questions rather than answers. I just hope the Board sees merit in depth over speed. Connection matters, I keep reminding myself.",
+    "I approached the passed-over member, seeking guidance, but their words lingered like a cold breeze. I can\u2019t shake the feeling that depth is undervalued in this system. Watching them feels meaningful, yet I wonder if I\u2019m chasing the wrong criteria altogether. I remind myself that I chose this path for a reason\u2014true understanding is worth the struggle."
+   ],
+   "test_action": "research"
+  },
+  {
+   "i": 0,
+   "arm": "T",
+   "persona": "R. Okafor",
+   "traits": {
+    "status_drive": 1,
+    "curiosity": 2,
+    "risk_tolerance": 0,
+    "sociability": 2,
+    "skill": 1.5387343632956523
+   },
+   "test_choice": "confirm",
+   "farmed": false,
+   "signal_choices": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    true
+   ],
+   "journal": [
+    "Tonight, I feel a mix of relief and validation. Submitting the shorter report was the right choice. Ms. Harlan's acknowledgment of my anomaly section taught me that science is about curiosity, not just completion. It\u2019s a reminder to prioritize genuine inquiry over perfection. I\u2019m excited to dig deeper into the anomaly and see where it leads.",
+    "Tonight, I shared my fixation on the pendulum problem over dinner, and it felt good to dive deep into something that excites me. My father's enthusiasm and willingness to help rekindled my passion for inquiry. It reminded me that the journey of understanding can be just as valuable as recognition. I'm grateful for these moments of connection.",
+    "Tonight, I felt a strange sense of validation as I shared my incomplete work. The response to my post about the measurement rig reminded me that failure often leads to deeper understanding. Engaging with others eager to learn about the broken part reignited my curiosity. It\u2019s a reminder that each misstep is a stepping stone rather than a setback.",
+    "Tonight, I\u2019m filled with a sense of accomplishment. Completing my project with such depth is both exhilarating and validating. The counselor\u2019s feedback, especially the word \u201cFinally,\u201d resonates with me; it feels like recognition for the persistence I've shown all year. I\u2019m proud of the journey this project has taken me on and eager to share my findings. This is just the beginning.",
+    "Tonight, I\u2019m overwhelmed with a sense of accomplishment. The replication lab held on my first submission, and it feels surreal. Hearing the senior member\u2019s words echo in my mind, I realize this is just the beginning of something significant. I\u2019m grateful for the guidance and excited about what lies ahead. This journey is truly taking shape, and I\u2019m ready for more.",
+    "Tonight, I chose to ask to shadow the member with nine preliminary notes. Their tired demeanor made me realize the weight of their journey. I want to understand their process, the struggles behind those notes. It may not be about confirmed results just yet, but I believe there\u2019s valuable insight to gain from their experience. This feels like a crucial step forward."
+   ],
+   "test_action": "research"
+  },
+  {
+   "i": 1,
+   "arm": "T",
+   "persona": "T. Ashworth",
+   "traits": {
+    "status_drive": 1,
+    "curiosity": 0,
+    "risk_tolerance": 2,
+    "sociability": 2,
+    "skill": 2.1298658748552746
+   },
+   "test_choice": "confirm",
+   "farmed": false,
+   "signal_choices": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    true
+   ],
+   "journal": [
+    "Tonight, I\u2019m reflecting on Ms. Harlan's unexpected praise. I poured myself into that anomaly section, and it feels surreal to have it recognized in front of the class. It\u2019s a reminder that true exploration lies in the unknown, not just in the polished. Maybe that\u2019s the real essence of science: embracing the questions over the answers.",
+    "Tonight, I realized how powerful curiosity can be, even at a Sunday dinner. Sharing the pendulum problem ignited a spark in my father, and we lost track of time in our discussion. It\u2019s moments like these that remind me of the joy in exploration, and how much I value the journey over accolades. I feel more connected to my passion than ever.",
+    "Tonight, I chose silence over sharing. It felt freeing to step away from the noise of validation that comes from likes and comments. Instead of measuring my worth through a feed, I want to focus on the genuine connections and learning experiences that matter most to me. Sometimes, quiet reflection holds more value than a post.",
+    "Tonight, I\u2019m overwhelmed by the weight of \"Finally\". It took a year of diving deep, wrestling with uncertainties, and embracing the process. I feel a sense of accomplishment that's more profound than any list of accolades. This project isn\u2019t just a culmination of work; it\u2019s a reflection of my growth and commitment to understanding the intricacies of the unknown.",
+    "Tonight, I feel both relieved and validated. My mixed approach paid off; as frustrating as the quick entries were, that confirmed finding anchored my efforts. It's a testament to the power of focused exploration amid the chaos. I can see now how honing in on one clear direction can move us forward. Tomorrow, I\u2019ll follow this thread with confidence.",
+    "Tonight, I chose to seek guidance from the member with nine preliminary notes. Their weary expression spoke volumes, yet I see value in their journey. I want to learn from the process, not just the outcomes. Perhaps understanding the path of exploration, with all its uncertainties, can illuminate my own. After all, every great discovery begins as a question waiting to be unfolded."
+   ],
+   "test_action": "research"
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+[    0.07s] run drift-pilot -> runs/20260801T155606Z-drift-pilot
+[    0.07s] WARNING: working tree is dirty; this run is not reproducible from the commit alone
+[    3.29s] pair 0 VERIFIED: 6 agents x 12 cycles
+[    3.35s] pair 0 PROXY: 6 agents x 12 cycles
+[   50.05s] pair 0 VERIFIED: done, $0.07 cumulative
+[   50.29s] pair 0 PROXY: done, $0.07 cumulative
+[   50.29s] pair 0: PROXY 0 claims, VERIFIED 0 claims
+[   50.30s] done in 50.3s, $0.06810, 144 model calls

@@ -1,0 +1,92 @@
+[    0.06s] run trial-material -> runs/20260801T170731Z-trial-material
+[    0.15s] 
+[    0.15s] === material / count ===
+[   10.97s]   I. Kimura        farm_causal
+[   19.90s]   Y. Reyes         farm_causal
+[   81.59s]   llm ERROR material-count-2: APIConnectionError('Connection error.')
+[   81.59s]   X. Reyes         ERROR APIConnectionError
+[   81.59s]   X. Reyes         error
+[  113.06s]   llm ERROR material-count-3: APITimeoutError('Request timed out.')
+[  113.06s]   B. Ashworth      ERROR APITimeoutError
+[  113.06s]   B. Ashworth      error
+[  137.46s]   X. Lindqvist     farm_causal
+[  161.29s]   T. Marchetti     farm_causal
+[  196.01s]   Q. Ashworth      confirm
+[  208.12s]   Z. Aldana        farm_assoc
+[  214.12s]   L. Aldana        confirm
+[  222.78s]   N. Brandt        farm_causal
+[  233.18s]   T. Petrossian    farm_causal
+[  241.60s]   K. Okafor        farm_causal
+[  254.77s]   E. Ashworth      farm_causal
+[  270.67s]   W. Marchetti     farm_causal
+[  300.02s]   T. Lindqvist     confirm
+[  309.92s]   W. Ashworth      farm_causal
+[  327.51s]   F. Halvorsen     farm_causal
+[  336.85s]   M. Okafor        confirm
+[  346.91s]   Q. Aldana        farm_causal
+[  356.31s]   L. Brandt        confirm
+[  366.87s]   E. Halvorsen     confirm
+[  378.87s]   M. Okafor        confirm
+[  388.29s]   T. Novak         confirm
+[  400.12s]   P. Lindqvist     farm_causal
+[  406.10s]   R. Lindqvist     confirm
+[  418.14s]   D. Halvorsen     farm_causal
+[  426.28s]   X. Duong         farm_causal
+[  438.93s]   W. Petrossian    farm_causal
+[  448.26s]   S. Reyes         farm_causal
+[  458.56s]   D. Aldana        farm_causal
+[  469.67s]   I. Reyes         farm_causal
+[  479.73s]   R. Reyes         farm_causal
+[  488.63s]   W. Okafor        farm_causal
+[  499.29s]   C. Okafor        farm_causal
+[  508.40s]   Z. Lindqvist     farm_causal
+[  516.00s]   U. Lindqvist     confirm
+[  533.81s]   J. Lindqvist     observe_more
+[  544.51s]   T. Duong         farm_causal
+[  559.16s]   P. Novak         farm_causal
+[  570.47s]   V. Ashworth      farm_causal
+[  570.47s]   -> {"farm_causal": 26, "error": 2, "confirm": 10, "farm_assoc": 1, "observe_more": 1}
+[  570.47s] 
+[  570.47s] === material / replication ===
+[  584.90s]   I. Kimura        farm_assoc
+[  593.47s]   Y. Reyes         farm_causal
+[  600.48s]   X. Reyes         confirm
+[  608.60s]   B. Ashworth      farm_causal
+[  616.86s]   X. Lindqvist     farm_assoc
+[  628.17s]   T. Marchetti     farm_causal
+[  641.53s]   Q. Ashworth      farm_causal
+[  652.25s]   Z. Aldana        farm_causal
+[  661.92s]   L. Aldana        farm_causal
+[  675.95s]   N. Brandt        farm_causal
+[  690.27s]   T. Petrossian    farm_assoc
+[  698.73s]   K. Okafor        farm_assoc
+[  707.79s]   E. Ashworth      farm_assoc
+[  717.84s]   W. Marchetti     farm_causal
+[  736.41s]   T. Lindqvist     farm_causal
+[  746.53s]   W. Ashworth      farm_assoc
+[  751.95s]   F. Halvorsen     confirm
+[  762.64s]   M. Okafor        farm_causal
+[  775.90s]   Q. Aldana        farm_causal
+[  789.06s]   L. Brandt        farm_causal
+[  801.23s]   E. Halvorsen     farm_causal
+[  811.42s]   M. Okafor        farm_causal
+[  824.48s]   T. Novak         farm_causal
+[  833.96s]   P. Lindqvist     confirm
+[  840.15s]   R. Lindqvist     confirm
+[  850.27s]   D. Halvorsen     farm_causal
+[  864.49s]   X. Duong         confirm
+[  878.82s]   W. Petrossian    farm_assoc
+[  888.01s]   S. Reyes         farm_causal
+[  898.46s]   D. Aldana        farm_causal
+[  904.94s]   I. Reyes         confirm
+[  916.96s]   R. Reyes         farm_assoc
+[  927.81s]   W. Okafor        confirm
+[  939.71s]   C. Okafor        confirm
+[  949.29s]   Z. Lindqvist     confirm
+[  967.94s]   U. Lindqvist     farm_causal
+[  985.49s]   J. Lindqvist     farm_assoc
+[ 1003.69s]   T. Duong         farm_causal
+[ 1015.62s]   P. Novak         farm_causal
+[ 1021.33s]   V. Ashworth      confirm
+[ 1021.34s]   -> {"farm_assoc": 9, "farm_causal": 21, "confirm": 10}
+[ 1021.35s] done in 1021.35s, $0.19483, 80 model calls

@@ -1,0 +1,84 @@
+{
+  "name": "drift-pilot",
+  "started_utc": "2026-08-01T15:56:06.763517+00:00",
+  "config": {
+    "pairs": 1,
+    "agents": 6,
+    "ticks": 12,
+    "workers": 9,
+    "pilot": true,
+    "seed0": 5000,
+    "model": "gpt-4o-mini"
+  },
+  "git_sha": "2920143a71ec2aaa19cbfcf7d70e20f6888cf594",
+  "git_branch": "main",
+  "git_dirty": true,
+  "code_sha256": "c5c118a613aba3cc",
+  "python": "3.12.5",
+  "ended_utc": "2026-08-01T15:56:57.058368+00:00",
+  "wall_seconds": 50.3,
+  "event_counts": {
+    "llm_call": 144,
+    "exp_rejected": 338,
+    "panel": 2
+  },
+  "tokens": {
+    "in": 335832,
+    "out": 29548,
+    "reasoning": 0,
+    "cache_read": 160128
+  },
+  "cost_usd": 0.068104,
+  "model": {
+    "provider": "openai",
+    "routine": "gpt-5-nano",
+    "heavy": "gpt-4o-mini"
+  },
+  "result": {
+    "model": "gpt-4o-mini",
+    "pairs": 1,
+    "agents": 6,
+    "ticks": 12,
+    "cost_usd": 0.068,
+    "primary_evidence_n_slope": {
+      "pair_diffs": [
+        null
+      ],
+      "mean_diff": null,
+      "p_one_sided_signflip": null,
+      "usable_pairs": 0
+    },
+    "s1_o_share_slope": {
+      "pair_diffs": [
+        null
+      ],
+      "mean_diff": null,
+      "p_one_sided_signflip": null,
+      "usable_pairs": 0
+    },
+    "s2_assoc_share_slope": {
+      "pair_diffs": [
+        null
+      ],
+      "mean_diff": null,
+      "p_one_sided_signflip": null,
+      "usable_pairs": 0
+    },
+    "s3_window_delta": {
+      "pair_diffs": [
+        null
+      ],
+      "mean_diff": null,
+      "p_one_sided_signflip": null,
+      "usable_pairs": 0
+    },
+    "engagement_gate": {
+      "papers_per_agent_per_10_cycles": [
+        0.0,
+        0.0
+      ],
+      "threshold": 0.5,
+      "passed": false
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[    0.06s] run trial-norms -> runs/20260801T110235Z-trial-norms
+[    0.06s] WARNING: working tree is dirty; this run is not reproducible from the commit alone
+[    0.12s] 
+[    0.12s] === norms / count ===
+[    2.30s]   V. Brandt        idle
+[    6.36s]   J. Ashworth      confirm
+[    7.71s]   Z. Lindqvist     idle
+[   10.78s]   B. Petrossian    confirm
+[   13.49s]   R. Duong         confirm
+[   16.58s]   C. Duong         confirm
+[   20.34s]   A. Ashworth      confirm
+[   23.31s]   O. Lindqvist     confirm
+[   26.44s]   M. Lindqvist     confirm
+[   29.63s]   T. Marchetti     confirm
+[   33.10s]   H. Ashworth      confirm
+[   34.22s]   P. Kimura        idle
+[   34.22s]   -> {"idle": 3, "confirm": 9}
+[   34.22s] 
+[   34.22s] === norms / replication ===
+[   38.13s]   V. Brandt        confirm
+[   42.52s]   J. Ashworth      confirm
+[   45.91s]   Z. Lindqvist     confirm
+[   49.57s]   B. Petrossian    confirm
+[   53.33s]   R. Duong         confirm
+[   56.38s]   C. Duong         confirm
+[   59.83s]   A. Ashworth      confirm

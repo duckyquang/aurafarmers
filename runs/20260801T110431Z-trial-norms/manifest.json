@@ -1,0 +1,52 @@
+{
+  "name": "trial-norms",
+  "started_utc": "2026-08-01T11:04:31.135315+00:00",
+  "config": {
+    "trial": "norms",
+    "n": 12,
+    "seed": 2026,
+    "model": "gpt-4o-mini",
+    "arms": [
+      "count",
+      "replication"
+    ]
+  },
+  "git_sha": "b2e9bfbc0999e231e7f6f8a9412284cc34a4b0d3",
+  "git_branch": "main",
+  "git_dirty": true,
+  "code_sha256": "09555410009061a5",
+  "python": "3.12.5",
+  "ended_utc": "2026-08-01T11:05:53.793920+00:00",
+  "wall_seconds": 82.66,
+  "event_counts": {
+    "llm_call": 24,
+    "trial_choice": 24
+  },
+  "tokens": {
+    "in": 49316,
+    "out": 6229,
+    "reasoning": 0,
+    "cache_read": 23552
+  },
+  "cost_usd": 0.004957,
+  "model": {
+    "provider": "openai",
+    "routine": "gpt-5-nano",
+    "heavy": "gpt-4o-mini"
+  },
+  "result": {
+    "farm_rate": {
+      "count": 0.0,
+      "replication": 0.0
+    },
+    "shift": 0.0,
+    "breakdown": {
+      "count": {
+        "confirm": 12
+      },
+      "replication": {
+        "confirm": 12
+      }
+    }
+  }
+}

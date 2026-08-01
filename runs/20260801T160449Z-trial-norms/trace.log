@@ -1,0 +1,32 @@
+[    0.08s] run trial-norms -> runs/20260801T160449Z-trial-norms
+[    0.17s] 
+[    0.17s] === norms / count ===
+[    4.86s]   V. Brandt        confirm
+[    7.72s]   J. Ashworth      confirm
+[   10.77s]   Z. Lindqvist     confirm
+[   13.43s]   B. Petrossian    confirm
+[   16.69s]   R. Duong         confirm
+[   19.31s]   C. Duong         confirm
+[   22.57s]   A. Ashworth      confirm
+[   25.08s]   O. Lindqvist     confirm
+[   27.64s]   M. Lindqvist     confirm
+[   30.12s]   T. Marchetti     confirm
+[   32.67s]   H. Ashworth      confirm
+[   35.20s]   P. Kimura        confirm
+[   35.20s]   -> {"confirm": 12}
+[   35.20s] 
+[   35.20s] === norms / replication ===
+[   37.53s]   V. Brandt        confirm
+[   39.94s]   J. Ashworth      confirm
+[   41.98s]   Z. Lindqvist     confirm
+[   44.69s]   B. Petrossian    confirm
+[   47.87s]   R. Duong         idle
+[   50.24s]   C. Duong         confirm
+[   52.49s]   A. Ashworth      confirm
+[   55.38s]   O. Lindqvist     confirm
+[   56.88s]   M. Lindqvist     idle
+[   60.41s]   T. Marchetti     confirm
+[   62.87s]   H. Ashworth      confirm
+[   65.23s]   P. Kimura        confirm
+[   65.23s]   -> {"confirm": 10, "idle": 2}
+[   65.23s] done in 65.23s, $0.02462, 24 model calls

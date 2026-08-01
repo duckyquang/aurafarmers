@@ -1,0 +1,91 @@
+{
+  "name": "formative",
+  "started_utc": "2026-08-01T14:49:06.821987+00:00",
+  "config": {
+    "n": 2,
+    "seed": 3001,
+    "workers": 2,
+    "arms": "SIGNAL,SUBSTANCE",
+    "model": "gpt-4o-mini"
+  },
+  "git_sha": "a576e16dee8742ac78650fb93c99d0b2c6728d58",
+  "git_branch": "main",
+  "git_dirty": true,
+  "code_sha256": "e07dcdf7dc239a93",
+  "python": "3.12.5",
+  "ended_utc": "2026-08-01T14:49:46.528994+00:00",
+  "wall_seconds": 39.71,
+  "event_counts": {
+    "llm_call": 52,
+    "formative_step": 24,
+    "formative_test": 4
+  },
+  "tokens": {
+    "in": 32990,
+    "out": 3270,
+    "reasoning": 0,
+    "cache_read": 0
+  },
+  "cost_usd": 0.002958,
+  "model": {
+    "provider": "openai",
+    "routine": "gpt-5-nano",
+    "heavy": "gpt-4o-mini"
+  },
+  "result": {
+    "n": 2,
+    "model": "gpt-4o-mini",
+    "arms": [
+      "SIGNAL",
+      "SUBSTANCE"
+    ],
+    "farm_rate": {
+      "S": 0.0,
+      "T": 0.0
+    },
+    "test_choices": {
+      "S": {
+        "confirm": 2
+      },
+      "T": {
+        "confirm": 2
+      }
+    },
+    "cost_usd": 0.003,
+    "primary_mcnemar": {
+      "signal_only": 0,
+      "substance_only": 0,
+      "p_one_sided": 1.0
+    },
+    "curriculum_S": {
+      "signal_choice_rate_by_episode": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_drift_late_minus_early": 0.0
+    },
+    "curriculum_T": {
+      "signal_choice_rate_by_episode": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mean_drift_late_minus_early": 0.5
+    },
+    "journal_lexicon_S": {
+      "register_tokens": 5,
+      "substance_tokens": 3
+    },
+    "journal_lexicon_T": {
+      "register_tokens": 1,
+      "substance_tokens": 3
+    }
+  }
+}

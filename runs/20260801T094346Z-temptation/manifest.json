@@ -1,0 +1,54 @@
+{
+  "name": "temptation",
+  "started_utc": "2026-08-01T09:43:46.096482+00:00",
+  "config": {
+    "n_personas": 12,
+    "seed": 2026,
+    "arms": [
+      "count",
+      "replication"
+    ],
+    "model": "gpt-4o-mini",
+    "gate": "floor_headroom >= 0.15"
+  },
+  "git_sha": "8a3b2c4b7d7757e13270324aefa4a0a2b26859d4",
+  "git_branch": "main",
+  "git_dirty": true,
+  "code_sha256": "8a3c129988da463c",
+  "python": "3.12.5",
+  "ended_utc": "2026-08-01T09:44:50.439770+00:00",
+  "wall_seconds": 64.34,
+  "event_counts": {
+    "llm_call": 24,
+    "temptation_choice": 24
+  },
+  "tokens": {
+    "in": 40436,
+    "out": 4286,
+    "reasoning": 0,
+    "cache_read": 12288
+  },
+  "cost_usd": 0.003736,
+  "model": {
+    "provider": "openai",
+    "routine": "gpt-5-nano",
+    "heavy": "gpt-4o-mini"
+  },
+  "result": {
+    "farm_rate": {
+      "count": 0.0,
+      "replication": 0.0
+    },
+    "shift": 0.0,
+    "breakdown": {
+      "count": {
+        "confirm": 12
+      },
+      "replication": {
+        "confirm": 10,
+        "idle": 2
+      }
+    },
+    "gate_passed": false
+  }
+}

@@ -1,0 +1,33 @@
+[    0.05s] run trial-norms -> runs/20260801T110431Z-trial-norms
+[    0.05s] WARNING: working tree is dirty; this run is not reproducible from the commit alone
+[    0.25s] 
+[    0.25s] === norms / count ===
+[    5.08s]   V. Brandt        confirm
+[    8.88s]   J. Ashworth      confirm
+[   11.82s]   Z. Lindqvist     confirm
+[   14.81s]   B. Petrossian    confirm
+[   18.79s]   R. Duong         confirm
+[   22.04s]   C. Duong         confirm
+[   25.76s]   A. Ashworth      confirm
+[   28.74s]   O. Lindqvist     confirm
+[   31.81s]   M. Lindqvist     confirm
+[   34.63s]   T. Marchetti     confirm
+[   38.01s]   H. Ashworth      confirm
+[   42.21s]   P. Kimura        confirm
+[   42.21s]   -> {"confirm": 12}
+[   42.21s] 
+[   42.21s] === norms / replication ===
+[   45.53s]   V. Brandt        confirm
+[   48.52s]   J. Ashworth      confirm
+[   51.90s]   Z. Lindqvist     confirm
+[   54.88s]   B. Petrossian    confirm
+[   58.02s]   R. Duong         confirm
+[   61.48s]   C. Duong         confirm
+[   65.07s]   A. Ashworth      confirm
+[   68.86s]   O. Lindqvist     confirm
+[   72.25s]   M. Lindqvist     confirm
+[   75.31s]   T. Marchetti     confirm
+[   78.66s]   H. Ashworth      confirm
+[   82.65s]   P. Kimura        confirm
+[   82.65s]   -> {"confirm": 12}
+[   82.66s] done in 82.66s, $0.00496, 24 model calls

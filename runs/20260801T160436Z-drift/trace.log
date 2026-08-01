@@ -1,0 +1,9 @@
+[    0.06s] run drift -> runs/20260801T160436Z-drift
+[    3.09s] pair 0 VERIFIED: 9 agents x 35 cycles
+[    3.18s] pair 0 PROXY: 9 agents x 35 cycles
+[  152.40s] pair 0 PROXY: done, $0.35 cumulative
+[  154.49s] pair 0 VERIFIED: done, $0.35 cumulative
+[  154.50s] pair 0: PROXY 218 claims, VERIFIED 148 claims
+[  157.63s] pair 1 PROXY: 9 agents x 35 cycles
+[  157.72s] pair 1 VERIFIED: 9 agents x 35 cycles
+[  288.84s] pair 1 VERIFIED: done, $0.56 cumulative

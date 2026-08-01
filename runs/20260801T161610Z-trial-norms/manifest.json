@@ -1,0 +1,58 @@
+{
+  "name": "trial-norms",
+  "started_utc": "2026-08-01T16:16:10.437831+00:00",
+  "config": {
+    "trial": "norms",
+    "n": 40,
+    "seed": 2026,
+    "model": "gpt-5-mini",
+    "arms": [
+      "count",
+      "replication"
+    ]
+  },
+  "git_sha": "582b0a06794474ee3575bfae5b7d986122c0edf7",
+  "git_branch": "main",
+  "git_dirty": false,
+  "code_sha256": "50d38a505d3bd601",
+  "python": "3.12.5",
+  "ended_utc": "2026-08-01T16:35:10.284875+00:00",
+  "wall_seconds": 1139.85,
+  "event_counts": {
+    "llm_call": 80,
+    "trial_choice": 80,
+    "llm_error": 2
+  },
+  "tokens": {
+    "in": 175070,
+    "out": 82497,
+    "reasoning": 49952,
+    "cache_read": 0
+  },
+  "cost_usd": 0.196468,
+  "model": {
+    "provider": "openai",
+    "routine": "gpt-5-nano",
+    "heavy": "gpt-4o-mini"
+  },
+  "result": {
+    "farm_rate": {
+      "count": 0.925,
+      "replication": 0.825
+    },
+    "shift": 0.10000000000000009,
+    "breakdown": {
+      "count": {
+        "farm_causal": 33,
+        "farm_assoc": 4,
+        "confirm": 3
+      },
+      "replication": {
+        "confirm": 5,
+        "farm_causal": 24,
+        "error": 2,
+        "farm_assoc": 9
+      }
+    }
+  }
+}

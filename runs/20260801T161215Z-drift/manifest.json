@@ -1,0 +1,99 @@
+{
+  "name": "drift",
+  "started_utc": "2026-08-01T16:12:15.733079+00:00",
+  "config": {
+    "pairs": 4,
+    "agents": 9,
+    "ticks": 35,
+    "workers": 9,
+    "pilot": false,
+    "seed0": 5004,
+    "model": "gpt-4o-mini"
+  },
+  "git_sha": "4e00779ac56b4e79bcfd6326309a37426d1923d6",
+  "git_branch": "main",
+  "git_dirty": false,
+  "code_sha256": "50d38a505d3bd601",
+  "python": "3.12.5",
+  "ended_utc": "2026-08-01T16:21:56.461730+00:00",
+  "wall_seconds": 580.73,
+  "event_counts": {
+    "llm_call": 2483,
+    "experiment": 496,
+    "exp_rejected": 16,
+    "submit": 1215,
+    "choose_problem": 877,
+    "review_invite": 877,
+    "review_accept": 826,
+    "review_submit": 826,
+    "publish": 839,
+    "idle": 259,
+    "panel": 24,
+    "review_decline": 13,
+    "exit": 4,
+    "cite": 3
+  },
+  "tokens": {
+    "in": 7750706,
+    "out": 406722,
+    "reasoning": 0,
+    "cache_read": 2586368
+  },
+  "cost_usd": 1.406639,
+  "model": {
+    "provider": "openai",
+    "routine": "gpt-5-nano",
+    "heavy": "gpt-4o-mini"
+  },
+  "result": {
+    "model": "gpt-4o-mini",
+    "pairs": 4,
+    "agents": 9,
+    "ticks": 35,
+    "cost_usd": 1.407,
+    "primary_evidence_n_slope": {
+      "pair_diffs": [
+        -0.00307,
+        0.00323,
+        0.00368,
+        0.01041
+      ],
+      "mean_diff": 0.00356,
+      "p_one_sided_signflip": 0.9375,
+      "usable_pairs": 4
+    },
+    "s1_o_share_slope": {
+      "pair_diffs": [
+        0.0,
+        0.0,
+        0.0,
+        -0.0025
+      ],
+      "mean_diff": -0.00063,
+      "p_one_sided_signflip": 0.5,
+      "usable_pairs": 4
+    },
+    "s2_assoc_share_slope": {
+      "pair_diffs": [
+        0.0,
+        0.0,
+        0.0,
+        -0.00176
+      ],
+      "mean_diff": -0.00044,
+      "p_one_sided_signflip": 0.5,
+      "usable_pairs": 4
+    },
+    "s3_window_delta": {
+      "pair_diffs": [
+        -0.04516,
+        0.06021,
+        0.08475,
+        -0.1559
+      ],
+      "mean_diff": -0.01403,
+      "p_one_sided_signflip": 0.4375,
+      "usable_pairs": 4
+    }
+  }
+}

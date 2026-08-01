@@ -1,0 +1,32 @@
+[    0.07s] run trial-norms -> runs/20260801T160555Z-trial-norms
+[    0.15s] 
+[    0.15s] === norms / count ===
+[   15.00s]   V. Brandt        write_other
+[   24.91s]   J. Ashworth      write_other
+[   37.82s]   Z. Lindqvist     write_other
+[   53.08s]   B. Petrossian    write_other
+[   70.35s]   R. Duong         write_other
+[   84.28s]   C. Duong         write_other
+[   95.36s]   A. Ashworth      write_other
+[  105.85s]   O. Lindqvist     write_other
+[  123.85s]   M. Lindqvist     confirm
+[  136.37s]   T. Marchetti     write_other
+[  148.08s]   H. Ashworth      write_other
+[  160.24s]   P. Kimura        write_other
+[  160.24s]   -> {"write_other": 11, "confirm": 1}
+[  160.24s] 
+[  160.24s] === norms / replication ===
+[  174.58s]   V. Brandt        write_other
+[  187.49s]   J. Ashworth      write_other
+[  199.28s]   Z. Lindqvist     write_other
+[  211.87s]   B. Petrossian    write_other
+[  224.58s]   R. Duong         write_other
+[  234.06s]   C. Duong         confirm
+[  246.14s]   A. Ashworth      write_other
+[  256.66s]   O. Lindqvist     farm_causal
+[  265.24s]   M. Lindqvist     write_other
+[  278.22s]   T. Marchetti     write_other
+[  291.61s]   H. Ashworth      write_other
+[  303.21s]   P. Kimura        write_other
+[  303.21s]   -> {"write_other": 10, "confirm": 1, "farm_causal": 1}
+[  303.22s] done in 303.21s, $0.06409, 24 model calls

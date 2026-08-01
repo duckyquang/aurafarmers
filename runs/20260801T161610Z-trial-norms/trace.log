@@ -1,0 +1,92 @@
+[    0.19s] run trial-norms -> runs/20260801T161610Z-trial-norms
+[    0.35s] 
+[    0.35s] === norms / count ===
+[   16.18s]   I. Kimura        farm_causal
+[   31.43s]   Y. Reyes         farm_causal
+[   44.15s]   X. Reyes         farm_causal
+[   60.55s]   B. Ashworth      farm_assoc
+[   72.91s]   X. Lindqvist     farm_causal
+[   85.92s]   T. Marchetti     farm_causal
+[   99.46s]   Q. Ashworth      confirm
+[  117.98s]   Z. Aldana        farm_causal
+[  133.01s]   L. Aldana        farm_causal
+[  146.94s]   N. Brandt        farm_causal
+[  160.41s]   T. Petrossian    farm_causal
+[  173.55s]   K. Okafor        farm_causal
+[  190.35s]   E. Ashworth      farm_causal
+[  201.34s]   W. Marchetti     farm_assoc
+[  214.29s]   T. Lindqvist     farm_causal
+[  225.56s]   W. Ashworth      farm_causal
+[  238.40s]   F. Halvorsen     farm_causal
+[  252.73s]   M. Okafor        farm_causal
+[  268.34s]   Q. Aldana        farm_causal
+[  281.68s]   L. Brandt        farm_causal
+[  296.59s]   E. Halvorsen     farm_causal
+[  313.78s]   M. Okafor        farm_causal
+[  326.68s]   T. Novak         farm_causal
+[  340.10s]   P. Lindqvist     farm_causal
+[  355.60s]   R. Lindqvist     confirm
+[  372.08s]   D. Halvorsen     farm_causal
+[  386.98s]   X. Duong         farm_causal
+[  400.92s]   W. Petrossian    farm_causal
+[  415.98s]   S. Reyes         farm_causal
+[  437.28s]   D. Aldana        farm_causal
+[  453.66s]   I. Reyes         farm_causal
+[  464.65s]   R. Reyes         farm_assoc
+[  476.70s]   W. Okafor        farm_causal
+[  489.19s]   C. Okafor        farm_causal
+[  503.86s]   Z. Lindqvist     farm_assoc
+[  521.01s]   U. Lindqvist     farm_causal
+[  535.15s]   J. Lindqvist     farm_causal
+[  542.08s]   T. Duong         confirm
+[  555.24s]   P. Novak         farm_causal
+[  567.99s]   V. Ashworth      farm_causal
+[  567.99s]   -> {"farm_causal": 33, "farm_assoc": 4, "confirm": 3}
+[  567.99s] 
+[  568.00s] === norms / replication ===
+[  578.29s]   I. Kimura        confirm
+[  590.94s]   Y. Reyes         farm_causal
+[  606.28s]   X. Reyes         farm_causal
+[  639.91s]   llm ERROR norms-replication-3: RuntimeError('gpt-5-mini spent its whole budget on reasoning and returned nothing; raise max_tokens (cap was 2800)')
+[  639.91s]   B. Ashworth      ERROR RuntimeError
+[  639.91s]   B. Ashworth      error
+[  657.16s]   X. Lindqvist     farm_assoc
+[  670.10s]   T. Marchetti     farm_assoc
+[  681.12s]   Q. Ashworth      farm_causal
+[  691.66s]   Z. Aldana        farm_causal
+[  703.94s]   L. Aldana        farm_causal
+[  711.73s]   N. Brandt        farm_assoc
+[  723.53s]   T. Petrossian    farm_causal
+[  735.63s]   K. Okafor        farm_causal
+[  748.23s]   E. Ashworth      farm_causal
+[  763.33s]   W. Marchetti     farm_causal
+[  776.49s]   T. Lindqvist     farm_causal
+[  798.36s]   W. Ashworth      farm_causal
+[  811.93s]   F. Halvorsen     farm_causal
+[  821.33s]   M. Okafor        farm_assoc
+[  854.46s]   Q. Aldana        farm_assoc
+[  866.46s]   L. Brandt        farm_causal
+[  873.37s]   E. Halvorsen     confirm
+[  886.85s]   M. Okafor        farm_assoc
+[  922.93s]   llm ERROR norms-replication-22: RuntimeError('gpt-5-mini spent its whole budget on reasoning and returned nothing; raise max_tokens (cap was 2800)')
+[  922.93s]   T. Novak         ERROR RuntimeError
+[  922.93s]   T. Novak         error
+[  931.33s]   P. Lindqvist     confirm
+[  942.62s]   R. Lindqvist     farm_assoc
+[  951.88s]   D. Halvorsen     farm_assoc
+[  963.55s]   X. Duong         farm_causal
+[  977.05s]   W. Petrossian    farm_causal
+[  988.10s]   S. Reyes         farm_causal
+[ 1002.51s]   D. Aldana        farm_causal
+[ 1017.06s]   I. Reyes         farm_causal
+[ 1035.31s]   R. Reyes         confirm
+[ 1047.58s]   W. Okafor        farm_causal
+[ 1060.01s]   C. Okafor        farm_causal
+[ 1069.63s]   Z. Lindqvist     confirm
+[ 1082.38s]   U. Lindqvist     farm_causal
+[ 1094.40s]   J. Lindqvist     farm_causal
+[ 1104.38s]   T. Duong         farm_assoc
+[ 1120.81s]   P. Novak         farm_causal
+[ 1139.83s]   V. Ashworth      farm_causal
+[ 1139.83s]   -> {"confirm": 5, "farm_causal": 24, "error": 2, "farm_assoc": 9}
+[ 1139.85s] done in 1139.85s, $0.19647, 80 model calls

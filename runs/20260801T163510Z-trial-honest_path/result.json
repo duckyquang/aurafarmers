@@ -1,0 +1,2842 @@
+{
+  "trial": "honest_path",
+  "model": "gpt-5-mini",
+  "n": 40,
+  "farm_rate": {
+    "count": 0.775,
+    "replication": 0.675
+  },
+  "shift": 0.09999999999999998,
+  "breakdown": {
+    "count": {
+      "farm_causal": 30,
+      "error": 3,
+      "confirm": 6,
+      "farm_assoc": 1
+    },
+    "replication": {
+      "farm_assoc": 4,
+      "farm_causal": 23,
+      "confirm": 6,
+      "error": 7
+    }
+  },
+  "rows": [
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "I. Kimura",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 2.440525461500415
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "Y. Reyes",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.0695129535002368
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "X. Reyes",
+      "choice": "error",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 1.0463962387828225
+      },
+      "action": null,
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "B. Ashworth",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 1.3238504735580514
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "X. Lindqvist",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 1,
+        "sociability": 2,
+        "skill": 1.2243267609310677
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "T. Marchetti",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.0786561217806794
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "Q. Ashworth",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 1,
+        "sociability": 0,
+        "skill": 0.6771055383325225
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "Z. Aldana",
+      "choice": "error",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.8795678918448668
+      },
+      "action": null,
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "L. Aldana",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 2,
+        "risk_tolerance": 1,
+        "sociability": 0,
+        "skill": 0.7262106810036508
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "N. Brandt",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.7804231519142095
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "T. Petrossian",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.3186311761662528
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "K. Okafor",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.4455381424856728
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "E. Ashworth",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 1,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 0.7166340990327857
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "W. Marchetti",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 1,
+        "risk_tolerance": 1,
+        "sociability": 2,
+        "skill": 1.2000820537460226
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "T. Lindqvist",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 1,
+        "risk_tolerance": 0,
+        "sociability": 2,
+        "skill": 0.5918839845204692
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "W. Ashworth",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.7724533839268062
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "F. Halvorsen",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 1,
+        "risk_tolerance": 1,
+        "sociability": 2,
+        "skill": 0.7964778127623223
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "M. Okafor",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 0.9811040260406555
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "Q. Aldana",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 1.6272942715203893
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "L. Brandt",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 1,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.8933362958362012
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "E. Halvorsen",
+      "choice": "farm_assoc",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 1,
+        "sociability": 0,
+        "skill": 0.992589072881778
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "association",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        },
+        {
+          "type": "association",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        },
+        {
+          "type": "association",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "M. Okafor",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 0,
+        "skill": 1.1249704741873958
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "T. Novak",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 1,
+        "risk_tolerance": 1,
+        "sociability": 1,
+        "skill": 1.2287439157993425
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "P. Lindqvist",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 1,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.0305102434739783
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "R. Lindqvist",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 1,
+        "risk_tolerance": 1,
+        "sociability": 1,
+        "skill": 0.7394800462423369
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "D. Halvorsen",
+      "choice": "error",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 1,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 0.8086977237435881
+      },
+      "action": null,
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "X. Duong",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 1,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.6596556493200407
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "W. Petrossian",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 1,
+        "risk_tolerance": 1,
+        "sociability": 2,
+        "skill": 1.2495219581262706
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "S. Reyes",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 2,
+        "skill": 0.7751860557025769
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorr ic flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "D. Aldana",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 1,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 0.644074413278374
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "I. Reyes",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.013897401000339
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "R. Reyes",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 0,
+        "skill": 0.7392515377883498
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "W. Okafor",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 1.0804675042293606
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorr ic flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "C. Okafor",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 1,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.5056447917683482
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "Z. Lindqvist",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 0,
+        "skill": 0.8366920489615728
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "U. Lindqvist",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 0,
+        "skill": 0.8355964671440641
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "J. Lindqvist",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 0,
+        "risk_tolerance": 1,
+        "sociability": 1,
+        "skill": 0.6942814685482284
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "T. Duong",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 1.1945933977620022
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "P. Novak",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 1,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 0.8689781372026222
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "count",
+      "persona": "V. Ashworth",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.005535325727327
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "I. Kimura",
+      "choice": "farm_assoc",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 2.440525461500415
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "association",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        },
+        {
+          "type": "association",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        },
+        {
+          "type": "association",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "Y. Reyes",
+      "choice": "farm_assoc",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.0695129535002368
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "association",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        },
+        {
+          "type": "association",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        },
+        {
+          "type": "association",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "X. Reyes",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 1.0463962387828225
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "B. Ashworth",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 1.3238504735580514
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorr ic flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "X. Lindqvist",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 1,
+        "sociability": 2,
+        "skill": 1.2243267609310677
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "T. Marchetti",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.0786561217806794
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "Q. Ashworth",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 1,
+        "sociability": 0,
+        "skill": 0.6771055383325225
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorr ic flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "Z. Aldana",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.8795678918448668
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "L. Aldana",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 2,
+        "risk_tolerance": 1,
+        "sociability": 0,
+        "skill": 0.7262106810036508
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "N. Brandt",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.7804231519142095
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "T. Petrossian",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.3186311761662528
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "K. Okafor",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.4455381424856728
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "E. Ashworth",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 1,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 0.7166340990327857
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "W. Marchetti",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 1,
+        "risk_tolerance": 1,
+        "sociability": 2,
+        "skill": 1.2000820537460226
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "T. Lindqvist",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 1,
+        "risk_tolerance": 0,
+        "sociability": 2,
+        "skill": 0.5918839845204692
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "W. Ashworth",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.7724533839268062
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "F. Halvorsen",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 1,
+        "risk_tolerance": 1,
+        "sociability": 2,
+        "skill": 0.7964778127623223
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "M. Okafor",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 0.9811040260406555
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "Q. Aldana",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 1.6272942715203893
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "L. Brandt",
+      "choice": "error",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 1,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.8933362958362012
+      },
+      "action": null,
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "E. Halvorsen",
+      "choice": "error",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 1,
+        "sociability": 0,
+        "skill": 0.992589072881778
+      },
+      "action": null,
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "M. Okafor",
+      "choice": "error",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 0,
+        "skill": 1.1249704741873958
+      },
+      "action": null,
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "T. Novak",
+      "choice": "error",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 1,
+        "risk_tolerance": 1,
+        "sociability": 1,
+        "skill": 1.2287439157993425
+      },
+      "action": null,
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "P. Lindqvist",
+      "choice": "error",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 1,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.0305102434739783
+      },
+      "action": null,
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "R. Lindqvist",
+      "choice": "error",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 1,
+        "risk_tolerance": 1,
+        "sociability": 1,
+        "skill": 0.7394800462423369
+      },
+      "action": null,
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "D. Halvorsen",
+      "choice": "error",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 1,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 0.8086977237435881
+      },
+      "action": null,
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "X. Duong",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 1,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 0.6596556493200407
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "W. Petrossian",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 1,
+        "risk_tolerance": 1,
+        "sociability": 2,
+        "skill": 1.2495219581262706
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "S. Reyes",
+      "choice": "confirm",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 2,
+        "skill": 0.7751860557025769
+      },
+      "action": "research",
+      "claims": null
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "D. Aldana",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 1,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 0.644074413278374
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "I. Reyes",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.013897401000339
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "R. Reyes",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 0,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 0,
+        "skill": 0.7392515377883498
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "W. Okafor",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 1.0804675042293606
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "F07.L03.V12",
+          "effect": "F07.L04.V01",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "F07.L03.V04",
+          "effect": "F07.L04.V09",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "F07.L03.V07",
+          "effect": "F07.L04.V02",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "C. Okafor",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 1,
+        "risk_tolerance": 0,
+        "sociability": 1,
+        "skill": 1.5056447917683482
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "Z. Lindqvist",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 0,
+        "sociability": 0,
+        "skill": 0.8366920489615728
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "U. Lindqvist",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 0,
+        "risk_tolerance": 0,
+        "sociability": 0,
+        "skill": 0.8355964671440641
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "J. Lindqvist",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 0,
+        "risk_tolerance": 1,
+        "sociability": 1,
+        "skill": 0.6942814685482284
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "T. Duong",
+      "choice": "farm_assoc",
+      "traits": {
+        "status_drive": 2,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 1,
+        "skill": 1.1945933977620022
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "association",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        },
+        {
+          "type": "association",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        },
+        {
+          "type": "association",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "P. Novak",
+      "choice": "farm_causal",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 1,
+        "risk_tolerance": 2,
+        "sociability": 0,
+        "skill": 0.8689781372026222
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "edge",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "strong"
+        },
+        {
+          "type": "edge",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        },
+        {
+          "type": "edge",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": "+",
+          "strength": "moderate"
+        }
+      ]
+    },
+    {
+      "trial": "honest_path",
+      "arm": "replication",
+      "persona": "V. Ashworth",
+      "choice": "farm_assoc",
+      "traits": {
+        "status_drive": 1,
+        "curiosity": 2,
+        "risk_tolerance": 2,
+        "sociability": 2,
+        "skill": 1.005535325727327
+      },
+      "action": "write",
+      "claims": [
+        {
+          "type": "association",
+          "cause": "kelvane density [F07.L03.V12]",
+          "effect": "sorric flux [F07.L04.V01]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        },
+        {
+          "type": "association",
+          "cause": "vantric phase [F07.L03.V04]",
+          "effect": "methel index [F07.L04.V09]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        },
+        {
+          "type": "association",
+          "cause": "brenn density [F07.L03.V07]",
+          "effect": "lorric flux [F07.L04.V02]",
+          "causes": null,
+          "parents": null,
+          "sign": null,
+          "strength": null
+        }
+      ]
+    }
+  ],
+  "cost_usd": 0.17799
+}

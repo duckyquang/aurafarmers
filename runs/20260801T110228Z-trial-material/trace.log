@@ -1,0 +1,26 @@
+[    0.06s] run trial-material -> runs/20260801T110228Z-trial-material
+[    0.06s] WARNING: working tree is dirty; this run is not reproducible from the commit alone
+[    0.12s] 
+[    0.12s] === material / count ===
+[    6.03s]   V. Brandt        confirm
+[    9.18s]   J. Ashworth      confirm
+[   12.76s]   Z. Lindqvist     confirm
+[   16.47s]   B. Petrossian    confirm
+[   18.32s]   R. Duong         idle
+[   22.13s]   C. Duong         confirm
+[   25.66s]   A. Ashworth      confirm
+[   29.13s]   O. Lindqvist     confirm
+[   32.00s]   M. Lindqvist     confirm
+[   35.18s]   T. Marchetti     confirm
+[   37.44s]   H. Ashworth      idle
+[   41.00s]   P. Kimura        confirm
+[   41.00s]   -> {"confirm": 10, "idle": 2}
+[   41.00s] 
+[   41.00s] === material / replication ===
+[   44.54s]   V. Brandt        confirm
+[   49.40s]   J. Ashworth      confirm
+[   53.55s]   Z. Lindqvist     confirm
+[   56.87s]   B. Petrossian    confirm
+[   60.80s]   R. Duong         confirm
+[   63.66s]   C. Duong         confirm
+[   67.17s]   A. Ashworth      confirm

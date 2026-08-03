@@ -1,0 +1,28 @@
+{
+ "PROXY": {
+  "accepted": 127,
+  "matched": 71,
+  "unmatched": 0,
+  "ambiguous": 56,
+  "deferral_flagged": 16,
+  "deferral_share": 0.225,
+  "modal_confirm_flagged": 0,
+  "modal_share": 0.0,
+  "followed_through": 0,
+  "follow_through_rate": 0.0,
+  "world_interventions_total": 0
+ },
+ "VERIFIED": {
+  "accepted": 93,
+  "matched": 70,
+  "unmatched": 0,
+  "ambiguous": 23,
+  "deferral_flagged": 20,
+  "deferral_share": 0.286,
+  "modal_confirm_flagged": 0,
+  "modal_share": 0.0,
+  "followed_through": 0,
+  "follow_through_rate": 0.0,
+  "world_interventions_total": 4
+ }
+}

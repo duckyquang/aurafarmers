@@ -1,0 +1,40 @@
+{
+  "name": "endorsement-probe",
+  "started_utc": "2026-08-03T17:38:59.826608+00:00",
+  "config": {
+    "models": [
+      "gpt-4o-mini",
+      "gpt-5-mini"
+    ],
+    "n": 8,
+    "seed": 7001,
+    "cap_usd": 0.8
+  },
+  "git_sha": "0f8fc330576f270c803965681f26b876cb28ec17",
+  "git_branch": "main",
+  "git_dirty": true,
+  "code_sha256": "792a7d884a3c5a66",
+  "python": "3.12.5",
+  "ended_utc": "2026-08-03T17:40:51.614782+00:00",
+  "wall_seconds": 111.79,
+  "event_counts": {
+    "llm_call": 48,
+    "llm_error": 48,
+    "probe": 48
+  },
+  "tokens": {
+    "in": 0,
+    "out": 0,
+    "reasoning": 0,
+    "cache_read": 0
+  },
+  "cost_usd": 0.0,
+  "model": {
+    "provider": "openai",
+    "routine": "gpt-5-nano",
+    "heavy": "gpt-4o-mini"
+  },
+  "result": {
+    "cost_usd": 0.0
+  }
+}

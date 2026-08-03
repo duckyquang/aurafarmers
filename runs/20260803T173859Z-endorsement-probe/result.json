@@ -1,0 +1,109 @@
+{
+ "gpt-4o-mini": {
+  "P1": {
+   "tally": {
+    "yes": 0,
+    "no": 0,
+    "error": 8
+   },
+   "reasons": [
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError"
+   ]
+  },
+  "P2": {
+   "tally": {
+    "yes": 0,
+    "no": 0,
+    "error": 8
+   },
+   "reasons": [
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError"
+   ]
+  },
+  "P3": {
+   "tally": {
+    "yes": 0,
+    "no": 0,
+    "error": 8
+   },
+   "reasons": [
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError"
+   ]
+  }
+ },
+ "gpt-5-mini": {
+  "P1": {
+   "tally": {
+    "yes": 0,
+    "no": 0,
+    "error": 8
+   },
+   "reasons": [
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError"
+   ]
+  },
+  "P2": {
+   "tally": {
+    "yes": 0,
+    "no": 0,
+    "error": 8
+   },
+   "reasons": [
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError"
+   ]
+  },
+  "P3": {
+   "tally": {
+    "yes": 0,
+    "no": 0,
+    "error": 8
+   },
+   "reasons": [
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError",
+    "ERROR RateLimitError"
+   ]
+  }
+ },
+ "cost_usd": 0.0
+}

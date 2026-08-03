@@ -859,3 +859,37 @@ claims by intervention before filing?") crossed with end-of-run
 confrontation (the agent is shown its own anonymized record and asked to
 evaluate the practice). Stated norm vs own ledger, plus rationalization
 under confrontation. Not run under the current budget cap.
+
+### G2 results (run 2026-08-04, `scripts/deferral.py`, no API calls)
+
+Matching: a write action is tied to its accepted paper by custom_id +
+board-arm clause + exact canonical claim-key match; papers whose candidates
+produced more than one distinct text were excluded as ambiguous (the
+F01.L03.V01~F02.L03.V01 monoculture makes many papers textually
+indistinguishable across worlds). Exclusions are substantial and reported;
+the matched subset over-represents papers with less-common claims.
+
+| | PROXY | VERIFIED |
+|---|---|---|
+| accepted papers | 127 | 93 |
+| matched / ambiguous / unmatched | 71 / 56 / 0 | 70 / 23 / 0 |
+| deferral-flagged (primary regexes) | 16 (22.5%) | 20 (28.6%) |
+| modal-confirmation flagged (secondary) | 0 | 0 |
+| author follow-through on deferred variables | **0 / 16** | **0 / 20** |
+
+**H-G2 is half-refuted and half-confirmed, and the refuted half matters.**
+The deferral share (22.5% / 28.6%) falls far below the pre-registered 0.5
+threshold: most accepted papers do not even promise confirmation — they
+simply file. Where a paper *does* defer ("requires further investigation,"
+"future work"), follow-through is 0/36 pooled: no author ever ran an
+intervention touching a deferred variable. So the written-promise/practice
+gap exists but is absolute only on the narrow says-side that exists at all.
+The larger fact cuts against a hypocrisy reading of the lived worlds:
+three-quarters of the accepted record makes no epistemic promise to betray.
+Default cheap practice, not betrayed commitments, remains the best
+description of Study 4. The hypocrisy question now rests on G1 (stated
+norms under direct questioning), which is blocked pending API credits:
+the pre-registered probe run (`scripts/endorsement_probe.py`,
+`runs/20260803T173859Z-endorsement-probe`) errored 48/48 with
+`insufficient_quota` at $0.00 spend and will be rerun unchanged once the
+account is funded.
